@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>心理学期刊周报 · 07/23 — 07/30</title>
 <meta name="description" content="心理学期刊新文章周报，覆盖124本期刊，本周146篇新文章。">
+<meta property="og:title" content="心理学期刊周报 · 07/23 — 07/30">
+<meta property="og:description" content="心理学期刊新文章周报，覆盖124本期刊，本周146篇新文章。">
+<meta property="og:url" content="https://agoodstu.github.io/psy-weekly/">
+<meta property="og:image" content="https://agoodstu.github.io/psy-weekly/og-image.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="心理学期刊周报 · 07/23 — 07/30">
+<meta name="twitter:description" content="心理学期刊新文章周报，覆盖124本期刊，本周146篇新文章。">
+<meta name="twitter:image" content="https://agoodstu.github.io/psy-weekly/og-image.png">
+<link rel="icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Charter:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet">
@@ -268,6 +279,38 @@ a:hover { text-decoration: underline; }
   margin-bottom: 20px;
   flex-wrap: wrap;
 }
+
+/* search box */
+.search-box {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.search-box::placeholder { color: var(--text-tertiary); }
+.search-box:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+.search-no-result {
+  display: none;
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--text-secondary);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+}
+.search-no-result.visible { display: block; }
 
 .filter-chip {
   padding: 4px 12px;
@@ -690,9 +733,13 @@ a:hover { text-decoration: underline; }
 <div class="stat-item"><div class="stat-num">12</div><div class="stat-label">涵盖领域</div></div>
     </div>
 
+    <input type="search" class="search-box" id="search-box" placeholder="搜索标题/作者/摘要…" aria-label="搜索标题/作者/摘要">
+
     <div class="filter-bar" id="filter-bar">
       <button class="filter-chip active" data-field="all">全部 (146)</button>
     </div>
+
+    <div class="search-no-result" id="search-no-result">未找到匹配文章</div>
 
     <div class="timeline">
       
@@ -5837,25 +5884,45 @@ var filterChips = document.querySelectorAll('.filter-chip');
 var fieldSections = document.querySelectorAll('.timeline-field');
 var sidebarLinks = document.querySelectorAll('.side-link[data-field]');
 
+// ── Search box ─────────────────────────
+var searchBox = document.getElementById('search-box');
+var searchNoResult = document.getElementById('search-no-result');
+var activeField = 'all';
+
+function cardSearchText(card) {
+  var parts = [];
+  var title = card.querySelector('.card-title');
+  var authors = card.querySelector('.card-authors');
+  var summary = card.querySelector('.card-summary');
+  var journal = card.querySelector('.card-journal');
+  if (title) parts.push(title.textContent);
+  if (authors) parts.push(authors.textContent);
+  if (summary) parts.push(summary.textContent);
+  if (journal) parts.push(journal.textContent);
+  if (card.dataset.field) parts.push(card.dataset.field);
+  return parts.join(' ').toLowerCase();
+}
+
 function applyFilter(field) {
+  activeField = field;
   var showAll = (field === 'all');
+  var q = searchBox ? (searchBox.value || '').trim().toLowerCase() : '';
+  var anyVisible = false;
 
   cards.forEach(function(card) {
-    if (showAll || card.dataset.field === field) {
+    var matchField = showAll || card.dataset.field === field;
+    var matchSearch = (q.length < 2 || cardSearchText(card).indexOf(q) !== -1);
+    if (matchField && matchSearch) {
       card.classList.remove('hidden');
+      anyVisible = true;
     } else {
       card.classList.add('hidden');
     }
   });
 
   fieldSections.forEach(function(section) {
-    var sectionField = section.dataset.field;
-    if (showAll || sectionField === field) {
-      section.style.display = '';
-    } else {
-      var visible = section.querySelectorAll('.card:not(.hidden)').length;
-      section.style.display = visible > 0 ? '' : 'none';
-    }
+    var visible = section.querySelectorAll('.card:not(.hidden)').length;
+    section.style.display = visible > 0 ? '' : 'none';
   });
 
   filterChips.forEach(function(chip) {
@@ -5865,6 +5932,10 @@ function applyFilter(field) {
   sidebarLinks.forEach(function(link) {
     link.classList.toggle('active', link.dataset.field === field);
   });
+
+  if (searchNoResult) {
+    searchNoResult.classList.toggle('visible', !anyVisible);
+  }
 }
 
 filterChips.forEach(function(chip) {
@@ -5908,6 +5979,13 @@ cards.forEach(function(card) {
   });
   document.getElementById('filter-bar').appendChild(chip);
 });
+
+// ── Search input ──────────────────────
+if (searchBox) {
+  searchBox.addEventListener('input', function() {
+    applyFilter(activeField);
+  });
+}
 
 // ── Scroll to top ─────────────────────
 var scrollBtn = document.getElementById('scroll-top');
