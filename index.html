@@ -512,9 +512,22 @@ a:hover { text-decoration: underline; }
   margin-bottom: 6px;
 }
 
+.card-title::after {
+  content: " ↗";
+  font-size: 0.75em;
+  color: var(--text-tertiary);
+  opacity: 0.7;
+}
+
 .card-title:hover {
   color: var(--accent);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.card-title:hover::after {
+  color: var(--accent);
+  opacity: 1;
 }
 
 .card-summary {
