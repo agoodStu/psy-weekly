@@ -670,13 +670,19 @@ a:hover { text-decoration: underline; }
 /* responsive */
 @media (max-width: 768px) {
   .sidebar { display: none; }
-  .main { padding: 20px 14px 60px; }
+  .main { padding: 20px 12px 60px; }
   .page-header h1 { font-size: 20px; }
-  .stats-bar { gap: 10px; padding: 10px; }
+  .page-header { margin-bottom: 16px; padding-bottom: 14px; }
+  .stats-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; }
+  .stat-item { min-width: 0; }
   .stat-num { font-size: 20px; }
-  .timeline-field-head { padding-left: 40px; }
-  .timeline-rail { width: 32px; min-width: 32px; }
-  .timeline-card { padding: 12px; }
+  .timeline-field-head { padding-left: 4px; margin: 20px 0 12px; }
+  .timeline-item { display: block; }
+  .timeline-rail { display: none; }
+  .timeline-card { padding: 12px; margin-bottom: 10px; }
+  .card-head { flex-wrap: wrap; gap: 4px 6px; }
+  .card-head-left { flex-wrap: wrap; gap: 6px; }
+  .card-journal { white-space: normal; overflow: visible; text-overflow: clip; }
 }
 
 
