@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>⭐ 我的收藏 — 心理周报</title>
+<meta name="og:title" content="⭐ 我的收藏 — 心理周报">
+<link rel="icon" href="favicon.png">
+<style>
+:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #EFEEE6;
+  --text: #1F2328; --text-secondary: #57606A; --text-tertiary: #8C959F;
+  --accent: #0969DA; --accent-soft: rgba(9,105,218,0.08);
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #D8DEE4; --divider: #E5E8EC;
+  --tag-bg: rgba(9,105,218,0.08); --tag-text: #0969DA;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: var(--font-sans);
+  padding-top: 48px;
+  -webkit-font-smoothing: antialiased;
+}
+/* 顶部全局导航（三 tab：周报/日报/收藏） */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px; z-index: 100;
+  display: flex; align-items: center; gap: 4px;
+  padding: 0 14px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--divider);
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; height: 32px;
+  padding: 0 14px; border-radius: 16px;
+  color: var(--text-secondary); text-decoration: none;
+  font-size: 13.5px; font-weight: 500;
+  border: 1px solid transparent;
+  transition: color .15s, background .15s;
+}
+.topnav-tab:hover { color: var(--text); background: var(--bg-hover); text-decoration: none; }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+@media (max-width: 768px) {
+  .topnav { padding: 0 8px; }
+  .topnav-tab { padding: 0 10px; font-size: 12.5px; }
+}
+.fav-page { max-width: 760px; margin: 0 auto; padding: 24px 16px 84px; }
+.fav-page h1 { font-size: 22px; margin: 0 0 4px; font-family: var(--font-serif); }
+.fav-page .fav-sub { color: var(--text-secondary); font-size: 12px; margin-bottom: 20px; }
+.fav-empty { text-align: center; color: var(--text-secondary); padding: 60px 20px; font-size: 14px; }
+.fav-card {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: 8px; padding: 14px 16px; margin-bottom: 12px;
+}
+.fav-card-head { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+.fav-type {
+  font-size: 11px; padding: 1px 8px; border-radius: 10px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono); flex-shrink: 0;
+}
+.fav-title { font-size: 15px; font-weight: 600; line-height: 1.45; }
+.fav-title a { color: var(--text); text-decoration: none; }
+.fav-title a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.fav-meta { font-size: 12px; color: var(--text-secondary); margin-top: 6px; }
+.fav-summary { font-size: 13px; color: var(--text-secondary); margin-top: 8px; line-height: 1.6; }
+.fav-remove {
+  background: none; border: 1px solid var(--border); color: var(--text-secondary);
+  border-radius: 6px; padding: 4px 12px; font-size: 12px; cursor: pointer; margin-top: 10px;
+  transition: color .15s, border-color .15s;
+}
+.fav-remove:hover { color: #f85149; border-color: #f85149; }
+.fav-clear {
+  background: none; border: 1px solid var(--border); color: var(--text-tertiary);
+  border-radius: 6px; padding: 4px 12px; font-size: 12px; cursor: pointer; margin-left: 8px;
+}
+.fav-clear:hover { color: #f85149; border-color: #f85149; }
+</style>
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab" href="daily.html">📰 日报</a>
+  <a class="topnav-tab active" href="favorites.html">⭐ 收藏</a>
+</nav>
+<main class="fav-page">
+  <h1>⭐ 我的收藏</h1>
+  <div class="fav-sub">
+    <span id="fav-count">0</span> 条 · 存储在浏览器本地，清缓存会丢失
+    <button class="fav-clear" id="fav-clear" style="display:none">清空收藏</button>
+  </div>
+  <div id="fav-list"></div>
+</main>
+<script src="favorites.js"></script>
+</body>
+</html>
