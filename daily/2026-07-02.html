@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年7月2日 周四</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月2日 周四</span><span class="meta-chip">共 31 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>2023年6月全球海洋平均温度创纪录达21°C，警示气候变暖加速及生态系统风险</li><li>科学家将非生命组分组装成类细胞结构并成功分裂，合成生物学向创造生命迈出关键一步</li><li>法院裁定警方获取历史位置数据需令状，数字时代公民隐私保护获重要司法约束</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/breastfeeding-during-the-first-six-months-is-linked-to-better-sleep-at-one-year/" target="_blank" rel="noopener">Breastfeeding during the first six months is linked to better sleep at one year 前六个月母乳喂养与一岁时睡眠质量更好相关</a></div><div class="item-desc">研究发现出生后前六个月母乳喂养的婴儿在一岁时睡眠时长更优，支持母乳喂养对早期睡眠发育的促进作用。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/study-explores-how-cultural-tightness-shapes-personality-and-political-beliefs/" target="_blank" rel="noopener">Study explores how cultural tightness shapes personality and political beliefs 文化紧密度如何塑造人格与政治信念</a></div><div class="item-desc">研究发现来自文化更紧密州的人更易认同种族刻板印象和右翼威权主义，揭示文化规范对心理倾向的深远影响。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/how-belief-in-karma-shapes-whom-we-choose-to-help/" target="_blank" rel="noopener">How belief in karma shapes whom we choose to help 因果报应信念如何影响助人选择</a></div><div class="item-desc">相信因果报应既可能合理化他人不幸，也能增加对被视为高尚者的慷慨，揭示道德心理的双重作用。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/honesty-and-openness-are-the-primary-personality-traits-that-long-term-couples-share/" target="_blank" rel="noopener">Honesty and openness are the primary personality traits that long-term couples share 诚实与开放是长期伴侣最相似的人格特质</a></div><div class="item-desc">研究发现长期夫妻在诚实和开放性上高度相似，且能准确评估对方人格，为伴侣匹配研究提供新视角。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/depression-may-be-a-stronger-warning-sign-for-dementia-than-insomnia/" target="_blank" rel="noopener">Depression may be a stronger warning sign for dementia than insomnia 抑郁比失眠更可能是痴呆症预警信号</a></div><div class="item-desc">研究表明老年抑郁症状与痴呆风险关联更强，提示筛查抑郁有助于早期识别痴呆并干预。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/intelligence-predicts-prosocial-behaviors-like-voting-and-charitable-giving-in-m/" target="_blank" rel="noopener">Intelligence found to predict prosocial behaviors like voting and charitable giving in massive study 智力水平预测亲社会行为：投票、慈善捐赠等</a></div><div class="item-desc">大规模研究发现认知能力高者更易投票、捐赠和购买环保车，为智力与社会责任关联提供证据。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/left-leaning-americans-are-driving-the-u-s-birth-decline-new-study-finds/" target="_blank" rel="noopener">Left-leaning Americans are driving the U.S. birth decline, new study finds 左倾美国人正推动美国生育率下降</a></div><div class="item-desc">研究发现政治信仰与生育率相关，保守派维持历史水平，左倾人士生育更少，加剧人口结构变化。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/machine-learning-reveals-how-brain-maturation-predicts-emotional-suppression-in/" target="_blank" rel="noopener">Artificial intelligence estimates of childhood brain age predict teenage coping skills 人工智能评估儿童大脑年龄可预测青少年应对能力</a></div><div class="item-desc">儿童期大脑结构更老与青春期隐藏情绪习惯相关，揭示脑发育成熟度影响未来心理适应策略。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/global-ocean-temperatures-are-entering-uncharted-territory-climate-scientists-say/" target="_blank" rel="noopener">Global ocean temperatures are entering “uncharted territory,” climate scientists say 全球海洋温度进入“未知领域”</a></div><div class="item-desc">2023年6月全球海洋平均温度创纪录，达约21°C，警示气候变暖加速及海洋生态系统面临的严峻风险。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/earth-is-home-to-20-million-insect-species-three-times-more-than-we-thought/" target="_blank" rel="noopener">Earth is home to 20 million insect species—three times more than we thought 地球昆虫物种多达2000万，是此前估计的三倍</a></div><div class="item-desc">新分析表明昆虫种类远超预期，达2000万种，显著低估的生物多样性对生态保护提出新挑战。</div></div></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/the-rubin-telescope-just-began-the-largest-cosmic-time-lapse-in-history/" target="_blank" rel="noopener">The Rubin telescope just began the largest cosmic time-lapse in history 鲁宾望远镜启动史上最大宇宙延时摄影</a></div><div class="item-desc">智利鲁宾天文台开启十年巡天计划，拍摄动态夜空，将极大推动时域天文学与暗物质研究。</div></div></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/this-planet-survived-the-death-of-its-star-and-kept-its-atmosphere/" target="_blank" rel="noopener">This planet survived the death of its star—and kept its atmosphere 这颗行星在恒星死亡后幸存并保留大气层</a></div><div class="item-desc">发现气态巨行星绕白矮星运行且保留大气，证明行星在恒星演化末期仍可维持大气，挑战传统行星演化理论。</div></div></div><div class="item"><span class="item-idx">13</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/07/01/1140003/llms-are-stuck-in-a-groupthink-rut-this-startup-is-trying-to-get-them-out/" target="_blank" rel="noopener">LLMs are stuck in a groupthink groove. This startup is trying to get them out. 大语言模型陷入群体思维，初创公司试图打破</a></div><div class="item-desc">主流AI聊天机器人输出高度雷同（如随机数偏好7），反映模型缺乏多样性，新方案旨在提升回答独特性。</div></div></div><div class="item"><span class="item-idx">14</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/scientists-just-unveiled-cyborg-cockroaches-that-can-breathe-underwater-for-hours/" target="_blank" rel="noopener">Scientists just unveiled “cyborg” cockroaches that can breathe underwater for hours 科学家推出可在水下呼吸数小时的“半机械蟑螂”</a></div><div class="item-desc">仿生蟑螂配备氧气发生器和水下呼吸管，可执行水下搜救任务，拓展昆虫机器人应用场景。</div></div></div><div class="item"><span class="item-idx">15</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/supreme-court-limits-police-searches-of-phone-location-data/" target="_blank" rel="noopener">Supreme Court limits police searches of phone location data 最高法院限制警方搜查手机位置数据</a></div><div class="item-desc">法院裁定警方获取历史位置数据需令状，保护公民隐私，对数字时代执法行为产生重要约束。</div></div></div><div class="item"><span class="item-idx">16</span><div class="item-body"><div class="item-title"><a href="https://www.quantamagazine.org/for-the-first-time-a-cell-built-from-scratch-grows-and-divides-20260701/" target="_blank" rel="noopener">For the First Time, a Cell Built From Scratch Grows and Divides 首个人工合成细胞实现生长与分裂</a></div><div class="item-desc">科学家将非生命组分组装成类细胞结构并成功分裂，证明在实验室创造生命成为可能，推动合成生物学发展。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><span class="item-idx">17</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/features/2026-07-01/how-a-13-billion-leveraged-etf-drives-volatility-in-a-key-ai-memory-stock" target="_blank" rel="noopener">One Leveraged ETF Is Reshaping Trading in World&#x27;s Top AI Memory Stock 一只杠杆ETF正重塑全球顶级AI存储股交易格局（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">18</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/newsletters/2026-07-01/meta-plans-a-cloud-business-in-challenge-to-industry-rivals" target="_blank" rel="noopener">Meta Plans a Cloud Business in Challenge to Industry Rivals Meta拟推云业务挑战行业巨头（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">19</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-01/south-korean-banks-expand-trading-floors-for-24-hour-won-market" target="_blank" rel="noopener">South Korean Banks Expand Trading Floors for 24-Hour Won Market 韩国银行扩大交易大厅布局迎24小时韩元市场（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">20</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-01/otaku-in-america-can-t-get-their-hands-on-authentic-anime-merch" target="_blank" rel="noopener">Otaku in America Can’t Get Their Hands on Authentic Anime Merch 美国动漫迷难买正版周边商品（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">21</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/jp/news/newsletters/2026-07-01/THIKWFVTTCZU00" target="_blank" rel="noopener">【今朝の5本】仕事を始める前に読んでおきたい厳選ニュース 【今晨5要闻】开工前必读精选资讯（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">22</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-01/anthropic-splits-from-pack-in-race-to-shape-first-ai-election-big-take-podcas" target="_blank" rel="noopener">AI Money and Anxiety Are Powering This Election Cycle AI资金与焦虑情绪主导本选举周期（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">23</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-01/china-impulsa-centros-de-datos-en-brasil-con-inversion-millonaria-de-bytedance" target="_blank" rel="noopener">ByteDance construye en Brasil su mayor complejo de centros de datos fuera de China 字节跳动在巴西建设其中国外最大数据中心集群（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">24</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-01/apple-readies-new-ipad-pro-redesigned-entry-macbook-pro-for-first-half-2027" target="_blank" rel="noopener">Apple Readies New iPad Pro, Redesigned Entry MacBook Pro for 2027 苹果计划2027年推出新版iPad Pro及重新设计的入门级MacBook Pro（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">25</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/newsletters/2026-07-01/northern-ireland-riots-stoked-by-social-media-accounts-from-us-uk" target="_blank" rel="noopener">Northern Ireland Riots Stoked by Social Media Accounts From US, UK 美英社交媒体账号煽动北爱尔兰骚乱（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">26</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-01/m-a-volume-to-stay-strong-in-second-half-says-sullivan-s-sawyer" target="_blank" rel="noopener">M&amp;A Volume to Stay Strong in Second Half, Says Sullivan’s Sawyer 苏利文律师事务所高管预计下半年并购交易量持续强劲（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">27</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-01/musk-ally-gracias-eyes-bets-in-ai-energy-after-spacex-windfall" target="_blank" rel="noopener">Musk Ally Gracias Eyes Bets in AI, Energy After SpaceX Windfall 马斯克盟友Gracias借SpaceX红利押注AI与能源领域（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">28</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-01/trump-embraces-roosevelt-a-president-he-sees-as-kindred-spirit" target="_blank" rel="noopener">Trump Draws Parallels to Roosevelt During US 250th Anniversary Celebrations 特朗普在美国250周年庆典期间自比罗斯福（Bloomberg）</a></div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

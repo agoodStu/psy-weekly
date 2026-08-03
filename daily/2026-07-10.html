@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年7月10日 周五</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月10日 周五</span><span class="meta-chip">共 41 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>酒精改变决策脑回路但效果随阿尔茨海默特征而异，提示需个体化风险评估</li><li>五种睡眠亚型关联脑电波与健康，超越传统二分法，有助精准干预</li><li>单个人类皮层神经元计算复杂度远超预期，AI分析证实其微型芯片能力</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title">A diverse toy environment is linked to better infant communication skills (2026.07.09) 多样玩具环境促进婴儿沟通能力</div><div class="item-desc">家庭中玩具种类越多，婴儿早期语言和互动能力发展越好，揭示环境刺激的重要性。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title">Chronic alcohol use alters Alzheimer’s brain circuits differently based on underlying pathology (2026.07.09) 慢性饮酒对阿尔茨海默病脑回路影响因病理而异</div><div class="item-desc">酒精改变决策相关脑回路，但效果取决于阿尔茨海默病的具体特征，提示个体化风险。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title">Men who consume pornography report lower sexual satisfaction than female viewers (2026.07.09) 男性色情消费者性满意度低于女性</div><div class="item-desc">综合研究显示，男性观看色情内容与性功能下降及满意度降低相关，而女性则未表现出同样关联。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title">American ginseng extract improves memory and clearing of cellular waste in aging rats (2026.07.09) 西洋参提取物改善老龄大鼠记忆并清除细胞废物</div><div class="item-desc">西洋参根提取物保护突触连接，提升大脑细胞废物清理系统，延缓衰老相关认知衰退。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title">Early bird, night owl or something else? Five patterns may define how we sleep (2026.07.09) 早鸟、夜猫子还是其他？五种睡眠模式揭示个体差异</div><div class="item-desc">新研究识别出五种不同睡眠亚型，关联脑电波模式、行为与健康，超越传统二分法。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title">New psychology study challenges a major assumption about why we bond with our friends (2026.07.09) 新研究挑战“性格相似决定友谊满意度”假设</div><div class="item-desc">朋友间性格略有相似，但相似度并不预测友谊幸福感，其他因素更关键。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title">Severe early deprivation leaves lasting mark on life skills 16 years later (2026.07.09) 早期严重剥夺对生活技能影响持续16年</div><div class="item-desc">布加勒斯特早期干预项目显示，接受寄养护理的儿童16年后适应功能更好，抚养质量是中介。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title">How fictional violence shapes the actions of copycat offenders (2026.07.08) 虚构暴力如何影响模仿犯行为</div><div class="item-desc">现实罪犯常模仿影视游戏中的具体暴力手法，研究探讨了媒体暴力对犯罪行为的塑造机制。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">2 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title">Scientists reveal a simple feedback tweak that could improve human-machine interface control (2026.07.09) 实时反馈微调可显著提升人机界面控制</div><div class="item-desc">研究发现任务中即时成功率反馈能增强机器控制能力，尤其当视觉受限时效果更佳。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title">The Branching Dendrite Secret Behind Human Cognitive Superiority (2026.07.08) 树突分支秘密揭示人类认知优势</div><div class="item-desc">单个人类皮层神经元计算复杂度远超预期，AI分析证实其作为“微型芯片”的独特能力。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title">Anthropic found a hidden space where Claude puzzles over concepts (2026.07.09) Anthropic发现Claude模型内部“概念沉思空间”</div><div class="item-desc">Anthropic开发工具揭示了LLM回答问题时内部表征的神秘结构，既有平凡也有令人不安的发现。</div></div></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title">National rollout of a brief suicide prevention program for veterans shows high success rates (2026.07.09) 全国推广退伍军人简短自杀预防项目成功率显著</div><div class="item-desc">简短的干预方案有效降低退伍军人自杀风险，为大规模心理健康干预提供证据。</div></div></div><div class="item"><span class="item-idx">13</span><div class="item-body"><div class="item-title">Physicist says splashy new cosmology study made ‘elemental’ mistake (2026.07.09) 物理学家指斥新宇宙学研究犯“基本”错误</div><div class="item-desc">一项声称颠覆宇宙认知的Nature论文被同行质疑，指出其在基本原理上存在漏洞。</div></div></div><div class="item"><span class="item-idx">14</span><div class="item-body"><div class="item-title">These absurdly cute mice live at higher altitudes than any other mammal—here’s how they do it (2026.07.09) 超萌小鼠为何能生活在最高海拔？</div><div class="item-desc">安第斯叶耳鼠通过独特生理适应在含氧量极低的高山生存，刷新哺乳动物海拔纪录。</div></div></div><div class="item"><span class="item-idx">15</span><div class="item-body"><div class="item-title">Cases of explosive diarrhea-causing cyclosporiasis are rising fast in the U.S. (2026.07.09) 美国环孢子虫病病例快速上升</div><div class="item-desc">环孢子虫病病例从6月全国几十例飙升至仅密歇根州超千例，需警惕食品安全。</div></div></div><div class="item"><span class="item-idx">16</span><div class="item-body"><div class="item-title">The political realignment of America: Education overtakes race as key ideological divider (2026.07.09) 美国政治重组：教育取代种族成为意识形态分界线</div><div class="item-desc">过去五次大选数据显示，教育程度差异加剧，种族差异缩小，低学历者更趋保守。</div></div></div><div class="item"><span class="item-idx">17</span><div class="item-body"><div class="item-title">Will We Ever Find Alien Civilizations? (2026.07.09) 我们能否找到外星文明？</div><div class="item-desc">尽管搜寻数十年仍无确凿证据，但技术突破和候选信号持续激发人类对地外生命的好奇。</div></div></div><div class="item"><span class="item-idx">18</span><div class="item-body"><div class="item-title">Four nuclear reactors hit a big milestone in the US (2026.07.09) 美国四座核反应堆达成关键里程碑</div><div class="item-desc">特朗普政府设定的7月4日临界目标实现，微型反应堆技术取得进展，象征核能复兴。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">📐 arXiv 前沿</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">A1</span><div class="item-body"><div class="item-title">Single-Entity Spiking Neuron Models: Survey (2026.07.08) 单实体脉冲神经元模型：综述</div><div class="item-desc">系统综述了生物可解释神经系统的不同数学建模方法，对脉冲模型及其离散与连续变体进行分类。为神经形态计算和计算神经科学领域提供了模型选择的系统参考。</div></div></div><div class="item"><span class="item-idx">A2</span><div class="item-body"><div class="item-title">Quantifying Entrainment Evidence: A Comparison of Frequentist and Bayesian Approaches for Information Processing Pathway Maps (2026.07.07) 量化夹带证据：信息处理通路图的频率派与贝叶斯方法比较</div><div class="item-desc">比较了频率派和贝叶斯统计推断在信息处理通路图中链接模型输出与神经活动的效果。为神经影像分析中统计方法的选择提供了实证指导。</div></div></div><div class="item"><span class="item-idx">A3</span><div class="item-body"><div class="item-title">STST-JEPA: Shallow-Target Spatio-Temporal Joint Embedding Prediction Architecture For EEG Self-Supervised Learning (2026.07.07) STST-JEPA：用于EEG自监督学习的浅层目标时空联合嵌入预测架构</div><div class="item-desc">提出一种针对脑电图脑龄预测的浅层目标时空联合嵌入预测架构，通过自监督学习应对跨站点导联异质性和小样本问题。推动了EEG作为廉价便携生物标志物的实用化进程。</div></div></div><div class="item"><span class="item-idx">A4</span><div class="item-body"><div class="item-title">Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning (2026.07.08) Agon：具有隐式对手推理评分的竞争性跨模型强化学习</div><div class="item-desc">提出Agon框架，让两个竞争模型相互评分对方的推理过程而非仅评分最终答案。可引导模型生成更高质量推理轨迹，突破当前基于可验证奖励的强化学习局限。</div></div></div><div class="item"><span class="item-idx">A5</span><div class="item-body"><div class="item-title">Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops (2026.07.08) 人工智能中的递归自我改进：从有界自我精炼到自主研究循环</div><div class="item-desc">综述1250篇arXiv论文，系统梳理了AI自我改进的不同形式（自我精炼、自我奖励、自我对弈等）。为区分不同层次的自我改进能力提供统一术语和分类，警示自主研究循环的潜在风险。</div></div></div><div class="item"><span class="item-idx">A6</span><div class="item-body"><div class="item-title">Creativity from Friction: Human-AI Interaction for Exploratory Structural Design (2026.07.08) 摩擦中的创造力：面向探索性结构设计的人机交互</div><div class="item-desc">提出支持人机交互的探索性结构设计方法，帮助用户外化想法、探索替代方案并精炼部分解。克服了AI生成最终答案不适合创意领域的缺点，实现约束满足下的协同设计。</div></div></div><div class="item"><span class="item-idx">A7</span><div class="item-body"><div class="item-title">HIVE: Understanding Post-Hallucination Reasoning in Vision Language Models (2026.07.08) HIVE：理解视觉语言模型中的幻觉后推理</div><div class="item-desc">研究视觉语言模型在生成幻觉语义后的推理阶段，分析模型如何基于错误语义继续推理。揭示了幻觉的后续影响，为提升VLM鲁棒性提供了新视角。</div></div></div><div class="item"><span class="item-idx">A8</span><div class="item-body"><div class="item-title">Does Bielik Know What It Doesn&#x27;t Know? Activation Dispersion Separates Entity Familiarity from Factual Reliability Across Model Scale (2026.07.08) Bielik知道它不知道什么吗？激活分散度在不同模型规模下区分实体熟悉度与事实可靠性</div><div class="item-desc">通过分析波兰语Bielik模型的激活分散度，在生成答案前检测模型对实体的熟悉程度。为预测大模型对陌生实体的幻觉倾向提供了基于激活的早期信号。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><span class="item-idx">19</span><div class="item-body"><div class="item-title">North Korea decides on measures to expand nuclear forces, KCNA reports 朝中社：朝鲜决定采取措施扩大核力量（Reuters）</div></div></div><div class="item"><span class="item-idx">20</span><div class="item-body"><div class="item-title">Russian man pleads not guilty in US cyber espionage case 俄罗斯男子在美国网络间谍案中拒不认罪（Reuters）</div></div></div><div class="item"><span class="item-idx">21</span><div class="item-body"><div class="item-title">New Mexico says US Justice Dept hindering probe of former Epstein ranch 新墨西哥州称美司法部阻碍调查前爱泼斯坦牧场（Reuters）</div></div></div><div class="item"><span class="item-idx">22</span><div class="item-body"><div class="item-title">SK Hynix Is Said to Price US Share Offering at $149 Apiece 消息称SK海力士美股发行价定在49美元（Bloomberg）</div></div></div><div class="item"><span class="item-idx">23</span><div class="item-body"><div class="item-title">Venezuela publica nuevas reglas petroleras que ponen fin al control de PDVSA 委内瑞拉发布新石油规则，终结PDVSA控制（Bloomberg）</div></div></div><div class="item"><span class="item-idx">24</span><div class="item-body"><div class="item-title">Saudis Eye Canada as PIF Accepts Carney Invite to Toronto 沙特瞄准加拿大，PIF接受卡尼邀请赴多伦多（Bloomberg）</div></div></div><div class="item"><span class="item-idx">25</span><div class="item-body"><div class="item-title">Polymarket Seeks License to Offer Margin Trading Legally in US Polymarket申请在美国合法提供保证金交易牌照（Bloomberg）</div></div></div><div class="item"><span class="item-idx">26</span><div class="item-body"><div class="item-title">Lutnick Presses SK Hynix, Samsung to Boost Memory Output in US 卢特尼克施压SK海力士及三星增加在美内存产量（Bloomberg）</div></div></div><div class="item"><span class="item-idx">27</span><div class="item-body"><div class="item-title">Wayve Staff Sold Stock at 10% Discount on Pisces Exchange Wayve员工通过Pisces交易所折价10%出售股票（Bloomberg）</div></div></div><div class="item"><span class="item-idx">28</span><div class="item-body"><div class="item-title">Volkswagen Eyes Halving Model Lineup After Board Impasse 董事会僵局后，大众拟将车型数量减半（Bloomberg）</div></div></div><div class="item"><span class="item-idx">29</span><div class="item-body"><div class="item-title">Fed’s Warsh Names Leadership for Five New Task Forces 美联储沃什任命五个新特别工作组负责人（Bloomberg）</div></div></div><div class="item"><span class="item-idx">30</span><div class="item-body"><div class="item-title">Fed escolhe Arminio Fraga e outros nomes para forças-tarefa 美联储选定阿米尼奥·弗拉加等人加入特别工作组（Bloomberg）</div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

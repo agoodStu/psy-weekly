@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年6月25日 周四</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月25日 周四</span><span class="meta-chip">共 31 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>科学家在核反应堆旁捕获幽灵粒子，开启粒子物理新纪元</li><li>创纪录热浪迫使法国核电站关闭，凸显气候对能源的威胁</li><li>靶向脑刺激临床试验显著改善难治性抑郁，提供新疗法</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">A social bonding hormone boosts cooperation among men interacting with women 社交激素促进男性与女性合作 — 实验发现催产素使异性恋男性更愿与女性合作，揭示激素对社交行为的调节作用</div></div></div><div class="item"><div class="item-body"><div class="item-title">New research sheds light on why women tend to generate more creative ideas during the ovulatory phase 排卵期女性创造力更强的原因 — 研究表明排卵期激素上升提升思维原创性，解释女性创造力周期性波动的机制</div></div></div><div class="item"><div class="item-body"><div class="item-title">Personalized fMRI Scans Supercharge TMS Depression Treatment 个性化脑磁图引导TMS治疗抑郁症 — 临床试验证明基于个体脑成像的靶向刺激，显著改善难治性抑郁疗效</div></div></div><div class="item"><div class="item-body"><div class="item-title">Republicans are more likely to see a smile as a play for power, study suggests 共和党人更易将微笑视为权力游戏 — 研究揭示政治身份影响表情解读，保守派更倾向将微笑理解为竞争信号</div></div></div><div class="item"><div class="item-body"><div class="item-title">Gossiping and manipulation linked to higher fertility in new psychology study 八卦和操控行为与高生育率相关 — 心理学研究发现间接攻击行为者恋爱概率更高、子女更多，揭示进化适应策略</div></div></div><div class="item"><div class="item-body"><div class="item-title">Extreme heat is muddling animals’ brains—and even triggering aggression 极端高温扰乱动物大脑引发攻击性 — 高温使鸟类认知能力下降、行为异常，气候变化正威胁动物生存与生态系统</div></div></div><div class="item"><div class="item-body"><div class="item-title">Pop music lyrics have become more rebellious and less empathetic over the past six decades 流行歌词六十年间更叛逆更冷漠 — 歌词分析显示负面道德主题激增，积极情感减少，反映社会价值观转变趋势</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ultra-processed foods linked to lower memory and concentration in young adults 超加工食品损害年轻人记忆力与专注力 — 研究发现高摄入超加工食品与青年认知得分低相关，提示饮食质量影响大脑健康</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">How Physicists Track and Trap the Elusive Neutrino 物理学家如何追踪捕捉中微子 — 科学家通过大型探测器在核反应堆旁捕获幽灵粒子，开启粒子物理新纪元</div></div></div><div class="item"><div class="item-body"><div class="item-title">Slapping an “AI-generated” label on political messages doesn’t stop people from believing them “AI生成”标签难阻政治消息说服力 — 实验显示标注AI来源不影响公众对政策信息的信任，挑战AI内容治理有效性</div></div></div><div class="item"><div class="item-body"><div class="item-title">Europe’s extreme heat is shutting down power plants 欧洲极端高温导致电厂停运 — 创纪录热浪迫使法国核电站关闭，凸显气候危机对能源基础设施的威胁</div></div></div><div class="item"><div class="item-body"><div class="item-title">Top quantum computer expert claims Microsoft’s ‘topological qubit’ doesn’t hold up 量子专家质疑微软拓扑量子比特 — 专家指出微软宣称的技术未通过验证，量子计算竞赛中理论可靠性存疑</div></div></div><div class="item"><div class="item-body"><div class="item-title">Stripe, Anthropic, and OpenAI are backing an effort to stop respiratory infections 科技巨头联合抗击呼吸道感染 — Stripe、Anthropic等成立非营利组织，专注攻克普通感冒和流感疫苗难题</div></div></div><div class="item"><div class="item-body"><div class="item-title">The emergence of the web data infrastructure layer for AI AI时代崛起的数据基础设施层 — 企业需海量数据驱动AI，但网络信息碎片化阻碍模型训练，催生新型数据管道</div></div></div><div class="item"><div class="item-body"><div class="item-title">All challenges big and small 从战场废墟到人生挑战的感悟 — 作者回忆海湾战争后科威特经历，探讨逆境中成长与面对挑战的韧性</div></div></div><div class="item"><div class="item-body"><div class="item-title">This flying solar-powered platform could deliver better internet from the air 太阳能飞行平台空中提供更好网络 — Sceye飞艇驻留平流层充当高空基站，有望为偏远地区带来高速互联网</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">Earthquakes shake Venezuela capital 委内瑞拉首都发生地震（Reuters）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Vance says review underway to see how Turkey can get F-35 fighter jets 万斯称美方正审议土耳其F-35战斗机购买方案（Reuters）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Brazil senator, Lula ally Wagner resigns from leadership amid corruption probe 巴西参议员、卢拉盟友瓦格纳因涉贪腐调查辞去领导职务（Reuters）</div></div></div><div class="item"><div class="item-body"><div class="item-title">World court judges sue Trump administration over sanctions 国际法院法官起诉特朗普政府制裁措施（Reuters）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Micron Forecast Shatters Estimates on Insatiable AI Demand 美光预测因AI需求激增远超预期（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">US Warns That Gas Will Go Outside EU if Bloc Keeps Methane Rules 美国警告欧盟若坚持甲烷法规将面临天然气断供（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">El Niño Is Set to Further Disrupt a $300 Billion Supply Chain 厄尔尼诺或将进一步扰乱千亿美元供应链（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">US Health Spending to Top $6 Trillion in 2026 on the GLP-1 Wave 美国医疗支出因GLP-1药物热潮将于2026年突破万亿美元（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Big Banks Pass Fed Stress Test, Paving Way for Payouts 大型银行通过美联储压力测试，为分红铺平道路（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Why Some Boomers Are ‘Unretiring’ 婴儿潮一代为何“退而不休”（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Anthropic Accuses Alibaba of ‘Illicitly’ Accessing AI Models Anthropic指控阿里巴巴非法访问其AI模型（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Nvidia, SpaceX Drive US High-Grade Bond Sales to a June Record 英伟达、SpaceX推动美国高评级债券六月发行量创纪录（Bloomberg）</div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

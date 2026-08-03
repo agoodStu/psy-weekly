@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年6月24日 周三</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月24日 周三</span><span class="meta-chip">共 28 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">Heart Rates Align in Real-World Social Interactions 真实社交中心率同步 — 共享空间和注意力时人与人心率频率对齐，成为社交投入的生理指纹。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Opening a door to mental-health help online 打开在线心理健康之门 — 基于MIT技术的Koko平台提供匿名在线心理支持，帮助青少年掌握健康应对策略。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Chronic nicotine use rewires the brain to increase motivation for food 慢性尼古丁使用重塑大脑增加食物动机 — 尼古丁长期暴露改变脑回路，显著增强为获得食物付出的努力，而非仅增加药物渴望。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Human Memory Limits Make AI Better at Grammar 人类记忆限制使AI语法更好 — 引入类人遗忘机制的Transformer模型优先学习抽象语法结构，提升语言理解准确性。</div></div></div><div class="item"><div class="item-body"><div class="item-title">World-First Embryonic Stem Cell Trial for Huntington’s Opens 全球首个亨廷顿病胚胎干细胞试验启动 — 胚胎干细胞移植旨在修复受损神经元，为致命遗传病开辟潜在治疗路径。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Comfort Food Shuts Down Chronic Stress 舒适食物抑制慢性压力 — 高热量美味食物通过激活特定神经环路缓解长期压力，揭示“安慰剂效应”的生物学基础。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Sleep Deprivation Increases Synaptic Density Markers in the Brain 睡眠剥夺增加大脑突触密度标记 — 睡眠不足导致突触连接增强，支持“突触稳态假说”，解释睡眠对脑功能恢复的必要性。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Positive romantic relationships ease existential dread by boosting meaning in life 积极恋爱关系通过提升生命意义缓解存在恐惧 — 健康浪漫关系增强生命意义感，有效降低死亡焦虑，促进心理健康。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">GABA Immune Pathway Drives Female Brain Cancer Growth GABA免疫通路驱动女性脑癌生长 — 研究发现GABA免疫通路是胶质母细胞瘤性别差异的关键机制，为开发靶向治疗提供新方向。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ultrasound imaging turns a robot hand into a skillful mimic 超声成像让机械手成为灵巧模仿者 — 超声技术捕捉手部肌肉实时运动，使机器人精准模仿人手动作，提升精细操作能力。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Engineered “mini livers” could be injected as an alternative to transplantation 工程化“微型肝脏”可注射替代移植 — 可注射水凝胶微球携带肝细胞，替代肝功能数月，为肝衰竭患者提供无移植新疗法。</div></div></div><div class="item"><div class="item-body"><div class="item-title">A breath test could diagnose pneumonia in minutes 呼吸测试几分钟内诊断肺炎 — 便携芯片传感器PlasmoSniff检测呼气中的疾病标志物，实现肺炎快速无创诊断。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Reinventing the zipper 重新发明拉链 — 受40年前专利启发，三面拉链可瞬间变形组装，用于帐篷、骨折固定等快速成型场景。</div></div></div><div class="item"><div class="item-body"><div class="item-title">A man of many words 词汇大师 — 拼字比赛词源专家Brian Sietsema为选手提供单词发音和词源解答，保障比赛权威性。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Heads in the game 赛场上的头脑 — 分析世界杯决赛中裁判快速决策的心理过程，揭示高压下认知判断的关键机制。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Stand Up for Research, Innovation, and Education 支持研究、创新与教育 — MIT校友呼吁维护美国科技领导力、基于成绩的招生和可负担教育，捍卫学术使命。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">WiseTech Investors Tested, KPMG Scandal Widens WiseTech投资者受考验，毕马威丑闻扩大（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">German Rail Halted Nationwide Services After Radio System Outage 德国铁路因无线电系统故障全国停运（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Oil Holds Drop as More Tankers Cross Hormuz After Peace Talks 和平谈判后更多油轮穿越霍尔木兹，油价维持跌势（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Cerebras Drops After 2026 Sales Outlook Disappoints Investors Cerebras股价下跌，2026年销售展望令投资者失望（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">UAE Oil Exports Surge to 85% of Pre-War Levels, IEA Says 国际能源署：阿联酋石油出口回升至战前水平85%（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Asian Stocks Set to Extend AI Chip-Fueled Selloff: Markets Wrap 亚洲股市料延续AI芯片引发的抛售潮（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ship Insurers Set for Major Claims From Iran War, Allianz Says 安联：船险商将面临伊朗战争巨额索赔（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Bank of Canada Governor Warns About Imbalances as the US Hoovers Up Capital 加拿大央行行长警告美国吸走资本导致失衡（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Gates Told Congress Epstein Considered Blackmail Over Affairs 盖茨告诉国会，爱泼斯坦曾考虑以婚外情勒索（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Wall Street ‘Chip-Wreck’ Triggers AI Bubble Fear 华尔街“芯片海难”引发AI泡沫担忧（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">China’s Instagram Gets Ready to Go Public 中国版Instagram准备上市（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">MSCI Delays Indonesia’s Market Status Review Until November MSCI将印尼市场状态审查推迟至11月（Bloomberg）</div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

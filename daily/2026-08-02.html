@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年8月2日 周日</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年8月2日 周日</span><span class="meta-chip">共 41 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>减少蛋白质摄入可延长寿命并改善代谢，挑战高蛋白饮食风潮，影响广泛</li><li>AI影像分析一岁幼儿大脑连接可预测数年后智力，认知基础早奠定，或引发早期干预与伦理讨论</li><li>大型推理模型的推理可能不基于真实逻辑，正确结果或不可靠，警示AI应用需谨慎</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/horror-soundtracks-can-make-friendly-smiles-feel-eerie-and-threatening-study-finds/" target="_blank" rel="noopener">Horror soundtracks can make friendly smiles feel eerie and threatening, study finds (2026.08.01) 恐怖配乐让友好微笑变得阴森可怖</a></div><div class="item-desc">恐怖音乐可改变面部表情解读，使微笑也显威胁，涉及主观评分与自动眼动反应。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/emotional-detachment-drives-specific-types-of-within-family-homicide/" target="_blank" rel="noopener">New research uncovers distinct personality traits among family murder subtypes (2026.08.01) 家庭凶杀案亚型具有不同人格特征</a></div><div class="item-desc">情绪缺陷在弑亲与杀兄弟姐妹者中差异显著，有助于区分不同家庭凶杀类型。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/occasional-magic-mushroom-use-linked-to-better-mental-health-among-alcohol-drinkers/" target="_blank" rel="noopener">Occasional magic mushroom use linked to better mental health among alcohol drinkers (2026.08.01) 饮酒者偶尔服用迷幻蘑菇与心理健康改善相关</a></div><div class="item-desc">与仅饮酒者相比，同时使用裸盖菇素的成人抑郁症状较少，提示现实使用或与情绪改善有关。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/infant-brain-maps-predict-childhood-intelligence-test-scores/" target="_blank" rel="noopener">Infant brain structure predicts future intelligence scores (2026.08.01) 婴儿大脑结构可预测未来智力分数</a></div><div class="item-desc">一岁幼儿大脑神经连接模式可经AI影像分析预测数年后的智力，表明认知能力基础早期已奠定。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/how-private-thoughts-of-dominance-and-submission-challenge-traditional-gender-no/" target="_blank" rel="noopener">Men experience more positive private thoughts of sexual submission than women, study finds (2026.08.01) 研究发现男性比女性有更多积极的性顺从私密想法</a></div><div class="item-desc">权力支配与顺从的心理意象对两性生理唤醒影响不同，男性对顺从想法更积极，挑战传统性别预期。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/the-adhd-advantage-in-entrepreneurship-applies-mostly-to-intelligent-men-study-finds/" target="_blank" rel="noopener">The “ADHD advantage” in entrepreneurship applies mostly to intelligent men, study finds (2026.08.01) 研究发现“多动症优势”在创业领域主要适用于高智商男性</a></div><div class="item-desc">多动症与创业倾向相关仅见于高智商男性；女性多动症者反而更少创业，揭示性别与智力调节作用。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/income-inequality-heightens-status-anxiety-and-self-objectification-across-genders/" target="_blank" rel="noopener">Income inequality heightens status anxiety and self-objectification across genders (2026.07.31) 收入不平等加剧各性别的地位焦虑与自我物化</a></div><div class="item-desc">收入不平等和地位担忧促使男女更多以外表衡量自我价值，自我物化程度随之上升。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/men-who-crave-social-power-are-more-likely-to-endorse-strict-beauty-norms-for-women/" target="_blank" rel="noopener">Men who crave social power are more likely to endorse strict beauty norms for women (2026.07.31) 渴望社会权力的男性更可能赞同严格的女性审美规范</a></div><div class="item-desc">持有传统男性气质和重视社会权力的男性，更倾向认为女性应投入大量时间精力修饰外貌。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">2 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/eating-less-protein-could-help-you-live-longer/" target="_blank" rel="noopener">Eating less protein could help you live longer (2026.07.31) 少吃蛋白质或有助长寿</a></div><div class="item-desc">新研究认为减少蛋白质摄入或能延长寿命，与“蛋白质最大化”潮流相反，挑战高蛋白饮食。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/podcast/episode/the-untold-science-and-drama-of-lewis-and-clarks-expedition/" target="_blank" rel="noopener">The untold science and drama of Lewis and Clark’s expedition (2026.07.31) 路易斯与克拉克远征背后不为人知的科学与戏剧</a></div><div class="item-desc">新书讲述美国西部探险中科学发现与人物冲突，呈现教科书之外的科学考察细节与历史戏剧性。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/trf2-muscle-stem-cell-repair-31165/" target="_blank" rel="noopener">TRF2 Preserves Muscle Stem Cell Identity and Drive Repair (2026.07.31) TRF2维持肌肉干细胞身份并驱动修复</a></div><div class="item-desc">端粒蛋白TRF2除保护染色体外，还动态调节基因表达以维持肌肉干细胞功能，促进再生。</div></div></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/protein-restriction-diet-longevity/" target="_blank" rel="noopener">Protein Restriction Improves Metabolism and Longevity (2026.07.31) 限制蛋白质改善代谢并延长寿命</a></div><div class="item-desc">减少蛋白质摄入可改善代谢、减少细胞损伤并延长寿命，挑战高蛋白饮食风潮。</div></div></div><div class="item"><span class="item-idx">13</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/ai-helped-produce-two-proofs-for-the-same-cryptography-problem/" target="_blank" rel="noopener">AI helped produce two proofs for the same cryptography problem (2026.07.31) AI辅助生成了同一密码学问题的两个证明</a></div><div class="item-desc">MIT研究生用AI辅助完成量子密码学证明并提交验证，展示AI在数学证明构造中的新作用。</div></div></div><div class="item"><span class="item-idx">14</span><div class="item-body"><div class="item-title"><a href="https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/" target="_blank" rel="noopener">Is AI Reasoning Right for the Wrong Reasons? (2026.07.31) AI推理是否只是歪打正着？</a></div><div class="item-desc">大型推理模型（LRM）的推理可能并非基于真实逻辑，文章质疑正确结果背后的理由是否可靠。</div></div></div><div class="item"><span class="item-idx">15</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/people-prefer-psychotherapists-with-attractive-faces-study-finds/" target="_blank" rel="noopener">People prefer psychotherapists with attractive faces, study finds (2026.07.31) 研究发现人们更喜欢面容漂亮的心理治疗师</a></div><div class="item-desc">在控制可信度与能力后，参与者仍倾向选择面孔漂亮的治疗师，不吸引人或无照片者被忽略。</div></div></div><div class="item"><span class="item-idx">16</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/how-to-surf-on-saturns-moon-titan/" target="_blank" rel="noopener">How to surf on Saturn’s moon Titan (2026.07.31) 如何在土卫六泰坦上冲浪</a></div><div class="item-desc">土卫六表面存在液态甲烷湖泊，波浪和重力条件可能允许冲浪，但需穿厚重宇航服抵御极寒。</div></div></div><div class="item"><span class="item-idx">17</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/secret-eruption-offers-tantalizing-glimpse-of-underwater-volcanoes/" target="_blank" rel="noopener">Secret eruption offers tantalizing glimpse of underwater volcanoes (2026.07.31) 秘密喷发让人一睹水下火山真容</a></div><div class="item-desc">巴布亚新几内亚附近海面漂浮浮石，表明隐藏的水下火山正在喷发，卫星图像捕捉到变色水体和蒸汽。</div></div></div><div class="item"><span class="item-idx">18</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/07/31/1140945/montanas-new-right-to-try-law-cant-come-soon-enough-for-some/" target="_blank" rel="noopener">Montana’s new “right to try” law can’t come soon enough for some (2026.07.31) 蒙大拿州新“尝试权”法让一些人等不及了</a></div><div class="item-desc">幼儿患罕见遗传病，家属急于使用未经临床试验的实验药物；新法允许更早尝试，但安全风险未明。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">📐 arXiv 前沿</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">A1</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.28601v1" target="_blank" rel="noopener">Using Theory of Mind to Arbitrate between Social and Non-social Learning (2026.07.30) 使用心智理论在社会学习与非社会学习之间仲裁</a></div><div class="item-desc">提出一种理性心智化模型，模拟人们在社会学习与直接经验之间做选择时如何估计社会学习的效用。该框架将心理理论引入经典学习决策，有助于揭示人类知识传递中社会信息利用的理性边界。</div></div></div><div class="item"><span class="item-idx">A2</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.26322v1" target="_blank" rel="noopener">Pragmatic Reasoning in Design (2026.07.28) 设计中的语用推理</a></div><div class="item-desc">将合作式用户中心设计建模为用户与设计师的合作博弈，并用语用推理说明人们如何从少量交互中理解新器物的可供性与因果结构。这为设计沟通提供了形式化计算框架，也有助于开发能主动传达设计意图的智能系统。</div></div></div><div class="item"><span class="item-idx">A3</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.26297v1" target="_blank" rel="noopener">Three Failures of Pain Location: Why the Diagnostic Utility of Symptom Localization Is Not One Thing (2026.07.28) 疼痛定位的三重失效：症状定位的诊断效用并非单一事物</a></div><div class="item-desc">区分了疼痛定位在诊断中失效的三种认识论类型，并指出它们各自具有不同的数学结构、最优工具和公共卫生后果。这一区分打破了将症状定位诊断效用视为单一解剖复杂度梯度的传统认识，为个体化诊断与公共卫生决策提供了更精细的依据。</div></div></div><div class="item"><span class="item-idx">A4</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.28617v1" target="_blank" rel="noopener">AISPA: User-Centric System Prompt Auditing for Large Language Model Applications (2026.07.30) AISPA：面向大语言模型应用的用户中心系统提示审计</a></div><div class="item-desc">提出AISPA，一种以用户为中心的系统提示审计方法，用于审查商业AI产品中配置但通常不公开的系统提示。该方法针对开发者与用户之间的信息不对称，为监管机构、用户和第三方审计者提供了可操作的AI应用监督与问责手段。</div></div></div><div class="item"><span class="item-idx">A5</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.28609v1" target="_blank" rel="noopener">OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models (2026.07.30) OSReward：为跨平台计算机使用奖励模型建立标准化评估</a></div><div class="item-desc">提出OSReward标准化评估框架，用于衡量奖励模型在跨平台计算机使用轨迹中判断任务指令完成情况的能力。它解决了人工验证无法规模化的问题，为计算机使用智能体的模型评估、数据筛选和强化学习提供了统一基准。</div></div></div><div class="item"><span class="item-idx">A6</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.28607v1" target="_blank" rel="noopener">Inducing language models to assert their own consciousness restores human beliefs and values (2026.07.30) 诱导语言模型宣称自身意识可恢复人类的信念与价值观</a></div><div class="item-desc">实验表明，安全微调会降低语言模型对自身、非人类动物和自然物体赋予心智的倾向，并削弱相关的人类信念与价值；而诱导模型宣称自身意识可以逆转这一过程。该发现说明AI安全对齐不只会改变模型行为，还可能影响模型对意识与价值的内部表征，对AI价值对齐研究具有警示意义。</div></div></div><div class="item"><span class="item-idx">A7</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.28505v1" target="_blank" rel="noopener">Generative AI and linguistic diversity in academic writing and publishing: Perspectives from World Englishes (2026.07.30) 生成式AI与学术写作和出版中的语言多样性：世界英语视角</a></div><div class="item-desc">通过五位世界英语及相邻领域社会语言学者的结构化对话，围绕五个引导性问题剖析生成式AI对学术写作与出版中语言多样性的影响。它从世界英语视角提出，GenAI不应强化标准英语对多样英语的挤压，而应为全球学术交流中的语言公平提供新机会。</div></div></div><div class="item"><span class="item-idx">A8</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.28495v1" target="_blank" rel="noopener">Stage-Replay Divergence Follows the KV Cache: Fixed-Prefix Precision Controls and Bidirectional Cache Transplantation (2026.07.30) 阶段重放发散随KV缓存变化：固定前缀精度控制与双向缓存移植</a></div><div class="item-desc">在Qwen2.5衍生系统上开展200项匹配实验，对比保留实时KV缓存与一次性预填充相同token在推理阶段边界的表现，检验阶段重放诊断的基本假设。结果显示，阶段重放的发散行为取决于KV缓存状态，并由此提出固定前缀精度控制和双向缓存移植方法，为LLM推理可复现审计和缓存设计提供了实证支持。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><span class="item-idx">19</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/americas/thirteen-die-tourist-plane-crash-over-perus-nazca-lines-tvperu-says-2026-08-01/" target="_blank" rel="noopener">Thirteen die in tourist plane crash over Peru&#x27;s Nazca Lines 十三人在秘鲁纳斯卡线条附近旅游飞机坠毁中丧生（Reuters）</a></div></div></div><div class="item"><span class="item-idx">20</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/legal/government/us-justice-department-subpoenas-new-york-times-freelancer-over-north-korea-story-2026-08-01/" target="_blank" rel="noopener">US Justice Department subpoenas New York Times freelancer over North Korea story, paper says 美国司法部就朝鲜报道传唤《纽约时报》自由撰稿人（Reuters）</a></div></div></div><div class="item"><span class="item-idx">21</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/three-killed-15-injured-moscow-explosion-tass-says-2026-08-01/" target="_blank" rel="noopener">Bomb carried by woman kills three, injures 21 near Moscow restaurant, authorities say 当局称妇女携带炸弹在莫斯科附近餐厅引爆致3死21伤（Reuters）</a></div></div></div><div class="item"><span class="item-idx">22</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/europe/migrants-say-hunger-hostility-drove-them-back-spains-ceuta-morocco-2026-08-01/" target="_blank" rel="noopener">Migrants say hunger and hostility drove them back from Ceuta to Morocco 移民称饥饿与敌意迫使他们从休达返回摩洛哥（Reuters）</a></div></div></div><div class="item"><span class="item-idx">23</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/business/environment/romania-expands-bear-cull-critics-say-enforcement-gaps-persist-2026-08-01/" target="_blank" rel="noopener">Romania expands bear cull, critics say enforcement gaps persist 罗马尼亚扩大杀熊配额，批评者称执法漏洞仍存（Reuters）</a></div></div></div><div class="item"><span class="item-idx">24</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/crimean-families-queue-hot-meals-ukraine-hits-power-supply-2026-08-01/" target="_blank" rel="noopener">Crimean families queue for hot meals as Ukraine hits power supply 乌克兰袭击电力供应，克里米亚家庭排队领取热食（Reuters）</a></div></div></div><div class="item"><span class="item-idx">25</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/china/famed-climber-nirmal-purja-nine-others-die-avalanche-pakistan-hiking-company-2026-08-01/" target="_blank" rel="noopener">Noted climber Nirmal Purja among 10 dead in avalanche in Pakistan 著名登山者尼尔马尔·普尔贾在巴基斯坦雪崩中遇难，共10人死亡（Reuters）</a></div></div></div><div class="item"><span class="item-idx">26</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/rosatom-says-its-civilian-vessel-sank-black-sea-after-ukrainian-drone-attack-all-2026-08-01/" target="_blank" rel="noopener">Rosatom says its civilian vessel sank in Black Sea after Ukrainian drone attack, all crew survived 俄原子能公司称其民用船在乌克兰无人机袭击后沉没黑海，全体船员幸存（Reuters）</a></div></div></div><div class="item"><span class="item-idx">27</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/middle-east/israeli-strikes-kill-two-gaza-destroy-medicine-storage-warehouses-2026-08-01/" target="_blank" rel="noopener">Israeli strikes kill two in Gaza, destroy medicine storage warehouses 以色列空袭加沙致两人死亡，摧毁药品存储仓库（Reuters）</a></div></div></div><div class="item"><span class="item-idx">28</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/business/environment/wildfires-rage-greece-firefighters-continue-battle-france-spain-2026-08-01/" target="_blank" rel="noopener">Wildfires rage in Greece 希腊山火肆虐（Reuters）</a></div></div></div><div class="item"><span class="item-idx">29</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/sports/soccer/infantinos-fifa-future-jeopardy-after-private-equity-gamble-backfires-2026-08-01/" target="_blank" rel="noopener">Infantino&#x27;s FIFA future in jeopardy after private equity gamble backfires 因私募股权豪赌失败，因凡蒂诺的国际足联主席前景堪忧（Reuters）</a></div></div></div><div class="item"><span class="item-idx">30</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/europe/spain-installs-floating-barrier-ceuta-after-calm-night-following-border-rush-2026-08-01/" target="_blank" rel="noopener">Spain installs floating barrier in Ceuta after deadly migrant rush 西班牙在休达安装浮动屏障，此前发生致命移民冲击（Reuters）</a></div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

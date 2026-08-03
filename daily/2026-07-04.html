@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年7月4日 周六</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月4日 周六</span><span class="meta-chip">共 40 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>小分子药物XL20穿透血脑屏障阻断渐冻症毒性蛋白，为神经退行性疾病提供新疗法</li><li>新型灌注技术恢复捐赠者眼球活力，突破视网膜移植关键保存瓶颈</li><li>AI模型仅用心率血氧腹式呼吸逐秒追踪睡眠，实现无创精准居家监测</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title">Sleep Apnea’s Main Symptom Is Also its Cause 睡眠呼吸暂停的主要症状也是其病因</div><div class="item-desc">打鼾高频振动直接损伤上呼吸道肌肉，揭示症状与病因的恶性循环机制。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title">Zebrafish Brain Features Mammalian-Like Sensory Sorting 斑马鱼大脑拥有类似哺乳动物的感觉分类机制</div><div class="item-desc">斑马鱼前脑采用与人类相同的空间阶梯式感觉分类，揭示感觉处理进化保守性。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title">Humans and Mice Share Identical Brain Wiring for Smell 人类与小鼠共享相同的嗅觉脑回路</div><div class="item-desc">追踪自由活动小鼠和人类嗅球记录，证明哺乳动物嗅觉处理高度统一保守。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title">Ancient ‘hobbits’ feasted on Komodo dragons’ leftovers 古代“霍比特人”以科莫多龙残羹为食</div><div class="item-desc">新研究推翻弗洛勒斯人具备狩猎生火能力观点，指其依赖食腐生存。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title">Brain imaging reveals what makes professional visual artists unique 脑成像揭示专业视觉艺术家的独特之处</div><div class="item-desc">艺术家大脑结构和活动模式支撑生动心理意象，为艺术创作提供神经基础。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title">Could a daily cup of coffee protect the brain against depressive symptoms? 每日一杯咖啡能否保护大脑免受抑郁症状？</div><div class="item-desc">研究显示咖啡饮用者抑郁症状更少，而茶无关联，提示咖啡潜在抗抑郁作用。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title">Social media users tend to face more political hostility in less democratic and more unequal countries 社交媒体用户在不民主不平等国家面临更多政治敌意</div><div class="item-desc">线下社会不平等塑造线上政治攻击，民主与经济公平可缓解数字敌意。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title">Why a single IQ score may not capture your true brainpower 为何单一IQ分数无法捕捉真实脑力</div><div class="item-desc">认知技能关联随年龄和能力波动，单一IQ分数不足以代表整体智力水平。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">1 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title">Artificial intelligence accurately charts sleep stages without intrusive brain sensors 人工智能无需脑部传感器精确追踪睡眠阶段</div><div class="item-desc">AI模型仅用心率、血氧、腹式呼吸逐秒追踪睡眠，实现无创精准监测。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title">Zero-Computational Path to High-Resolution Robotic Touch 零计算路径实现高分辨率机器人触觉</div><div class="item-desc">力致变色材料将机械力自动转为结构色，省去复杂电路，实现无计算高分辨触觉。</div></div></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title">XL20 Crosses Blood-Brain Barrier to Shield ALS Neurons XL20穿越血脑屏障保护ALS神经元</div><div class="item-desc">小分子药物XL20穿透血脑屏障，阻断TDP-43毒性位点，为肌萎缩侧索硬化症提供新疗法。</div></div></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title">A device that revives eyeballs from dead donors could make eye transplants possible 复活死者眼球的装置或使眼球移植成为可能</div><div class="item-desc">新型灌注技术恢复捐赠者眼球活力，突破视网膜保存与移植关键瓶颈。</div></div></div><div class="item"><span class="item-idx">13</span><div class="item-body"><div class="item-title">July 4 heat wave would&#x27;ve been &#x27;virtually impossible&#x27; in 1776 七月四日热浪在1776年“几乎不可能”发生</div><div class="item-desc">当前美国热浪强度远超建国时期，气候变化导致极端高温频率大增。</div></div></div><div class="item"><span class="item-idx">14</span><div class="item-body"><div class="item-title">Archaeologists uncover new history from the Battle of Bunker Hill, the first major battle of the American Revolution 考古学家揭示邦克山战役新历史</div><div class="item-desc">新考古发现补充殖民军弹药短缺等细节，重写美国独立战争首战认知。</div></div></div><div class="item"><span class="item-idx">15</span><div class="item-body"><div class="item-title">What will happen to the moon in the far future? 遥远未来月球将发生什么？</div><div class="item-desc">月球表面记录撞击历史，潮汐相互作用将决定其最终被锁定或脱离地球。</div></div></div><div class="item"><span class="item-idx">16</span><div class="item-body"><div class="item-title">The biological dogma that women don’t make new eggs after birth may be wrong 女性出生后不产生新卵子的生物教条可能是错误的</div><div class="item-desc">新证据挑战卵子储备有限传统观点，或颠覆生殖生物学基础认知。</div></div></div><div class="item"><span class="item-idx">17</span><div class="item-body"><div class="item-title">The Lincoln Memorial Reflecting Pool’s algae problem has better solutions than hydrogen peroxide, experts say 林肯纪念堂倒影池藻类问题有比过氧化氢更好的解决方案</div><div class="item-desc">专家建议优先采用生态方法治理藻类，避免化学药剂二次损害水体。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">📐 arXiv 前沿</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">A1</span><div class="item-body"><div class="item-title">NeuroCogMap Reveals Cognitive Organization of Large Language Models NeuroCogMap揭示大语言模型的认知组织</div><div class="item-desc">⁠提出NeuroCogMap框架，系统分析大语言模型内部表征是否形成可复现的功能系统并关联人类认知。为理解AI认知架构及其与生物认知的关系提供可量化的方法论基础。</div></div></div><div class="item"><span class="item-idx">A2</span><div class="item-body"><div class="item-title">Personality Without Persons? A Psychometric Critique of Big Five Testing in Large Language Models 无人格的人格？大语言模型大五人格测试的心理测量学批判</div><div class="item-desc">⁠对LLM进行大五人格测量的心理测量学评估，检验人类人格量表在非人类系统中的适用性。揭示了将人类心理测量工具迁移至AI存在的根本缺陷，为AI人格测试的可靠性提供关键约束。</div></div></div><div class="item"><span class="item-idx">A3</span><div class="item-body"><div class="item-title">AI usage patterns are shaped by perceived gains in human agency AI使用模式受人类能动性感知增益塑造</div><div class="item-desc">⁠通过深度人种志数据，分析日常AI聊天机器人使用中用户对能动性感知的变化如何影响使用模式。提供了关于AI增强或削弱个体/集体能动性的实证证据，对理解人机协作的社会影响具有启示。</div></div></div><div class="item"><span class="item-idx">A4</span><div class="item-body"><div class="item-title">Clear Mind: Meditation and the Brain&#x27;s Signal-to-Noise Ratio 清明之心：冥想与大脑信噪比</div><div class="item-desc">⁠提出冥想效果可统一映射到大脑功能信噪比（f-SNR），将目标相关神经活动定义为信号、残余活动为噪声。为整合冥想科学中多样化的神经发现提供了简明可验证的理论框架。</div></div></div><div class="item"><span class="item-idx">A5</span><div class="item-body"><div class="item-title">Closing the Loop to Discover Psychological Theories with an Automated Cognitive Scientist 闭环发现：用自动化认知科学家探索心理学理论</div><div class="item-desc">⁠提出在认知科学中采用闭环自主发现系统，自动生成新理论并设计实验进行验证。首次将自动化科学发现方法引入认知科学，有望突破理论构建瓶颈，加速心理学理论创新。</div></div></div><div class="item"><span class="item-idx">A6</span><div class="item-body"><div class="item-title">Mitigating Confirmation Bias through Hand-Drawing Videos 通过手绘视频缓解确认偏差</div><div class="item-desc">⁠对比静态柱状图与动态手绘视频呈现方式，检验其对缓解确认偏差、提高图表解读准确性的效果。证明具身化教学方法能有效减少先验信念对数据解读的扭曲，为数据素养教育提供新策略。</div></div></div><div class="item"><span class="item-idx">A7</span><div class="item-body"><div class="item-title">Mind the Trust Gap: Identifying (Mis)alignments in Teacher-Student Views Toward Control and Agency in K-12 Classroom AI 警惕信任鸿沟：识别K-12课堂AI中师生对控制与能动性观点的（不）一致</div><div class="item-desc">⁠调查K-12课堂中教师与学生对AI控制权及能动性的看法，揭示双方的共识与分歧。为AI课堂部署中平衡多方利益、避免信任鸿沟提供实证依据，助力设计更人性化的教育AI系统。</div></div></div><div class="item"><span class="item-idx">A8</span><div class="item-body"><div class="item-title">Human Capital, Not Model Benchmarks, Predicts Hybrid Intelligence in Forecasting 预测中决定混合智能的是人力资本而非模型基准</div><div class="item-desc">⁠通过真实金钱预测市场（Polymarket）的个体级数据，发现人机协作绩效取决于特定可测量的人力资本，且混合表现呈三模态分布。挑战了单纯追求模型基准提升的范式，强调个体人类能力在增强AI辅助决策中的关键作用。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><span class="item-idx">18</span><div class="item-body"><div class="item-title">Juez permite que Jair Bolsonaro siga cumpliendo su condena desde su domicilio 法官允许博索纳罗继续居家服刑（Bloomberg）</div></div></div><div class="item"><span class="item-idx">19</span><div class="item-body"><div class="item-title">Carney Corrals Support for Oil Pipeline, Just in Time for Stampede 卡尼在抢购潮前为输油管道拉来支持（Bloomberg）</div></div></div><div class="item"><span class="item-idx">20</span><div class="item-body"><div class="item-title">Trump Pardons Six People Pursued for ‘Fixing Their Car’ 特朗普赦免六名因“修车”被追诉者（Bloomberg）</div></div></div><div class="item"><span class="item-idx">21</span><div class="item-body"><div class="item-title">Congo says number of confirmed Ebola cases rises to 1,502 刚果（金）埃博拉确诊病例升至1502例（Reuters）</div></div></div><div class="item"><span class="item-idx">22</span><div class="item-body"><div class="item-title">Brazil&#x27;s Bolsonaro to remain under house arrest 巴西博索纳罗将继续软禁（Reuters）</div></div></div><div class="item"><span class="item-idx">23</span><div class="item-body"><div class="item-title">1ドル200円の円安シナリオ、高市氏インド訪問、W杯ピッチ外の戦い─1週間のニュース5選 日元兑美元或跌至200、高市访印、世界杯场外博弈——本周五大新闻（Bloomberg）</div></div></div><div class="item"><span class="item-idx">24</span><div class="item-body"><div class="item-title">Largest US Grid Saw Demand Hit Record High Thursday on Heat 美国最大电网周四因高温用电需求创新高（Bloomberg）</div></div></div><div class="item"><span class="item-idx">25</span><div class="item-body"><div class="item-title">Fabio Okumura e Fabiano Zimmermann deixam ASA de Alberto Safra 法比奥·奥村与法比亚诺·齐默尔曼离开阿尔贝托·萨夫拉的ASA（Bloomberg）</div></div></div><div class="item"><span class="item-idx">26</span><div class="item-body"><div class="item-title">Death toll of Venezuela earthquakes rises to 2,645 委内瑞拉地震死亡人数升至2645人（Reuters）</div></div></div><div class="item"><span class="item-idx">27</span><div class="item-body"><div class="item-title">Mexican authorities identify remains of kidnapped journalist, arrest four police officers 墨西哥确认被绑记者遗骸，逮捕四名警察（Reuters）</div></div></div><div class="item"><span class="item-idx">28</span><div class="item-body"><div class="item-title">SQM y Codelco buscan elevar más de 70% la producción de litio con nueva inversión SQM与智利铜业拟新投资将锂产量提升逾70%（Bloomberg）</div></div></div><div class="item"><span class="item-idx">29</span><div class="item-body"><div class="item-title">Europe Has Replaced Most US Cuts Within NATO, Top Commander Says 北约高官称欧洲已填补美国大部分削减份额（Bloomberg）</div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

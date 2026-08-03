@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年6月18日 周四</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月18日 周四</span><span class="meta-chip">共 31 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>脑机接口将神经信号转为文字光标，实现重度瘫痪者居家自主交流操作</li><li>复方避孕药增加暴食症状首次得到大规模证实，揭示激素对进食行为的影响</li><li>高谷氨酸水平导致对错误过度敏感，解释焦虑抑郁共病风险增加的神经机制</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">High brain glutamate levels linked to severe reactions to mistakes 脑内高谷氨酸水平与对失误的强烈反应相关 — 高谷氨酸水平导致对错误过度敏感，解释焦虑抑郁共病风险增加机制</div></div></div><div class="item"><div class="item-body"><div class="item-title">Migrating Nerve Cells Experience Routine, Repairable DNA Damage 迁移中的神经细胞经历常规可修复的DNA损伤 — 新生神经元迁移时因挤压DNA双链断裂，揭示脑发育中固有损伤与修复机制</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trauma and Poverty Linked to Brain Changes in Schizophrenia 创伤与贫困关联精神分裂症患者脑部变化 — 童年创伤、贫困等社会因素直接导致精神分裂谱系障碍相关脑结构功能改变</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ingestible Vibrating Capsule Predicts Anorexia Relapse 可吞咽振动胶囊预测厌食症复发风险 — 胶囊振动监测感知能力变化，发现康复患者内感受受损可预警复发</div></div></div><div class="item"><div class="item-body"><div class="item-title">Our brains underestimate Elon Musk’s wealth 人脑难以理解马斯克的万亿财富规模 — 认知局限使大脑无法理解极端财富数值，揭示数字感知的神经机制</div></div></div><div class="item"><div class="item-body"><div class="item-title">Oral Contraceptives Linked to Binge Eating Risk 口服避孕药与暴食风险存在关联 — 大规模研究证实复方避孕药增加暴食症状，首次揭示激素对进食行为的影响</div></div></div><div class="item"><div class="item-body"><div class="item-title">Online therapy helps ease stress and anxiety after broken-heart syndrome 在线疗法有助于缓解心碎综合征后的压力焦虑 — 基于网络的认知行为疗法显著减轻心脏事件后患者的压力焦虑水平</div></div></div><div class="item"><div class="item-body"><div class="item-title">New study identifies distinct psychological profiles among youths with gender dysphoria 青少年性别焦虑者存在三种心理亚型 — 从低心理困扰到高创伤支持不足三类群体，揭示个性化干预必要性</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">The first Atlantic tropical storm of 2026 is here—and it used to be a Pacific cyclone 2026年首个大西洋热带风暴来自太平洋气旋 — 热带风暴亚瑟由太平洋残余形成，将给美国东南部带来强降雨和山洪风险</div></div></div><div class="item"><div class="item-body"><div class="item-title">Seven Perfect Shuffles Randomize a Deck of Cards. But How Many Sloppy Ones? 完美洗牌七次可随机化牌组，粗糙洗牌需几次？ — 数学证明粗糙洗牌所需次数远多于完美洗牌，揭示随机性生成效率差异</div></div></div><div class="item"><div class="item-body"><div class="item-title">Math predicts humans could go extinct in about 17,000 years 数学模型预测人类约1.7万年后可能灭绝 — 基于大灭绝周期模型，人类面临气候、疫情等复合风险，警示长期存续挑战</div></div></div><div class="item"><div class="item-body"><div class="item-title">Macular Degeneration Linked to Increased Risk of Cancer 黄斑变性患者患癌风险升高 — 大规模队列研究揭示新生血管性黄斑变性特定癌症风险增加，具临床筛查意义</div></div></div><div class="item"><div class="item-body"><div class="item-title">NASA data reveals weird x-ray changes in the exploded ruins of dead stars NASA数据揭示死亡星体残骸诡异X射线变化 — 超新星遗迹亮度14年持续波动，暗示残骸物理过程或存在未知机制</div></div></div><div class="item"><div class="item-body"><div class="item-title">Unprecedented brain implant allows paralyzed man to completely control his computer and “speak” independently 史无前例脑植入让瘫痪者独立控制电脑“说话” — 脑机接口将神经信号转为文字光标，实现重度瘫痪者居家自主交流操作</div></div></div><div class="item"><div class="item-body"><div class="item-title">Here’s how big the Ebola outbreak in the Democratic Republic of the Congo might be 刚果（金）埃博拉疫情规模预测 — 基于检测率和死亡率模型估算布迪布焦病毒疫情已列为第三大爆发，需加强防控</div></div></div><div class="item"><div class="item-body"><div class="item-title">Want to get a data center online quickly? Give it some flex. 数据中心快速上线秘诀：灵活调度电力负荷 — 通过协调非必要设备（如电热水壶）错峰用电，缓解电网压力并加速部署</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">SpaceX Will Probably Swallow Tesla – and Your Portfolio SpaceX或将吞并特斯拉——连带你的投资组合（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trump Defends Iran Deal as Republican Pushback Grows 特朗普为伊朗协议辩护，共和党反对声浪渐涨（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">NY Knicks Fans Pay $950 to Hold Spots at Free Parade 尼克斯球迷花50美元排队抢占免费游行位置（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Warsh Puts Stamp on Fed With Immediate Changes to Usual Routine 沃什掌舵美联储即改常规，新政烙印鲜明（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">【今朝の5本】仕事を始める前に読んでおきたい厳選ニュース 【今晨5篇】开工前必读精选新闻（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trump Sends Another Mixed Message to Canada on Trade as G7 Wraps G7峰会落幕之际，特朗普再向加拿大传递贸易矛盾信号（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">What a Missing Dot Revealed at the Fed 美联储点阵图缺失透露何种玄机（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">“Nunca fui esquerdista”, diz Lula no G7 em conversa gravada 卢拉在G7录音中称“我从未左倾”（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Dollar Steamrolls Peers as Fed Opens Door for 2026 Rate Hike 美联储为2026年加息铺路，美元碾压其他货币（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Lula comenta durante cumbre del G7: “nunca fui de izquierda” 卢拉G7峰会发言：“我从未左倾”（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">The Cyberbullies Tormenting Teenage Girls as Blood Sport 网络霸凌将少女逼入血淋淋的“斗兽场”（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Inside the Chaotic Iran Talks That Let Trump Claim Victory, But Not Yet Peace 混乱的伊朗谈判内幕：特朗普得以宣称胜利，但和平尚非定局（Bloomberg）</div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

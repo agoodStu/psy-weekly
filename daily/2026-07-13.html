@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年7月13日 周一</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月13日 周一</span><span class="meta-chip">共 38 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>早发性痴呆确诊前15年即出现持续工作效率损失，为早期筛查提供窗口期</li><li>AI对选项框架的细微变化过度反应，比人类更易被“助推”操纵，引发决策安全担忧</li><li>方解石在裂缝中生长使罗马混凝土随年代更坚固，为现代建筑自修复材料提供新思路</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/school-smartphone-bans-save-time-but-dont-improve-student-mental-health-study-finds/" target="_blank" rel="noopener">School smartphone bans save time but don’t improve student mental health, study finds (2026.07.12) 校园手机禁令节省时间但未改善学生心理健康</a></div><div class="item-desc">研究显示限制手机使用仅节省教职工时间与成本，对学生生活质量无显著提升，质疑禁令有效性。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/people-with-psychiatric-disorders-tend-to-have-a-smaller-pineal-gland/" target="_blank" rel="noopener">People with psychiatric disorders tend to have a smaller pineal gland (2026.07.12) 精神疾病患者松果体体积偏小</a></div><div class="item-desc">统计分析发现精神病患者松果体物理尺寸小于常人，揭示大脑结构差异与精神疾病的潜在关联。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/early-onset-dementia-work-productivity-31039/" target="_blank" rel="noopener">Decreasing Productivity Can Precede a Dementia Diagnosis by Years (2026.07.12) 生产力下降可早于痴呆诊断数年</a></div><div class="item-desc">追踪数十年数据发现，早发性痴呆患者在确诊前15年即出现持续恶化的工作效率损失，提示早期预警信号。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/more-heated-yoga-means-less-severe-depression-symptoms-new-trial-analysis-finds/" target="_blank" rel="noopener">More hot yoga means less severe depression symptoms, new trial analysis finds (2026.07.12) 热瑜伽次数越多，抑郁症状越轻</a></div><div class="item-desc">临床试验分析显示，热瑜伽参与频率与抑郁严重度成反比，为社区非药物干预提供新选项。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/hunger-makes-all-sweetness-more-rewarding-but-artificial-sweetener-users-show-unique-brain-responses/" target="_blank" rel="noopener">Hunger makes all sweetness more rewarding, but artificial sweetener users show unique brain responses (2026.07.12) 饥饿增强甜味快感，但代糖使用者大脑反应独特</a></div><div class="item-desc">饥饿时人对糖和代糖的即时愉悦感均增强，但长期代糖使用者大脑奖赏通路存在差异。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/people-spending-more-time-on-social-media-and-dating-apps-tend-to-be-slightly-less-satisfied-with-their-bodies/" target="_blank" rel="noopener">People spending more time on social media and dating apps tend to be slightly less satisfied with their bodies (2026.07.12) 社交与约会App使用时长越长，身体满意度越低</a></div><div class="item-desc">国际调查发现，年轻人在社交和约会App上花时间越多，身体评价和欣赏程度越低。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/trump-s-2020-pivot-on-face-masks-changed-republican-behavior-but-not-their-medic/" target="_blank" rel="noopener">Trump’s 2020 pivot on face masks changed Republican behavior but not their medical beliefs (2026.07.12) 特朗普口罩立场转变改变了共和党人行为，未改变医疗信念</a></div><div class="item-desc">大型研究发现官方表态能改变公众行为，但未必改变其关于干预措施有效性的根本认知。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/are-you-at-risk-for-romantic-addiction-the-answer-lies-in-your-attachment-style-psychological-flexibility-and-emotion-regulation/" target="_blank" rel="noopener">Are you at risk for romantic addiction? The answer lies in your attachment style, psychological flexibility, and emotion regulation (2026.07.12) 浪漫成瘾风险取决于依恋风格、心理灵活性与情绪调节</a></div><div class="item-desc">研究发现早期关系模式通过心理灵活性和情绪调节两个过程影响对伴侣的成瘾倾向。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">3 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/nine-recent-studies-that-reveal-the-hidden-psychology-of-american-politics/" target="_blank" rel="noopener">Nine recent studies that reveal the hidden psychology of American politics (2026.07.12) 九项研究揭示美国政治的隐秘心理</a></div><div class="item-desc">党派认同已渗透生活各方面，影响对微笑的解读、消费选择等，远超投票行为本身。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/ai-models-are-far-more-susceptible-to-misleading-nudges-than-humans-study-shows/" target="_blank" rel="noopener">AI models are far more susceptible to misleading nudges than humans, study shows (2026.07.12) AI模型比人类更易受选项呈现方式误导</a></div><div class="item-desc">研究表明AI对选项框架的细微变化过度反应，在决策时比人类更易被“助推”操纵。</div></div></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/how-a-1-900-year-old-latrine-helps-explain-why-roman-concrete-lasts/" target="_blank" rel="noopener">How a 1,900-year-old latrine helps explain why Roman concrete lasts (2026.07.11) 1900年前古罗马厕所揭示混凝土持久之谜</a></div><div class="item-desc">方解石在裂缝中生长使罗马混凝土随年代更坚固，为现代建筑长寿提供启示。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">4 条</span></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/deadly-meat-allergies-from-tick-bites-are-on-the-rise-should-you-be-worried/" target="_blank" rel="noopener">Deadly meat allergies from tick bites are on the rise. Should you be worried? (2026.07.12) 蜱虫叮咬引发致命肉类过敏病例增加</a></div><div class="item-desc">阿尔法-半乳糖综合征由蜱虫叮咬触发，患者对红肉产生过敏，美国病例持续上升需警惕。</div></div></div><div class="item"><span class="item-idx">13</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/is-it-a-problem-for-cats-to-eat-insects-researchers-are-probing-feline-diets-to-find-out/" target="_blank" rel="noopener">Is it a problem for cats to eat insects? Researchers are probing feline diets to find out (2026.07.12) 猫吃昆虫是问题吗？研究人员正在调查猫的饮食</a></div><div class="item-desc">户外猫不仅捕鸟鼠，昆虫摄入量惊人，研究旨在评估昆虫对猫健康及生态的影响。</div></div></div><div class="item"><span class="item-idx">14</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/study-finds-sexpositivity-posts-on-instagram-often-reinforce-womens-objectification-and-narrow-beauty-ideals/" target="_blank" rel="noopener">Study finds #SexPositivity posts on Instagram often reinforce women’s objectification and narrow beauty ideals (2026.07.11) 研究发现#性积极Instagram帖常强化女性物化与狭隘审美</a></div><div class="item-desc">分析显示该标签下内容更多推广商业化外貌标准而非性自主权，偏离运动初衷。</div></div></div><div class="item"><span class="item-idx">15</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/wimbledon-2026-opened-with-a-148-mph-serve-heres-how-tennis-players-brains-track-such-fast-balls/" target="_blank" rel="noopener">Wimbledon 2026 opened with a 148 mph serve—here’s how tennis players brains track such fast balls (2026.07.11) 温网发球时速148英里，网球运动员大脑如何追踪高速球</a></div><div class="item-desc">大脑通过预测性追踪与精细运动控制应对超快球速，结合多感官线索提前反应。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">📐 arXiv 前沿</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">A1</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.09278v1" target="_blank" rel="noopener">Structural Brain Predictors of Visual Attention Gradient Modulated by Trait Anxiety (2026.07.10) 特质焦虑调节的视觉注意梯度的大脑结构预测因子</a></div><div class="item-desc">研究了个体差异在大脑结构形态上如何预测视觉空间注意梯度的动态分配，并考察特质焦虑的调节作用。揭示了大脑结构特征与注意灵活性之间的关系，为理解焦虑如何影响空间注意偏差提供了神经解剖学依据。</div></div></div><div class="item"><span class="item-idx">A2</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.09032v1" target="_blank" rel="noopener">Quantum Logic as the Logic of Contexts (2026.07.10) 量子逻辑作为语境逻辑</a></div><div class="item-desc">论证了量子逻辑并非经典逻辑的异常偏离，而是可以在有限且完全可计算的设定中被视为逻辑的基础，并以自由正交模格为例展示。颠覆了传统对量子逻辑的认知，为逻辑学的重新排序提供了新的视角和计算基础。</div></div></div><div class="item"><span class="item-idx">A3</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.07429v1" target="_blank" rel="noopener">Single-Entity Spiking Neuron Models: Survey (2026.07.08) 单实体脉冲神经元模型综述</a></div><div class="item-desc">综述了生物可解释的神经系统数学模型，根据共同特征和特殊用途对模型进行分类，包括脉冲模型及其离散和连续模拟。为神经科学计算建模提供了一个系统性的分类参考，有助于选择适合模拟膜电位动态等生物过程的模型。</div></div></div><div class="item"><span class="item-idx">A4</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.09598v1" target="_blank" rel="noopener">Tokenizer Transplantation: Mitigating Autoregressive Collapse in Edge-Efficient Bengali ASR (2026.07.10) 分词器移植：缓解边缘高效孟加拉语自动语音识别中的自回归崩溃</a></div><div class="item-desc">识别出轻量级语音识别模型在孟加拉语上失败的根本原因是英语中心的字节级分词器，并通过分词器移植来缓解自回归崩溃。为资源稀缺的非拉丁语系语言提供了一种有效的边缘部署方案，提升了多语言语音识别的鲁棒性。</div></div></div><div class="item"><span class="item-idx">A5</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.09576v1" target="_blank" rel="noopener">Conceptual Networks for Cross-Linguistic Idiomatic Expressions:A Feature-Based Graph Approach (2026.07.10) 跨语言习语表达的概念网络：基于特征的图方法</a></div><div class="item-desc">提出了一个可解释的网络框架，用二进制概念特征表示八种语言共160种习语表达，并通过Jaccard相似度构建概念图。为跨语言习语的语义研究提供了计算视角，有助于比较不同语言中隐喻和固定表达的认知基础。</div></div></div><div class="item"><span class="item-idx">A6</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.09501v1" target="_blank" rel="noopener">Normalisation-Based Likelihood Ratio Estimation for Forensic Authorship Verification (2026.07.10) 基于归一化的似然比估计用于法医作者验证</a></div><div class="item-desc">在法医作者验证任务中，提出一种归一化方法直接从文本相似度分数估计似然比，无需单独的校准模型。简化了法医证据的量化流程，提高了似然比估计在真实案例中的可操作性。</div></div></div><div class="item"><span class="item-idx">A7</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.09375v1" target="_blank" rel="noopener">Mach-Mind-4-Flash Technical Report (2026.07.10) Mach-Mind-4-Flash技术报告</a></div><div class="item-desc">介绍了35B参数（3B激活）的混合专家代理模型Mach-Mind-4-Flash，仅通过后训练优化就达到或超越100B参数模型性能。证明了后训练和可扩展的强化学习环境可以有效提升小模型能力，具有重要的效率意义。</div></div></div><div class="item"><span class="item-idx">A8</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.09324v1" target="_blank" rel="noopener">Letting the Data Speak: Extracting Keywords from Crowdsourced Collections with AI (2026.07.10) 让数据说话：从众包集合中利用AI提取关键词</a></div><div class="item-desc">以牛津大学众包二战档案为例，评估了多种AI方法从众包集合中提取关键词的效果。为大规模众包文化遗产项目的关键词标注提供了技术路线和伦理考量，推动数据驱动的人文研究。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><span class="item-idx">16</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-13/nippon-paint-offers-8-6-billion-for-akzo-nobel-s-paint-business" target="_blank" rel="noopener">Nippon Paint Offers $8.6 Billion for Akzo Nobel’s Paint Business 立邦涂料出价60亿美元收购阿克苏诺贝尔涂料业务（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">17</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/newsletters/2026-07-13/foreigners-retain-bearish-bets-on-nifty-while-loading-up-on-india-stocks" target="_blank" rel="noopener">India Inflows at Risk With Foreigners’ Bearish Futures Bets, Mideast Flareup 外资看空期权押注及中东局势升级，印度资金流入面临风险（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">18</span><div class="item-body"><div class="item-title"><a href="https://cn.nytimes.com/business/20260713/volkswagen-china-problems-restructuring/?utm_source=RSS" target="_blank" rel="noopener">大众汽车是如何在中国陷入困境的 大众汽车是如何在中国陷入困境的（纽约时报中文网）</a></div></div></div><div class="item"><span class="item-idx">19</span><div class="item-body"><div class="item-title"><a href="https://cn.nytimes.com/china/20260713/china-workers-robots-factories/?utm_source=RSS" target="_blank" rel="noopener">中国机器人技术热潮下，被抛弃的蓝领工人 中国机器人技术热潮下，被抛弃的蓝领工人（纽约时报中文网）</a></div></div></div><div class="item"><span class="item-idx">20</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-13/newsom-budget-kneecapped-hollywood-tax-credit-lawmakers-say" target="_blank" rel="noopener">Newsom Budget ‘Kneecapped’ Hollywood Tax Credit, Lawmakers Say 议员称纽森预算“削弱”好莱坞税收抵免（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">21</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-13/hyundai-hymtf-workers-strike-over-bonuses-ai-robot-job-security" target="_blank" rel="noopener">Hyundai Motor Workers Strike Over Bonuses, Robot Job Security 现代汽车工人因奖金及机器人岗位保障问题罢工（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">22</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/asia-pacific/list-some-significant-fatal-fires-thailand-2026-07-13/" target="_blank" rel="noopener">List of some significant fatal fires in Thailand 泰国部分重大致命火灾盘点（Reuters）</a></div></div></div><div class="item"><span class="item-idx">23</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-13/treasury-two-year-yield-rises-to-highest-since-2025-on-oil-gain" target="_blank" rel="noopener">Treasury Two-Year Yield Rises to Highest Since 2025 on Oil Gain 油价上涨推动美国两年期国债收益率升至2025年来最高（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">24</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-13/sk-hynix-shares-drop-in-seoul-after-much-hyped-us-trading-debut" target="_blank" rel="noopener">SK Hynix Shares Drop in Seoul After Much-Hyped US Trading Debut SK海力士美国上市备受瞩目，首尔股价下跌（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">25</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-13/us-to-increase-mexico-sugar-imports-to-1-15-million-metric-tons" target="_blank" rel="noopener">US to Increase Mexico Sugar Imports to 1.15 Million Metric Tons 美国将墨西哥食糖进口配额增至115万吨（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">26</span><div class="item-body"><div class="item-title"><a href="https://cn.nytimes.com/science/20260713/china-space-race/?utm_source=RSS" target="_blank" rel="noopener">火箭回收凸显中国太空雄心，航空工业与美国差距正在缩小 火箭回收凸显中国太空雄心，航空工业与美国差距正在缩小（纽约时报中文网）</a></div></div></div><div class="item"><span class="item-idx">27</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/middle-east/eu-ministers-debate-curbing-trade-with-israeli-settlements-2026-07-13/" target="_blank" rel="noopener">EU ministers to debate curbing trade with Israeli settlements 欧盟部长拟讨论限制与以色列定居点贸易（Reuters）</a></div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

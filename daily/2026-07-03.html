@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年7月3日 周五</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月3日 周五</span><span class="meta-chip">共 33 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>壁画颜料中提取古人类遗传物质，为考古学提供“基因档案”揭示未记录的洞穴活动</li><li>AI在能源、制造等关键基础设施实现物理世界智能控制，价值远超消费级聊天机器人</li><li>裸盖菇素提升主观睡眠质量且改善程度与头痛发作减少成正比，为治疗提供新思路</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/nasa-needs-volunteers-to-spend-a-year-locked-in-a-mars-simulation/" target="_blank" rel="noopener">NASA needs volunteers to spend a year locked in a Mars simulation NASA招募志愿者封闭一年模拟火星任务</a></div><div class="item-desc">美国宇航局启动长期火星模拟任务，需志愿者在封闭环境中生活一年，为未来深空探索积累经验。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/psilocybin-improves-sleep-quality-in-patients-with-chronic-cluster-headaches/" target="_blank" rel="noopener">Psilocybin improves sleep quality in patients with chronic cluster headaches 裸盖菇素改善慢性丛集性头痛患者睡眠质量</a></div><div class="item-desc">研究发现裸盖菇素能提升主观睡眠质量，且改善程度与头痛发作减少成正比，为治疗提供新思路。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/major-new-study-links-childhood-income-inequality-to-a-magnified-genetic-risk-for-depression/" target="_blank" rel="noopener">Major new study links childhood income inequality to a magnified genetic risk for depression 童年收入不平等加剧抑郁遗传风险</a></div><div class="item-desc">成长于贫富差距大的社会，即便遗传易感性较低者抑郁症状也会增加，环境与基因交互作用显著。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/the-white-house-goes-all-in-on-aliens-with-new-uap-science-advisory-council/" target="_blank" rel="noopener">The White House goes all in on aliens with new UAP Science Advisory Council 白宫成立UAP科学顾问委员会全面调查外星现象</a></div><div class="item-desc">新顾问团旨在为政府最高层提供不明空中现象建议，并推动研究成果公开，加速外星生命探索。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/the-gender-attractiveness-gap-why-both-men-and-women-rate-female-faces-higher/" target="_blank" rel="noopener">Both men and women rate female faces as more attractive 男女一致认为女性面孔更具吸引力</a></div><div class="item-desc">跨文化大样本分析证实性别影响审美判断，女性面孔普遍被评为更迷人，挑战了传统审美观念。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/narcissism-and-psychopathy-linked-to-lower-physical-stress-responses-under-pressure/" target="_blank" rel="noopener">Narcissism and psychopathy linked to lower physical stress responses under pressure 自恋与心理变态者在压力下生理反应更低</a></div><div class="item-desc">高自恋和精神病态特质的人面对急性应激时身心反应减弱，暗示这些特质可能提供某种抗压保护。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/brain-lag-evolutionary-30977/" target="_blank" rel="noopener">Study Supports and Expands the Primate Brain Lag Hypothesis 研究支持并扩展灵长类大脑滞后假说</a></div><div class="item-desc">现代分子遗传定年证实，大脑尺寸演化始终滞后于体型增大，为人类脑容量快速增长的起源提供新解释。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/video-games-might-offer-a-small-boost-to-memory-and-mental-skills/" target="_blank" rel="noopener">Video games might offer a small boost to memory and mental skills 电子游戏或可小幅提升记忆与心智能力</a></div><div class="item-desc">综合多项研究发现，游戏能轻微改善信息处理和记忆细节，但效果有限，不宜过度夸大。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">2 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/07/02/1138433/teaching-ai-to-run-with-the-turbines/" target="_blank" rel="noopener">Teaching AI to run with the turbines 教会AI与涡轮机共舞</a></div><div class="item-desc">AI在能源、制造等关键基础设施领域实现物理世界的智能控制，远超聊天机器人等消费级应用价值。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/why-digital-government-records-are-so-hard-to-preserve/" target="_blank" rel="noopener">Why digital government records are so hard to preserve 数字政府记录为何难以长期保存</a></div><div class="item-desc">总统记录法案面临数字时代挑战，电子文件易遭篡改、格式过时，需法律与技术协同解决方案。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/ai-writing-mystery-complexity-creativity-30978/" target="_blank" rel="noopener">AI Writing Strips Mystery and Complexity From Stories AI写作剥离故事的悬疑与复杂性</a></div><div class="item-desc">基于CASPER评估框架发现，AI生成故事系统性地减少了文学复杂性，削弱了叙事深度和神秘感。</div></div></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/male-marathoners-might-be-twice-as-likely-to-hit-the-wall-as-women-the-reason-why-might-surprise-you/" target="_blank" rel="noopener">Male marathoners might be twice as likely to ‘hit the wall’ as women—the reason why might surprise you 男性马拉松“撞墙”风险或为女性两倍</a></div><div class="item-desc">研究发现糖原耗尽导致“撞墙”现象，男性因代谢差异更易遭遇，揭示性别在耐力运动中的关键影响。</div></div></div><div class="item"><span class="item-idx">13</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/07/02/1140045/achieving-operational-excellence-with-ai/" target="_blank" rel="noopener">Achieving operational excellence with AI 借助AI实现运营卓越</a></div><div class="item-desc">结合精益六西格玛等流程框架，AI能大规模维持运营严谨性，避免技术滥用导致的效率下降。</div></div></div><div class="item"><span class="item-idx">14</span><div class="item-body"><div class="item-title"><a href="https://www.quantamagazine.org/astrophysicists-puzzle-over-webbs-new-universe-20260702/" target="_blank" rel="noopener">Astrophysicists Puzzle Over Webb’s New Universe 韦伯望远镜发现“不应存在”的早期宇宙</a></div><div class="item-desc">早期黑洞和星系超出预期，迫使天体物理学家提出多种新理论，亟需验证哪些解释符合观测。</div></div></div><div class="item"><span class="item-idx">15</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/how-to-avoid-heat-illness-and-stay-safe-during-the-mega-heat-wave/" target="_blank" rel="noopener">How to avoid heat illness and stay safe during the mega heat wave 极端热浪下如何预防热病保安全</a></div><div class="item-desc">美国中东部遭遇高温，需警惕热痉挛、中暑等热病，建议补充水分、避免暴晒和及时降温。</div></div></div><div class="item"><span class="item-idx">16</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/independent-voters-are-mostly-ideological-moderates-seeking-political-flexibilit/" target="_blank" rel="noopener">What millions of voter records reveal about political independents 数百万选民记录揭示政治独立派真实立场</a></div><div class="item-desc">多数独立选民持温和意识形态，并非中立或摇摆，其对两党政策的实际倾向常被误解。</div></div></div><div class="item"><span class="item-idx">17</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/07/02/1139981/why-californias-carbon-manure-math-doesnt-add-up/" target="_blank" rel="noopener">Why California’s carbon manure math doesn’t add up 加州碳信用 manure 计算存在根本缺陷</a></div><div class="item-desc">备受补贴的 manure 减排项目实际减碳效果存疑，暴露了以碳信用替代直接减排的气候行动短板。</div></div></div><div class="item"><span class="item-idx">18</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/ancient-cave-paintings-can-harbor-human-dna-for-millennia-scientists-find/" target="_blank" rel="noopener">Ancient cave paintings can harbor human DNA for millennia, scientists find 古老洞穴壁画可保存人类DNA数千年</a></div><div class="item-desc">壁画的颜料中提取出古人类遗传物质，为考古学提供“基因档案”，揭示未记录的洞穴活动。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><span class="item-idx">19</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/legal/government/watchdog-faults-secret-service-missing-102-radio-calls-during-2024-trump-2026-07-02/" target="_blank" rel="noopener">Watchdog faults Secret Service for missing 102 radio calls during 2024 Trump shooting 监察机构批评特勤局在2024年特朗普枪击事件中错过102次无线电通话（Reuters）</a></div></div></div><div class="item"><span class="item-idx">20</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/asia-pacific/us-says-it-supports-pakistans-right-defend-itself-against-terrorist-attacks-2026-07-02/" target="_blank" rel="noopener">US says it supports Pakistan&#x27;s right to defend itself against &#x27;terrorist attacks&#x27; 美国称支持巴基斯坦自卫权以应对“恐怖袭击”（Reuters）</a></div></div></div><div class="item"><span class="item-idx">21</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/russian-attacks-kill-three-eastern-ukraine-officials-say-2026-07-02/" target="_blank" rel="noopener">Russian attacks kill three in eastern Ukraine, officials say 官员称俄军袭击乌克兰东部致三人死亡（Reuters）</a></div></div></div><div class="item"><span class="item-idx">22</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-02/falta-de-diesel-dificulta-resgates-apos-terremoto-na-venezuela" target="_blank" rel="noopener">Falta de diesel dificulta resgates após terremoto na Venezuela 柴油短缺阻碍委内瑞拉地震后救援（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">23</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-02/top-us-general-for-europe-resigns-as-trump-squeezes-nato-allies" target="_blank" rel="noopener">Top US General for Europe Resigns as Trump Squeezes NATO Allies 美驻欧最高将领辞职，特朗普施压北约盟友（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">24</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-02/why-trump-s-great-american-state-fair-in-washington-looks-so-empty" target="_blank" rel="noopener">Why the Great American State Fair Looks So Empty 美国大州博览会为何显得如此冷清（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">25</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-02/nyc-s-extreme-heat-threatens-holiday-weekend-plans-with-110f-real-feel" target="_blank" rel="noopener">NYC’s Extreme Heat Threatens Holiday Weekend Plans With 110F Real Feel 纽约极端高温威胁假日周末计划，体感温度达110华氏度（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">26</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-02/ken-griffin-compra-os-138-apartamentos-de-condominio-em-miami-por-us-125-mi" target="_blank" rel="noopener">Ken Griffin compra os 138 apartamentos de condomínio em Miami por US$ 125 mi 肯·格里芬以1.25亿美元购入迈阿密138套公寓（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">27</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/opinion/newsletters/2026-07-02/tricking-the-ai-investors" target="_blank" rel="noopener">Tricking the AI Investors 欺骗AI投资者（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">28</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-02/guinea-court-reduces-ex-prime-minister-s-corruption-sentence" target="_blank" rel="noopener">Guinea Court Reduces Ex-Prime Minister’s Corruption Sentence 几内亚法院减轻前总理腐败刑期（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">29</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-02/refiner-profits-are-soaring-in-sign-of-lingering-hormuz-snarls" target="_blank" rel="noopener">Refiner Profits Are Soaring in Sign of Lingering Hormuz Snarls 炼油商利润飙升显示霍尔木兹海峡梗阻持续（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">30</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-07-02/morgan-stanley-desafia-consenso-de-valorizacao-do-dolar" target="_blank" rel="noopener">Morgan Stanley desafia consenso de valorização do dólar 摩根士丹利挑战美元升值共识（Bloomberg）</a></div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

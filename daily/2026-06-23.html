@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年6月23日 周二</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月23日 周二</span><span class="meta-chip">共 32 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>大脑双策略框架平衡处理可预测与意外事件，解决长期“适应性效率”争议</li><li>暗能量变化暗示暗物质也变化，“暗维度”假说有望统一解释两者</li><li>干细胞移植让两名重症患者持续缓解超15年，实验性疗法值得更大规模试验</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">Researchers map specific empathy blind spots found in psychopathic personalities 心理变态者的共情盲点图谱 — 研究发现，高度冷酷者难以感知他人情绪，而高度反社会者主要在特定情境下共情缺失，揭示人格差异对共情的影响。</div></div></div><div class="item"><div class="item-body"><div class="item-title">How a new forecasting model accurately predicted the outcome of the 2024 presidential election 预测2024大选结果的新模型 — 基于选民对候选人未来领导力和政策专长的评估框架，准确预测了2024年美国总统大选胶着结果，为传统模型提供替代方案。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ancient Brainstem Neurons Discovered to Control Attention 脑干古老神经元控制注意力 — 研究发现脑干中存在进化保守的神经回路，作为基础“注意力选择引擎”，挑战了长期以来关于皮层主导注意力的共识。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Sleep Habits Determine If Your Genes Accelerate Alzheimer’s 睡眠习惯决定基因是否加速阿尔茨海默病 — 水通道蛋白-4基因与睡眠环境相互作用，影响阿尔茨海默病早期脑结构与认知改变，揭示基因-环境互作的关键窗口。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Brain Handles Surprises Like an Internal Software Update 大脑处理意外事件如同内部软件更新 — 大脑采用双策略框架平衡处理可预测与意外事件的速度和精度，优化毫秒级神经能量分配，解决长期“适应性效率”争议。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Mental health policy is a major deciding factor for voters, new study finds 心理健康政策成为选民重要决定因素 — 2024年选举研究显示，心理健康政策对选民选择的重要性仅次于边境安全，尤其影响年轻人和女性投票意向。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Positive conversations leave a temporary neural echo in mother-child brain networks 积极对话在母子脑网络中留下神经回声 — 母子正向面对面交谈后，大脑活动仍暂时同步，表明日常社交互动可能物理性塑造社会脑网络发育。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Harsh childhood environments shape future reproduction, but not always as evolutionary theory predicts 童年恶劣环境塑造未来生育模式，但不完全符合进化理论 — 加拿大人口普查数据分析发现，社区经济与人口条件可预测15年后居民生育模式，但性别间存在差异，挑战传统进化预测。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">1 条</span></div><div class="item"><div class="item-body"><div class="item-title">Three things to watch amid Anthropic’s latest feud with the government Anthropic与政府最新争议中的三个看点 — 分析AI公司Anthropic与美政府就模型安全披露的冲突，关注监管边界、商业利益与公共安全的三方博弈。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">Why the paint is peeling off the Lincoln Memorial Reflecting Pool—experts explain 林肯纪念堂倒影池油漆剥落之谜 — 专家解析池面涂层剥落原因，指出施工工艺与材料问题导致爱国象征变谜团，建议改进修复方案。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Lipid Molecule Slows Progressive Retinal Degeneration 脂质分子延缓视网膜退化 — 天然脂质分子芥酸酰胺能稳定视网膜损伤保护反应，其水平下降加速感光细胞退化，补充该分子可延缓病变。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Interstellar Comet 3I/ATLAS is almost as old as the universe itself 星际彗星3I/ATLAS几乎与宇宙同龄 — 哈勃望远镜观测显示该星际彗星比预期更古老、更奇特，可能诞生于宇宙早期，挑战彗星形成理论。</div></div></div><div class="item"><div class="item-body"><div class="item-title">A Dark Dimension Could Link Two of the Universe’s Great Unknowns 暗维度可能连接宇宙两大未知之谜 — 暗能量随时间变化的观测提示暗物质也可能变化，理论家探索“暗维度”假说统一解释暗物质与暗能量。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Stem cells banish severe autoimmune disease for 15 years 干细胞移植使严重自身免疫病缓解15年 — 两名罕见重症自身免疫病患者接受干细胞移植后持续缓解超15年，提示该实验性疗法值得更大规模临床试验。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Will NASA’s SkyFall Mars helicopter fleet sink science at the Red Planet? NASA“天降”火星直升机舰队会否损害科学？ — NASA计划发射三架核动力直升机探索火星，但科学家担忧预算挤压现有火星科研任务，引发科学优先级争议。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Got a tick bite? Here’s what to do and when to seek treatment 被蜱虫咬了怎么办？何时就医？ — 美国蜱虫叮咬急诊率创五年新高，专家建议及时移除蜱虫、观察症状，出现发热或皮疹需立即就医。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ebola outbreak latest, World Cup heat risks and dad brains 埃博拉疫情更新、世界杯高温风险及爸爸大脑 — 本周科学新闻速览：埃博拉新研究估计病毒传播风险；卡塔尔世界杯高温对球员影响；父亲育儿期大脑结构变化。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">CME Direct Trading Platform Is Back Up After Earlier Disruptions CME直接交易平台短暂中断后已恢复运行（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Who Is Andy Burnham, the UK’s Likely Next Prime Minister? 安迪·伯纳姆是谁？英国下任首相热门人选（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Pfizer’s Lung Cancer Drug Trial Fails to Boost Survival 辉瑞肺癌药物试验未能提高生存率（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ford Negotiates With Canadian Workers Under Cloud of Trade Uncertainty 福特在贸易不确定阴云下与加拿大工人谈判（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Maine Democrats Test Abortion as a Midterm Message 缅因州民主党人将堕胎议题作为中期选举风向标（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Qualcomm Nears Deal for AI Chip Startup Modular 高通接近达成收购AI芯片初创公司Modular的交易（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">A Decade After Brexit Vote, Britain Can’t Keep a Prime Minister 脱欧公投十年后，英国首相更迭成常态（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Hedge Funds Piled Into Bearish Oil Bets Ahead of US-Iran MOU 美伊谅解备忘录签署前，对冲基金大举增持原油空头（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Romania’s Turmoil Deepens After PM Hopeful Loses Vote 罗马尼亚总理候选人投票失利，政局动荡加剧（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">【今朝の5本】仕事を始める前に読んでおきたい厳選ニュース 【今晨五则】工作前必读精选新闻（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">Children’s Online Safety Bill Gains Traction in Congress 儿童在线安全法案在国会获积极推进（Bloomberg）</div></div></div><div class="item"><div class="item-body"><div class="item-title">FAA Taps Air Space Intelligence for AI Traffic Control Tool FAA采用空天情报公司AI空中交通管制工具（Bloomberg）</div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

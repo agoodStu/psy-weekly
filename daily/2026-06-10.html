@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年6月10日 周三</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月10日 周三</span><span class="meta-chip">共 28 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">16 条</span></div><div class="item"><div class="item-body"><div class="item-title">How the new FDA-approved ingredient bemotrizinol enhances sunscreen protection — 美国FDA批准的新型防晒成分bemotrizinol将提高防晒霜的保护效果</div></div></div><div class="item"><div class="item-body"><div class="item-title">How math&#x27;s &#x27;hairy ball theorem&#x27; could explain bad hair days — 数学中的“毛发球定理”或许能解释糟糕的发型</div></div></div><div class="item"><div class="item-body"><div class="item-title">Americans’ trust in the CDC has plummeted since 2025, new poll finds — 新民调显示，自2025年以来，美国人对美国疾病控制与预防中心的信任度大幅下降</div></div></div><div class="item"><div class="item-body"><div class="item-title">NASA reveals astronauts who will fly Artemis III, its next step toward a moon landing — 美国宇航局公布即将执行阿耳忒弥斯III任务的宇航员名单，这是其重返月球计划的关键一步</div></div></div><div class="item"><div class="item-body"><div class="item-title">Inside the new Siri AI and the privacy paradox of Apple Intelligence — 苹果新Siri人工智能及其隐私悖论</div></div></div><div class="item"><div class="item-body"><div class="item-title">Resistance training may boost longevity. But how much do you need? — 力量训练可能延长寿命，但需要多少量？</div></div></div><div class="item"><div class="item-body"><div class="item-title">Rare meteorite might be a relic from a ‘lost world’ — 稀有陨石可能是“失落世界”的遗物</div></div></div><div class="item"><div class="item-body"><div class="item-title">Genital herpes tests are notoriously unreliable, but better ones are in the works — 生殖器疱疹检测历来不可靠，但更好的检测方法正在研发中</div></div></div><div class="item"><div class="item-body"><div class="item-title">Spotted lanternflies’ love of cities may be the secret to their invasion success — 斑点飞蛾对城市的喜爱可能是其成功入侵的秘密</div></div></div><div class="item"><div class="item-body"><div class="item-title">The asteroid that killed the dinosaurs may have sparked millions of years of hydrothermal life — 擎毁恐龙的陨石可能引发了数百万年的热水生物活动</div></div></div><div class="item"><div class="item-body"><div class="item-title">Slums are bearing the brunt of the climate crisis — and devising solutions — 贫民窟正承受气候危机的重压，并正在制定解决方案</div></div></div><div class="item"><div class="item-body"><div class="item-title">‘Odd’ Gulf of Mexico earthquake rattles Florida and Cuba — 墨西哥湾“奇怪”地震震撼佛罗里达和古巴</div></div></div><div class="item"><div class="item-body"><div class="item-title">The Philippines earthquake is the largest this year, but it could’ve been bigger—here’s why — 菲律宾今年发生的大地震是最大的，但可能更大——原因如下</div></div></div><div class="item"><div class="item-body"><div class="item-title">NASA’s astronauts will wear a Prada-designed onesie to keep cool on the moon — 美国宇航局的宇航员将在月球上穿上普拉达设计的紧身衣以保持凉爽</div></div></div><div class="item"><div class="item-body"><div class="item-title">Increase in wildfire-driven ozone pollution linked to premature deaths across the U.S. — 由于野火驱动的臭氧污染增加，美国过早死亡病例增加</div></div></div><div class="item"><div class="item-body"><div class="item-title">Why GLP-1 drugs might reduce cancer risk — 为什么GLP-1药物可能降低癌症风险</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">Gold Extends Fall as Renewed US-Iran Clashes Test Fragile Truce</div></div></div><div class="item"><div class="item-body"><div class="item-title">Cuba Poised for Biggest US Fuel Shipment Since Cold War Embargo</div></div></div><div class="item"><div class="item-body"><div class="item-title">México reclama que aranceles dan ventaja a sus rivales automotrices asiáticos</div></div></div><div class="item"><div class="item-body"><div class="item-title">Cracker Barrel Lures Diners With Patriotic Shirts, Salt Shakers</div></div></div><div class="item"><div class="item-body"><div class="item-title">Hegseth Plans Trip to Guantanamo Bay Amid US-Cuba Tensions</div></div></div><div class="item"><div class="item-body"><div class="item-title">ASML’s Surge to Record High Masks Lowball Valuation Versus Peers</div></div></div><div class="item"><div class="item-body"><div class="item-title">Labubu Maker Pop Mart Pushes Back on One-Hit Wonder Fears</div></div></div><div class="item"><div class="item-body"><div class="item-title">US Attacks Iran, Consumers ‘Deeply Pessimistic’</div></div></div><div class="item"><div class="item-body"><div class="item-title">NASA&#x27;s Artemis III crew: a test pilot, an Italian, a record-holder and a first-timer</div></div></div><div class="item"><div class="item-body"><div class="item-title">Customs Says $11.4 Billion Is Tied Up in US Tariff Refund Appeal</div></div></div><div class="item"><div class="item-body"><div class="item-title">Leonardo’s New CEO Sees Green Light for Space Venture Next Year</div></div></div><div class="item"><div class="item-body"><div class="item-title">Venezuela Deploys Troops in Mafia-Run Gold Mining Heartland</div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

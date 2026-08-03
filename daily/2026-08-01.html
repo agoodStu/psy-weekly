@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年8月1日 周六</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年8月1日 周六</span><span class="meta-chip">共 41 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>NLP模型分析儿童语音提前六年预测心理疾病，准确率超临床专家，可用于早期筛查</li><li>氯胺酮在雌鼠中经应激激素激活小胶质细胞促神经可塑性，提供性别特异抗抑郁新路径</li><li>减少蛋白质摄入可改善代谢并延寿，挑战高蛋白潮流，但需兼顾肌肉健康</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/income-inequality-heightens-status-anxiety-and-self-objectification-across-genders/" target="_blank" rel="noopener">Income inequality heightens status anxiety and self-objectification across genders (2026.07.31) 收入不平等加剧地位焦虑与自我物化</a></div><div class="item-desc">收入不平等与地位焦虑让人更以外貌衡量自我价值，影响两性自我认知。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/men-who-crave-social-power-are-more-likely-to-endorse-strict-beauty-norms-for-women/" target="_blank" rel="noopener">Men who crave social power are more likely to endorse strict beauty norms for women (2026.07.31) 渴望社会权力的男性更认同严苛女性审美标准</a></div><div class="item-desc">崇尚传统男性气概并渴望社会权力的男性，更倾向要求女性在外貌上大量投入，反映审美背后的权力结构。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/mitochondrial-plaques-alzheimers-brains-31164/" target="_blank" rel="noopener">Mitochondrial Plaques in Alzheimer’s Brains Discovered (2026.07.31) 阿尔茨海默病脑内发现线粒体斑块</a></div><div class="item-desc">研究在阿尔茨海默病脑内发现线粒体斑块，见于动物模型和人类组织，为理解神经病理提供新方向。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/ai-speech-mental-health-nlp-31163/" target="_blank" rel="noopener">AI Models Analyze Children’s Speech to Predict Future Mental Health (2026.07.31) AI分析儿童语音预测未来心理健康</a></div><div class="item-desc">NLP模型分析9至13岁儿童语音，预测六年后的心理疾病比临床专家更准，有望用于早期筛查。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/ketamine-neuroplasticity-microglia-31162/" target="_blank" rel="noopener">Ketamine Reshapes Neural Networks and Neuroplasticity (2026.07.31) 氯胺酮重塑神经连接与可塑性</a></div><div class="item-desc">氯胺酮在雌性小鼠中通过应激激素激活小胶质细胞促进神经可塑性，揭示性别特异抗抑郁机制。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/brain-activity-patterns-may-shape-how-we-remember-childhood-trauma/" target="_blank" rel="noopener">Brain activity patterns may shape how we remember childhood trauma (2026.07.31) 大脑活动模式或塑造童年创伤记忆方式</a></div><div class="item-desc">大脑固有活动模式影响童年逆境的主观记忆，进而改变抑郁易感性，提示个性化干预可能。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/postpartum-psychosis-is-at-the-center-of-the-lindsay-clancy-trial-what-is-it/" target="_blank" rel="noopener">Postpartum psychosis is at the center of the Lindsay Clancy trial. What is it? (2026.07.31) 产后精神病是什么？林赛·克兰西案焦点</a></div><div class="item-desc">产后精神病是重性精神急症；该病成为母亲杀子案审判核心，凸显孕产期心理健康筛查的重要性。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/dummy-pills-reveal-the-hidden-power-of-human-expectation-in-addiction-recovery/" target="_blank" rel="noopener">Dummy pills reveal the hidden power of human expectation in addiction recovery (2026.07.31) 安慰剂揭示期望在成瘾康复中的隐藏力量</a></div><div class="item-desc">成瘾患者服用安慰剂即可减少渴求，酒精依赖者尤明显；可利用期望效应优化康复治疗。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">2 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/eating-less-protein-could-help-you-live-longer/" target="_blank" rel="noopener">Eating less protein could help you live longer (2026.07.31) 少吃蛋白质或助你更长寿</a></div><div class="item-desc">新研究建议减少蛋白质摄入可能延寿并省钱，与“蛋白质越多越好”潮流相反，但需兼顾肌肉健康。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/podcast/episode/the-untold-science-and-drama-of-lewis-and-clarks-expedition/" target="_blank" rel="noopener">The untold science and drama of Lewis and Clark’s expedition (2026.07.31) 刘易斯与克拉克远征背后的科学与戏剧</a></div><div class="item-desc">介绍刘易斯与克拉克远征的新书，揭示其科学发现、生态记录与殖民冲突，重新解读美国历史叙事。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/trf2-muscle-stem-cell-repair-31165/" target="_blank" rel="noopener">TRF2 Preserves Muscle Stem Cell Identity and Drive Repair (2026.07.31) TRF2蛋白维持肌肉干细胞特性并驱动修复</a></div><div class="item-desc">研究发现TRF2蛋白除保护染色体末端外，还调控肌肉干细胞基因，驱动组织修复，拓展其功能认知。</div></div></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/protein-restriction-diet-longevity/" target="_blank" rel="noopener">Protein Restriction Improves Metabolism and Longevity (2026.07.31) 限制蛋白质改善代谢并延长寿命</a></div><div class="item-desc">对350余项研究综述表明，减少蛋白质摄入可改善代谢、减少细胞损伤并延长寿命，挑战高蛋白潮流。</div></div></div><div class="item"><span class="item-idx">13</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/ai-helped-produce-two-proofs-for-the-same-cryptography-problem/" target="_blank" rel="noopener">AI helped produce two proofs for the same cryptography problem (2026.07.31) AI协助完成同一密码学问题的两个证明</a></div><div class="item-desc">AI工具帮助研究者为同一量子密码问题生成两个独立证明，展示AI辅助数学发现与验证的新可能。</div></div></div><div class="item"><span class="item-idx">14</span><div class="item-body"><div class="item-title"><a href="https://www.quantamagazine.org/is-ai-reasoning-right-for-the-wrong-reasons-20260731/" target="_blank" rel="noopener">Is AI Reasoning Right for the Wrong Reasons? (2026.07.31) AI“推理”会因错误理由得出正确答案吗</a></div><div class="item-desc">文章质疑大语言模型“推理”的真实性，指出答案可能来自模式匹配而非逻辑，强调可解释性挑战。</div></div></div><div class="item"><span class="item-idx">15</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/people-prefer-psychotherapists-with-attractive-faces-study-finds/" target="_blank" rel="noopener">People prefer psychotherapists with attractive faces, study finds (2026.07.31) 研究：人们偏爱面容有吸引力的心理治疗师</a></div><div class="item-desc">即使控制可信度和能力，人们仍偏爱面容好看的心理治疗师，显示外表偏倚影响医疗选择。</div></div></div><div class="item"><span class="item-idx">16</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/how-to-surf-on-saturns-moon-titan/" target="_blank" rel="noopener">How to surf on Saturn’s moon Titan (2026.07.31) 如何在土星卫星泰坦上冲浪</a></div><div class="item-desc">土卫六有液态甲烷湖和低重力，冲浪体验将不同于地球；科学家分析了理想冲浪条件。</div></div></div><div class="item"><span class="item-idx">17</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/secret-eruption-offers-tantalizing-glimpse-of-underwater-volcanoes/" target="_blank" rel="noopener">Secret eruption offers tantalizing glimpse of underwater volcanoes (2026.07.31) 秘密喷发揭开海底火山活动一角</a></div><div class="item-desc">巴布亚新几内亚附近海面浮石表明海底火山正喷发，卫星图像助科学家发现并监测深海火山活动。</div></div></div><div class="item"><span class="item-idx">18</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/07/31/1140945/montanas-new-right-to-try-law-cant-come-soon-enough-for-some/" target="_blank" rel="noopener">Montana’s new “right to try” law can’t come soon enough for some (2026.07.31) 蒙大拿新“尝试权”法对某些家庭仍显太迟</a></div><div class="item-desc">蒙大拿“尝试权”新法允许绝症患者使用未试验药物，但对一位幼儿仍来不及，凸显法律与现实的矛盾。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">📐 arXiv 前沿</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">A1</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.28607v1" target="_blank" rel="noopener">Inducing language models to assert their own consciousness restores human beliefs and values (2026.07.30) 诱导语言模型声称自己有意识可恢复人类信念与价值观</a></div><div class="item-desc">研究了安全微调如何抑制模型对自身、非人类动物和自然物的心智归因，并改变人类信念与价值观的表示；进一步表明诱导模型断言自身意识能逆转这一抑制。该发现揭示了AI对齐训练可能无意中干扰模型对心智的建模，对AI安全与价值观校准具有警示意义。</div></div></div><div class="item"><span class="item-idx">A2</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.23927v1" target="_blank" rel="noopener">Reality Monitoring in Large Language Models: Self-Knowledge That Transforms with Conversation Memory (2026.07.27) 大语言模型中的现实监控：随对话记忆变化的自我知识</a></div><div class="item-desc">通过两个实验和六个LLM测试了模型区分自身输出与用户输入的能力，发现源归因随对话记忆而变化。该工作首次系统评估LLM的现实监控能力，为理解幻觉机制和构建更可靠的对话系统提供了新视角。</div></div></div><div class="item"><span class="item-idx">A3</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.28041v1" target="_blank" rel="noopener">When AI Does the Work, What Is Learning For? Post-Instrumental Learning and the Risk of Capacity Dissolution (2026.07.30) 当AI完成工作，学习还有何用？后工具性学习与能力消解的风险</a></div><div class="item-desc">提出“后工具性学习”概念，分析当AI能产出机构用以认定能力的作品后学习目的被削弱，以及人类能力消解的风险。该研究将AI伦理讨论从当前缺陷扩展到教育本质与人类能力存续，促使重新思考AI时代学习的价值。</div></div></div><div class="item"><span class="item-idx">A4</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.27179v1" target="_blank" rel="noopener">The Social Cost of an AI Teammate: How an Artificial Teammate Reshapes Human-Human Communication in Small-Team Decision-Making (2026.07.29) AI队友的社会成本：人工队友如何重塑小团队决策中的人际沟通</a></div><div class="item-desc">使用群体沟通分析、团队调查和话语词汇分析，考察了对话式AI作为团队成员时对人与人之间沟通的影响。该研究揭示了AI加入团队可能带来社交沟通成本，为协作AI设计与团队集成提供实证依据。</div></div></div><div class="item"><span class="item-idx">A5</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.28478v1" target="_blank" rel="noopener">Would You Walk to the Car Wash? Revealing the Salience Bias of Large Language Models in Commonsense Reasoning (2026.07.30) 你会走路去洗车店吗？揭示大语言模型在常识推理中的显著性偏差</a></div><div class="item-desc">通过常识推理任务发现LLM过度依赖输入中的显式条件，被无用的显式干扰项（如数值）劫持而忽略隐含常识，并将此现象命名为显著性偏差。该发现指出了LLM在常识推理中的关键脆弱性，对提升模型鲁棒性具有重要启示。</div></div></div><div class="item"><span class="item-idx">A6</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.25131v1" target="_blank" rel="noopener">Beyond the Post Hoc User Study: Modeling Visual Decision-Making with Active Inference (2026.07.27) 超越事后用户研究：用主动推断建模视觉决策</a></div><div class="item-desc">提出用主动推断框架建模视觉决策中的解释错误，预测注意力、不确定性、记忆和偏差如何导致误读，而非在方案确定后事后测量。该工作为可视化评价提供了因果预测性理论工具，有望在设计阶段提前识别并减少误解。</div></div></div><div class="item"><span class="item-idx">A7</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.28550v1" target="_blank" rel="noopener">Correcting Mode Collapse in Silicon Sampling with Semantic Similarity Rating (2026.07.30) 用语义相似性评分修正硅基采样中的模式坍缩</a></div><div class="item-desc">指出LLM生成调查响应时方差过低（模式坍缩）源于其数值数据生成能力不足，并分析语义相似性评分是否可用于改善文本响应的多样性。该研究为硅基采样模拟人类调查提供了更可靠的方法，增强其在社会科学中的实用性。</div></div></div><div class="item"><span class="item-idx">A8</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.28601v1" target="_blank" rel="noopener">Using Theory of Mind to Arbitrate between Social and Non-social Learning (2026.07.30) 用心理理论协调社会学习与非社会学习</a></div><div class="item-desc">提出理性心智化模型，通过估计社会学习的效用，解释人们何时选择向他人学习而非依靠直接经验。该模型将心理理论计算引入学习决策，有助于理解人类学习策略，也可为AI智能体的社会学习设计提供参考。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><span class="item-idx">19</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/business/aerospace-defense/russia-pounds-kyiv-with-missiles-2026-07-31/" target="_blank" rel="noopener">Russia pounds Kyiv with missiles 俄罗斯用导弹猛烈攻击基辅（Reuters）</a></div></div></div><div class="item"><span class="item-idx">20</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/legal/government/us-ice-detains-johns-hopkins-researcher-airport-arrests-surge-2026-07-31/" target="_blank" rel="noopener">US ICE detains Johns Hopkins researcher as airport arrests surge 美国移民执法局拘留约翰斯·霍普金斯大学研究员，机场逮捕人数激增（Reuters）</a></div></div></div><div class="item"><span class="item-idx">21</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/business/aerospace-defense/north-korea-says-nato-fuel-plan-shows-alliance-preparing-war-2026-07-31/" target="_blank" rel="noopener">North Korea says NATO fuel plan shows alliance preparing for war 朝鲜称北约燃料计划表明联盟正在备战（Reuters）</a></div></div></div><div class="item"><span class="item-idx">22</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/business/fifa-has-scrapped-20-billion-world-cup-sell-off-plan-new-york-post-reports-2026-07-31/" target="_blank" rel="noopener">FIFA has scrapped $20 billion World Cup sell-off plan, New York Post reports 据《纽约邮报》报道，国际足联已放弃200亿美元世界杯转播权出售计划（Reuters）</a></div></div></div><div class="item"><span class="item-idx">23</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/middle-east/us-israel-planning-bombard-energy-related-targets-iran-cbs-reports-2026-07-31/" target="_blank" rel="noopener">US, Israel planning to bombard energy-related targets in Iran, CBS reports 据哥伦比亚广播公司报道，美国和以色列计划轰炸伊朗能源相关目标（Reuters）</a></div></div></div><div class="item"><span class="item-idx">24</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/latvia-closes-border-with-belarus-interior-minister-says-2026-07-31/" target="_blank" rel="noopener">Latvia closes border with Belarus, interior minister says 拉脱维亚内政部长称，拉脱维亚关闭与白俄罗斯的边境（Reuters）</a></div></div></div><div class="item"><span class="item-idx">25</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/business/aerospace-defense/thousands-rally-kyiv-demanding-ousted-defence-ministers-reinstatement-2026-07-31/" target="_blank" rel="noopener">Thousands take to Kyiv&#x27;s main street, firm on calls for defence minister&#x27;s return 数千人涌向基辅主干道，坚决要求国防部长复职（Reuters）</a></div></div></div><div class="item"><span class="item-idx">26</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/business/environment/magnitude-47-quake-strikes-near-italys-naples-causing-outages-damage-2026-07-31/" target="_blank" rel="noopener">Magnitude 4.7 quake strikes near Italy&#x27;s Naples, causing outages and damage 意大利那不勒斯附近发生4.7级地震，造成停电和损坏（Reuters）</a></div></div></div><div class="item"><span class="item-idx">27</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/business/aerospace-defense/trump-says-us-has-not-agreed-ukraine-building-patriot-missiles-2026-07-31/" target="_blank" rel="noopener">Trump says US has not agreed to Ukraine building Patriot missiles 特朗普称美国未同意乌克兰建造“爱国者”导弹（Reuters）</a></div></div></div><div class="item"><span class="item-idx">28</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/business/retail-consumer/founder-russian-retailer-wildberries-calls-ukrainian-attacks-acts-terrorism-2026-07-31/" target="_blank" rel="noopener">Founder of Russian retailer Wildberries calls Ukrainian attacks &#x27;acts of terrorism&#x27; 俄罗斯电商巨头野莓创始人称乌克兰袭击是“恐怖主义行为”（Reuters）</a></div></div></div><div class="item"><span class="item-idx">29</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/americas/perus-new-foreign-minister-eyes-stronger-us-ties-fujimori-takes-office-2026-07-31/" target="_blank" rel="noopener">Peru&#x27;s new foreign minister eyes stronger US ties as Fujimori takes office 藤森就任总统，秘鲁新任外长寻求加强与美国的关系（Reuters）</a></div></div></div><div class="item"><span class="item-idx">30</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/trump-says-icc-campaign-aimed-defending-netanyahu-not-himself-2026-07-31/" target="_blank" rel="noopener">Trump says ICC campaign aimed at defending Netanyahu, not himself 特朗普称国际刑事法院行动旨在保护内塔尼亚胡而非自己（Reuters）</a></div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

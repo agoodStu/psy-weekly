@@ -25,6 +25,22 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--accent-soft); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: var(--accent); }
+
 body {
   font-family: 'Inter', -apple-system, sans-serif;
   background: var(--bg);
@@ -32,7 +48,7 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 60px 20px;
+  padding: 60px 20px 40px;
 }
 
 .container {
@@ -136,6 +152,10 @@ h1 {
 </style>
 </head>
 <body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab active" href="index.html">📅 周报</a>
+  <a class="topnav-tab" href="daily.html">📰 日报</a>
+</nav>
 <div class="container">
   <h1>心理学期刊周报</h1>
   <p class="subtitle">Psychology Weekly · 往期存档</p>

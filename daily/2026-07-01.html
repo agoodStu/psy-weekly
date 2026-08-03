@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年7月1日 周三</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月1日 周三</span><span class="meta-chip">共 34 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>AI从心电图中发现隐藏信号可提前识别高风险人群，有望精准预防心源性猝死</li><li>中国超算LineShine以每秒近2百亿亿次运算超越美国，凸显算力竞争新格局</li><li>邱园将740万份标本数字化免费开放，极大促进全球植物与真菌研究资源可及性</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/the-association-between-autistic-traits-and-camouflaging-is-stronger-in-the-general-population/" target="_blank" rel="noopener">The association between autistic traits and camouflaging is stronger in the general population 普通人群中自闭特质与伪装行为关联更显著</a></div><div class="item-desc">元分析显示，普通人群中自闭特质越强伪装越多，但自闭症患者中此关联较弱，提示诊断差异。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/brain-synchronization-bridges-the-gap-between-fearing-a-threat-and-reacting-to-i/" target="_blank" rel="noopener">Researchers discover a neural bridge between fear and physical reactions 恐惧记忆与身体反应间的神经桥梁被揭示</a></div><div class="item-desc">研究发现海马体两侧在恐惧学习中协同，连接恐惧记忆与生理反应，揭示恐惧产生机制。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/scientists-reverse-autism-like-symptoms-in-mice-by-repairing-shortened-nerve-cell-structures/" target="_blank" rel="noopener">Scientists reverse autism-like symptoms in mice by repairing shortened nerve cell structures 修复缩短的神经细胞结构可逆转小鼠自闭样行为</a></div><div class="item-desc">通过激活特定神经通路恢复小鼠脑内关键结构，逆转类自闭症状，提示可逆性神经机制。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/common-flu-drugs-show-promise-in-preventing-cognitive-decline/" target="_blank" rel="noopener">Common flu drugs show promise in preventing cognitive decline 流感药物或能保护糖分子，预防认知衰退</a></div><div class="item-desc">研究发现糖分子流失导致慢性感染患者认知下降，常用流感药物可恢复其水平，提供新干预思路。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/how-aggressive-political-rhetoric-threatens-core-values-and-reduces-democratic-t/" target="_blank" rel="noopener">Experiments reveal the psychological cost of insulting political rhetoric 侮辱性政治言论让人感到核心价值受攻击</a></div><div class="item-desc">实验表明攻击性政治言辞使听众感觉自身价值观被侵犯，加剧社会分裂，不论其政治立场。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/chaotic-pigeons-are-helping-redefine-what-we-know-about-learning/" target="_blank" rel="noopener">Chaotic pigeons are helping redefine what we know about learning 鸽子在混沌中学习，挑战传统心理学奖励定律</a></div><div class="item-desc">新研究发现鸽子学习方式处于混沌边缘，质疑奖励与惩罚对学习的传统解释，推动学习理论革新。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/scientists-accidentally-discover-an-inherent-human-tendency-for-counterclockwise-movement/" target="_blank" rel="noopener">Scientists accidentally discover an inherent human tendency for counterclockwise movement 人类行走自然偏向逆时针，揭示群体自组织规律</a></div><div class="item-desc">研究发现人类自由行走时倾向逆时针，这种个人偏好可影响大规模人群自发组织模式。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/how-a-loss-of-pleasure-changes-the-way-young-people-work-for-rewards/" target="_blank" rel="noopener">Anhedonia makes young people less likely to work for high rewards 快感缺失削弱年轻人对高回报的付出意愿</a></div><div class="item-desc">实验表明快感缺失者难以调整努力获取更大奖励，源于对奖励与成本的认知缺陷。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">3 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/how-to-spot-an-ai-generated-face-according-to-science/" target="_blank" rel="noopener">How to spot an AI-generated face, according to science 训练视觉线索可将AI人脸识别准确率提升近一倍</a></div><div class="item-desc">研究表明，训练人们关注特定视觉细节，可将识别AI生成面孔的准确率提高近一倍。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/06/29/1139849/ai-agents-are-not-your-coworkers/" target="_blank" rel="noopener">AI agents are not your “coworkers” 将AI智能体视为“同事”会导致更多错误</a></div><div class="item-desc">研究发现将AI代理当同事而非工具，人们错误率增加18%，表明应正确对待人机协作角色。</div></div></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/gene-editing-startups-are-using-crispr-to-treat-diseases/" target="_blank" rel="noopener">Gene-editing startups are using CRISPR to treat diseases CRISPR基因编辑初创公司推进疾病治疗</a></div><div class="item-desc">多家基因编辑初创公司如Epicrispr致力于CRISPR疗法，探索从遗传病到癌症的临床应用。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/" target="_blank" rel="noopener">Claude Science is Anthropic’s newest flagship product Claude Science：Anthropic最新科研旗舰产品</a></div><div class="item-desc">Anthropic推出Claude Science，可自主辅助科学研究，拓展AI在科研领域的应用边界。</div></div></div><div class="item"><span class="item-idx">13</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/nasa-announces-astrobotic-intuitive-machines-and-firefly-to-build-lunar-landers-for-a-future-moon-base/" target="_blank" rel="noopener">NASA announces Astrobotic, Intuitive Machines and Firefly to build lunar landers for a future moon base NASA选定三家公司建造月球着陆器，为月球基地铺路</a></div><div class="item-desc">NASA投资4亿美元委托三家公司执行四次登月任务，为未来载人月球前哨站奠定基础。</div></div></div><div class="item"><span class="item-idx">14</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/new-york-city-could-see-its-hottest-weather-in-more-than-a-decade/" target="_blank" rel="noopener">New York City could see its hottest weather in more than a decade 纽约市或迎十多年来最高温，突破100华氏度</a></div><div class="item-desc">纽约市预计气温超100°F（38°C），打破2012年纪录，极端高温风险加剧。</div></div></div><div class="item"><span class="item-idx">15</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/what-is-a-lagrangian-used-for-in-physics/" target="_blank" rel="noopener">What is a Lagrangian used for in physics? 拉格朗日量的物理应用：从诺特定理到守恒律</a></div><div class="item-desc">拉格朗日量是分析力学核心，通过诺特定理联系对称性与守恒律，是现代物理学基石。</div></div></div><div class="item"><span class="item-idx">16</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/ai-finds-hidden-ecg-signal-that-predicts-sudden-cardiac-death-risk/" target="_blank" rel="noopener">AI finds hidden ECG signal that predicts sudden cardiac death risk AI识别隐藏心电信号，预测心源性猝死风险</a></div><div class="item-desc">AI从心电图中发现隐藏信号，可提前识别高风险人群，有望精准预防心源性猝死。</div></div></div><div class="item"><span class="item-idx">17</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/06/30/1139958/roundtables-longevitys-next-frontier-reprogramming-your-body/" target="_blank" rel="noopener">Roundtables: Longevity’s Next Frontier: “Reprogramming” Your Body 长寿新前沿：身体“重编程”逆转衰老</a></div><div class="item-desc">科学家探索细胞重编程技术以逆转衰老，巨额资金涌入，但实际应用仍面临挑战。</div></div></div><div class="item"><span class="item-idx">18</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/chinas-lineshine-supercomputer-tops-global-rankings-with-almost-2-quadrillion-calculations-per-second/" target="_blank" rel="noopener">China’s LineShine supercomputer tops global rankings with almost 2 quadrillion calculations per second 中国“天河”超算以近2百亿亿次/秒性能登顶全球</a></div><div class="item-desc">中国超算LineShine以每秒近2百亿亿次运算超越美国，位居TOP500榜首，彰显算力竞争新格局。</div></div></div><div class="item"><span class="item-idx">19</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/london-botanic-gardens-digitizes-7-million-specimens/" target="_blank" rel="noopener">London botanic gardens digitizes 7 million specimens 伦敦邱园完成700万份植物真菌标本数字化</a></div><div class="item-desc">邱园将740万份标本数字化并免费开放，极大促进全球植物与真菌研究资源可及性。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><span class="item-idx">20</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/americas/colombias-president-elect-taps-miguel-gomez-finance-minister-2026-06-30/" target="_blank" rel="noopener">Colombia president-elect taps Miguel Gomez as finance minister 哥伦比亚当选总统任命米格尔·戈麦斯为财政部长（Reuters）</a></div></div></div><div class="item"><span class="item-idx">21</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/newsletters/2026-06-30/nike-slips-after-cautious-commentary-eyes-china-reset" target="_blank" rel="noopener">Nike Eyes China Reset, Remains Cautious About Demand 耐克着眼中国市场重整，对需求仍持谨慎态度（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">22</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/newsletters/2026-06-30/supreme-court-hands-gop-election-year-win-on-campaign-spending" target="_blank" rel="noopener">Supreme Court’s Supermajority Hands GOP Election Year Win 最高法院绝对多数席次助共和党赢得大选年胜利（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">23</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/opinion/newsletters/2026-06-30/supreme-court-birthright-citizenship-decision-was-too-close-mr15vxpm" target="_blank" rel="noopener">The Supreme Court Procrastinates and (Barely) Passes the Test 最高法院拖延行事，（勉强）通过考验（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">24</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-06-30/trump-reports-at-least-1-2-billion-in-crypto-earnings-for-2025" target="_blank" rel="noopener">Trump Reports at Least $1.2 Billion in 2025 Crypto Earnings 特朗普报告2025年加密收益至少12亿美元（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">25</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-06-30/nasa-gives-more-lunar-lander-contracts-to-three-us-companies" target="_blank" rel="noopener">NASA Gives More Lunar Lander Contracts to Three US Companies NASA向三家美国公司追加月球着陆器合同（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">26</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-06-30/iherb-is-said-to-select-banks-for-500-million-ipo-this-year" target="_blank" rel="noopener">iHerb Is Said to Select Banks for $500 Million IPO This Year iHerb据悉选定投行，计划今年IPO募资10亿美元（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">27</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/asia-pacific/russia-urges-pakistan-afghanistan-use-diplomacy-solve-disputes-2026-06-30/" target="_blank" rel="noopener">Russia urges Pakistan, Afghanistan to use diplomacy to solve disputes 俄罗斯敦促巴基斯坦与阿富汗通过外交解决争端（Reuters）</a></div></div></div><div class="item"><span class="item-idx">28</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-06-30/brazilian-real-becomes-collateral-damage-as-dollar-roars-back" target="_blank" rel="noopener">Brazil Real Becomes ‘Collateral Damage’ as Dollar Roars Back 美元强势回归，巴西雷亚尔沦为“附带损害”（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">29</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-06-30/the-risky-debt-fueling-taiwan-and-korea-s-ai-stock-boom-big-take-asia-podcast" target="_blank" rel="noopener">Debt and Risky Bets Fuel South Korea and Taiwan&#x27;s AI Stock Boom 债务与高风险押注助推韩国与台湾AI股大涨（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">30</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/jp/news/newsletters/2026-06-30/THGQJOKIJH8S00" target="_blank" rel="noopener">【今朝の5本】仕事を始める前に読んでおきたい厳選ニュース 【今日早报】工作前必读的精选新闻（Bloomberg）</a></div></div></div><div class="item"><span class="item-idx">31</span><div class="item-body"><div class="item-title"><a href="https://www.bloomberg.com/news/articles/2026-06-30/ee-uu-sanciona-empresas-mexicanas-por-contrabando-de-combustible" target="_blank" rel="noopener">EE.UU. sanciona empresas mexicanas por contrabando de combustible 美国因燃油走私制裁墨西哥企业（Bloomberg）</a></div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

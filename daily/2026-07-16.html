@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年7月16日 周四</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月16日 周四</span><span class="meta-chip">共 42 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>常规疫苗接种可降低痴呆和阿尔茨海默病风险，或为预防认知衰退提供新途径</li><li>含铜药物恢复脑内废物清除系统并改善学习记忆，为阿尔茨海默治疗提供新思路</li><li>免疫治疗让多名复发性脑瘤儿童多年无病生存，为儿童脑癌带来突破性希望</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/how-bipolar-traits-and-positive-emotions-shape-cannabis-habits-in-young-adults/" target="_blank" rel="noopener">Linking bipolar disorder vulnerability to cannabis habits in college (2026.07.15) 双相障碍易感性与大学生大麻习惯相关</a></div><div class="item-desc">研究发现双相谱系障碍风险高的大学生，大麻使用导致更多日常生活干扰，揭示情绪障碍与cannabis关联。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/the-surprising-link-between-routine-vaccines-and-alzheimers-risk/" target="_blank" rel="noopener">The surprising link between routine vaccines and Alzheimer’s risk (2026.07.15) 常规疫苗与阿尔茨海默病风险的惊人联系</a></div><div class="item-desc">多项研究表明常规疫苗接种可降低痴呆和阿尔茨海默病风险，或为预防认知衰退提供新途径。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/men-become-somewhat-more-supportive-of-feminine-honor-norms-when-they-feel-jealous/" target="_blank" rel="noopener">Men become somewhat more supportive of feminine honor norms when they feel jealous (2026.07.15) 男人嫉妒时更支持女性荣誉规范</a></div><div class="item-desc">实验显示男性在嫉妒情绪下更赞同女性荣誉规范，而女性无此变化，与配偶保护倾向有关。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/new-study-explores-the-psychological-chain-behind-involuntary-sexual-thoughts/" target="_blank" rel="noopener">New study explores the psychological chain behind involuntary sexual thoughts (2026.07.15) 新研究揭示非自愿性念头的心理链条</a></div><div class="item-desc">研究显示生物性别和性欲影响色情使用和自发念头，思维游离起中介作用，理解性心理机制。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/short-video-viewing-temporarily-shuts-down-cognitive-control-networks-study-finds/" target="_blank" rel="noopener">Short-video viewing temporarily shuts down cognitive control networks, study finds (2026.07.15) 刷短视频暂时关闭认知控制网络</a></div><div class="item-desc">观看偏好短视频抑制大脑自控区域，与谷氨酸水平相关，解释短视频沉迷的神经机制。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/copper-delivering-drug-repairs-brain-pumps-to-clear-toxic-alzheimers-proteins/" target="_blank" rel="noopener">Copper-delivering drug repairs brain pumps to clear toxic Alzheimer’s proteins (2026.07.15) 铜递送药物修复脑泵清除阿尔茨海默毒性蛋白</a></div><div class="item-desc">含铜药物恢复脑内废物清除系统，降低毒性蛋白水平，改善学习记忆，为阿尔茨海默治疗提供新思路。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/avoidant-attachment-behaviors-link-childhood-trauma-to-psychopathic-traits-in-ad/" target="_blank" rel="noopener">Can learning to form healthy bonds reduce psychopathic behaviors? (2026.07.15) 学习建立健康依恋能否减少精神病态行为？</a></div><div class="item-desc">研究发现童年虐待通过依恋障碍导致精神病态，培养健康关系可降低反社会倾向，具干预意义。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/election-distrust-mobilizes-conservatives-while-liberals-participate-regardless-of-trust/" target="_blank" rel="noopener">Election distrust mobilizes conservatives, while liberals participate regardless of trust (2026.07.14) 选举不信任动员保守派，自由派参与不受信任影响</a></div><div class="item-desc">保守派因质疑选举公正性而更积极参与政治，自由派则不受信任程度影响，揭示政治行为差异。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">3 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/mathematicians-are-closing-in-on-the-hidden-order-inside-chaos/" target="_blank" rel="noopener">Mathematicians are closing in on the hidden order inside chaos (2026.07.15) 数学家逼近混沌中的隐藏秩序</a></div><div class="item-desc">拉姆齐理论研究混沌中的必然秩序，近期突破可能揭示系统无序与有序的临界点。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/astronomers-just-accidentally-spotted-the-faintest-exoplanet-ever-seen-from-earth/" target="_blank" rel="noopener">Astronomers just accidentally spotted the faintest exoplanet ever seen from Earth (2026.07.15) 天文学家意外发现从地球可见的最暗系外行星</a></div><div class="item-desc">在β Pictoris系统意外发现第三颗行星，是地面望远镜拍到的最暗系外行星，挑战探测极限。</div></div></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/augusts-solar-eclipse-inspires-science-involving-jets-balloons-and-einsteins-general-theory-of-relativity/" target="_blank" rel="noopener">August&#x27;s solar eclipse inspires science involving jets, balloons and Einstein’s general theory of relativity (2026.07.15) 八月日食激发喷气机、气球和爱因斯坦相对论科学实验</a></div><div class="item-desc">日全食期间科学家利用飞机、气球观测，验证广义相对论并收集罕见数据。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/video/scientists-discover-a-remarkable-new-monkey-species-with-orange-lips-and-a-froglike-roar/" target="_blank" rel="noopener">Scientists discover a ‘remarkable’ new monkey species with orange lips and a froglike roar (2026.07.15) 发现新猴种：橙色嘴唇，蛙鸣般吼叫</a></div><div class="item-desc">在刚果发现新猴种Likweli，其橙色唇斑和蛙鸣声独特，但可能已濒危。</div></div></div><div class="item"><span class="item-idx">13</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/how-to-avoid-getting-cyclosporiasis-and-why-washing-lettuce-may-not-be-enough/" target="_blank" rel="noopener">How to avoid getting cyclosporiasis—and why washing lettuce may not be enough (2026.07.15) 如何避免环孢子虫病——为何只洗生菜不够</a></div><div class="item-desc">环孢子虫病病例激增，专家指出仅清洗生菜不足以防病，需注意其他预防措施。</div></div></div><div class="item"><span class="item-idx">14</span><div class="item-body"><div class="item-title"><a href="https://www.quantamagazine.org/thermodynamic-computers-go-with-the-energy-flow-20260715/" target="_blank" rel="noopener">Thermodynamic Computers Go With the (Energy) Flow (2026.07.15) 热力学计算机顺应能量流动</a></div><div class="item-desc">利用热力学原理设计计算机，以噪声为资源而非敌人，有望实现低功耗高效计算。</div></div></div><div class="item"><span class="item-idx">15</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/trumps-latest-cdc-chief-pick-erica-schwartz-faces-senate-confirmation-hearing/" target="_blank" rel="noopener">Trump’s latest CDC chief pick Erica Schwartz faces Senate confirmation hearing (2026.07.15) 特朗普提名的CDC局长人选面临参议院确认听证</a></div><div class="item-desc">Erica Schwartz承诺“永不背叛科学”，但听证会面临两党质疑其政治独立性。</div></div></div><div class="item"><span class="item-idx">16</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/video/indonesias-new-capital-is-changing-the-borneo-rainforest-forever-science-is-listening-to-the-change/" target="_blank" rel="noopener">Indonesia’s new capital is changing the Borneo rainforest forever. Science is listening to the change (2026.07.15) 印尼新首都永久改变婆罗洲雨林，科学记录变化</a></div><div class="item-desc">印尼迁都至婆罗洲，雨林遭开发，科学家通过声景监测生态变化，警示生物多样性损失。</div></div></div><div class="item"><span class="item-idx">17</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/see-the-first-x-rays-of-humans-taken-in-space/" target="_blank" rel="noopener">See the first x-rays of humans taken in space (2026.07.15) 首张太空中人类X光片公布</a></div><div class="item-desc">在太空站拍摄手部X光片，证明太空医疗设备可行，为长期航天任务（如火星）提供安全支持。</div></div></div><div class="item"><span class="item-idx">18</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/experimental-immune-therapy-shows-promise-against-deadly-childhood-brain-cancer/" target="_blank" rel="noopener">Experimental immune therapy shows promise against deadly childhood brain cancer (2026.07.14) 实验性免疫疗法对致命儿童脑癌显希望</a></div><div class="item-desc">早期试验中多名复发性脑瘤儿童经免疫治疗后多年无病生存，为儿童脑癌带来突破。</div></div></div><div class="item"><span class="item-idx">19</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/nasas-hubble-reveals-a-black-hole-hiding-inside-a-massive-star-cluster-in-the-milky-way/" target="_blank" rel="noopener">NASA’s Hubble reveals a black hole hiding inside a massive star cluster in the Milky Way (2026.07.14) 哈勃望远镜揭示银河系大星团中隐藏的黑洞</a></div><div class="item-desc">在奥米茄星团内发现中等质量黑洞，证实长期猜想，为黑洞形成演化提供关键证据。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">📐 arXiv 前沿</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">A1</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.12909v1" target="_blank" rel="noopener">Real-time fall detection based on vision for low-power edge platforms (2026.07.14) 基于视觉的低功耗边缘平台实时跌倒检测</a></div><div class="item-desc">提出物理信息引导的跌倒检测框架，将跌倒重新定义为稳定性丧失的动态过程而非静态姿态分类。该框架利用边缘平台低功耗特性实现实时检测，对老年护理和智能监控具有实际应用价值。</div></div></div><div class="item"><span class="item-idx">A2</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.12930v1" target="_blank" rel="noopener">Optimal photostimulation selection for iterative activity maps (2026.07.14) 迭代活动图谱的最优光刺激选择</a></div><div class="item-desc">提出OPhELIA方法，通过优化光刺激选择在全光学双光子全息光遗传学中实现高效环路映射。解决了组合复杂度、组织加热和光损伤等实验限制，使因果环路映射变得可行。</div></div></div><div class="item"><span class="item-idx">A3</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.12382v1" target="_blank" rel="noopener">Differentiable Clone-Structured Causal Graphs for End-to-End Cognitive Map Learning from Image Sequences (2026.07.14) 可微克隆结构因果图用于图像序列端到端认知地图学习</a></div><div class="item-desc">提出可微分的克隆结构因果图算法，实现从原始感官输入端到端学习可解释的认知地图。克服了传统算法需预定义随机变量和模板匹配的限制，更贴近海马体建模的生物学合理性。</div></div></div><div class="item"><span class="item-idx">A4</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.13034v1" target="_blank" rel="noopener">Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution (2026.07.14) AI智能体能否判断任务简单性？迈向复杂度感知推理与执行</a></div><div class="item-desc">指出大语言模型智能体缺乏任务复杂度感知，导致过度上下文消耗。提出任务感知的执行范围估计能力，可显著提升多步骤工程工作流的效率与资源利用。</div></div></div><div class="item"><span class="item-idx">A5</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.13013v1" target="_blank" rel="noopener">Audio-Native Speech Recognition with a Frozen Discrete-Diffusion Language Model (2026.07.14) 基于冻结离散扩散语言模型的音频原生语音识别</a></div><div class="item-desc">提出一种音频原生语音识别方法，利用冻结的离散扩散语言模型直接处理音频信号。避免了传统语音识别中声学模型与语言模型分离的复杂性，实现端到端的高效识别。</div></div></div><div class="item"><span class="item-idx">A6</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.12861v1" target="_blank" rel="noopener">Unveiling Complex Collective Behaviors from Simple Rewards (2026.07.14) 从简单奖励中揭示复杂集体行为</a></div><div class="item-desc">通过多智能体强化学习分析简单奖励下涌现的复杂群体行为机制。揭示了神经策略的涌现规律，为机器人集群的行为设计与可解释性提供新视角。</div></div></div><div class="item"><span class="item-idx">A7</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.12958v1" target="_blank" rel="noopener">CD-MED: Cross-Domain Multimodal Emotion Descriptor for Visual Comparison of Digital Objects (2026.07.14) CD-MED：用于数字对象视觉比较的跨域多模态情感描述符</a></div><div class="item-desc">提出跨域多模态情感描述符CD-MED，实现不同模态（如电影、歌曲）的数字对象情感直接比较。打破了传统情感识别模型模态特定的限制，为跨媒体情感分析提供统一框架。</div></div></div><div class="item"><span class="item-idx">A8</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.12755v1" target="_blank" rel="noopener">Practical Judgment, Virtue, and Intuition in the Use of Opaque AI-Enabled Systems (2026.07.14) 使用不透明AI系统时的实践判断、美德与直觉</a></div><div class="item-desc">探讨在功能不透明的AI系统应用中，用户如何依赖实践判断、美德和直觉进行决策。为AI系统的人机交互设计和伦理治理提供了哲学与心理学视角的重要启示。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><span class="item-idx">20</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/china/chinas-wang-huning-meets-top-north-korean-official-pyongyang-kcna-reports-2026-07-15/" target="_blank" rel="noopener">China&#x27;s Wang Huning meets a top North Korean official in Pyongyang, KCNA reports 王沪宁在平壤会见朝鲜高级官员，朝中社报道（Reuters）</a></div></div></div><div class="item"><span class="item-idx">21</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/sports/soccer/holders-argentina-beat-england-2-1-set-up-world-cup-final-against-spain-2026-07-15/" target="_blank" rel="noopener">Argentina late show sinks England and sets up World Cup final against Spain 阿根廷绝杀英格兰，与西班牙会师世界杯决赛（Reuters）</a></div></div></div><div class="item"><span class="item-idx">22</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/us/us-house-defeats-bid-cut-off-israel-aid-vote-dividing-democrats-2026-07-15/" target="_blank" rel="noopener">US House defeats bid to cut off Israel aid in vote dividing Democrats 美众议院否决切断对以援助议案，民主党内部分歧（Reuters）</a></div></div></div><div class="item"><span class="item-idx">23</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/europe/russia-says-ukrainian-drone-kills-chief-engineer-zaporizhzhia-nuclear-plant-2026-07-15/" target="_blank" rel="noopener">Russia says Ukrainian drone kills chief engineer at Zaporizhzhia nuclear plant 俄称乌无人机袭击扎波罗热核电站，总工程师身亡（Reuters）</a></div></div></div><div class="item"><span class="item-idx">24</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/americas/death-toll-venezuela-quakes-rises-4829-government-says-2026-07-15/" target="_blank" rel="noopener">Death toll from Venezuela quakes rises to 4,829, government says 委内瑞拉地震死亡人数升至4829人，政府确认（Reuters）</a></div></div></div><div class="item"><span class="item-idx">25</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/uk/iran-summons-british-envoy-over-irgc-designation-2026-07-15/" target="_blank" rel="noopener">Iran summons British envoy over IRGC designation 伊朗就伊斯兰革命卫队被列名召见英国大使（Reuters）</a></div></div></div><div class="item"><span class="item-idx">26</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/middle-east/us-strikes-iran-strengthen-trumps-options-new-escalation-officials-say-2026-07-15/" target="_blank" rel="noopener">US strikes on Iran strengthen Trump&#x27;s options for new escalation, officials say 美官员称对伊打击为特朗普升级局势提供选项（Reuters）</a></div></div></div><div class="item"><span class="item-idx">27</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/sports/ioc-defends-russian-olympic-committee-reinstatement-after-eu-countries-call-2026-07-15/" target="_blank" rel="noopener">IOC defends Russian Olympic Committee reinstatement after EU countries call for funding cuts 欧盟多国要求削减资助，国际奥委会为俄奥委会恢复资格辩护（Reuters）</a></div></div></div><div class="item"><span class="item-idx">28</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/us/rubio-host-conference-far-left-terrorism-thursday-2026-07-15/" target="_blank" rel="noopener">Rubio to host conference on &#x27;far-left terrorism&#x27; on Thursday 鲁比奥拟于周四主持“极左恐怖主义”会议（Reuters）</a></div></div></div><div class="item"><span class="item-idx">29</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/legal/government/trump-spy-nominee-clayton-will-not-directly-say-biden-won-2020-election-2026-07-15/" target="_blank" rel="noopener">Trump spy nominee Clayton will not directly say Biden won 2020 election 特朗普提名的间谍主管克莱顿拒直接承认拜登赢得2020大选（Reuters）</a></div></div></div><div class="item"><span class="item-idx">30</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/europe/zelenskiy-propose-interior-minister-klymenko-ukraines-new-defence-minister-2026-07-15/" target="_blank" rel="noopener">Zelenskiy to propose Interior Minister Klymenko as Ukraine&#x27;s new defence minister, lawmakers say 议员称泽连斯基将提名内务部长克利缅科任新国防部长（Reuters）</a></div></div></div><div class="item"><span class="item-idx">31</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/uk/uk-police-charge-14-year-old-boy-with-terrorism-offence-over-mosque-plot-2026-07-15/" target="_blank" rel="noopener">UK police charge 14-year-old boy with terrorism offence over mosque plot 英国警方指控14岁少年涉策划袭击清真寺涉恐罪名（Reuters）</a></div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

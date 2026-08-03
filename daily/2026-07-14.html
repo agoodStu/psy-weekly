@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年7月14日 周二</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月14日 周二</span><span class="meta-chip">共 41 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>银河系云团检测到树莓糖，为宇宙生命起源及星际有机化学提供关键证据</li><li>疫苗训练免疫系统识别芬太尼变异体，为阿片类药物滥用提供新防线</li><li>联邦开源AI整合文献与暗数据提供免费工具，旨在逆转阿尔茨海默高失败率</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/testosterone-puberty-girls-emotional-distress-31042/" target="_blank" rel="noopener">Testosterone Drives Early Pubertal Distress in Girls (2026.07.13) 睾酮驱动女孩青春期早期情绪困扰</a></div><div class="item-desc">睾酮在10-12岁女孩情绪脆弱中起主导作用，挑战传统激素角色认知，提示早期干预方向。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/open-source-ai-tools-alzheimers-31041/" target="_blank" rel="noopener">Open-Source AI Tools for Alzheimer’s (2026.07.13) 开源AI工具助力阿尔茨海默病研究</a></div><div class="item-desc">联邦开源AI整合文献与暗数据提供免费工具集，旨在逆转阿尔茨海默临床试验高失败率。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/" target="_blank" rel="noopener">What Anthropic’s latest AI discovery does—and doesn’t—show (2026.07.13) Anthropic最新AI发现的真相与局限</a></div><div class="item-desc">公司发布怪诞研究揭示AI内部机制，但实际意义有限，需谨慎评估其可解释性价值。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/objective-measurements-shed-light-on-the-geometry-of-facial-attractiveness/" target="_blank" rel="noopener">Objective measurements shed light on the geometry of facial attractiveness (2026.07.13) 客观测量揭示面部吸引力的几何特征</a></div><div class="item-desc">三维面形客观几何模式决定吸引力，男女特征不同，挑战审美主观论，可用于社会认知研究。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/infant-auditory-spatial-tracking-noise-31040/" target="_blank" rel="noopener">Infants Use Spatial Cues to Hear Voices in Noisy Environments (2026.07.13) 婴儿利用空间线索在嘈杂环境中分辨声音</a></div><div class="item-desc">即使大脑皮层未成熟，婴儿也能借助空间分隔隔离语音，揭示早期听觉分离能力。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/the-evolutionary-reasons-behind-who-we-choose-as-friends/" target="_blank" rel="noopener">The evolutionary reasons behind who we choose as friends (2026.07.13) 选择朋友背后的进化原因</a></div><div class="item-desc">同性友谊选择基于祖先环境中的合作特质，拓展友谊进化论解释，关联现代社交行为。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.quantamagazine.org/why-am-i-left-handed-20260713/" target="_blank" rel="noopener">Why Am I Left-Handed? (2026.07.13) 我为什么是左撇子？</a></div><div class="item-desc">左撇子由大脑偏侧化与遗传共同决定，研究揭示其与认知功能及疾病风险的关联。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/wealth-and-air-pollution-emerge-as-top-predictors-of-state-autism-rates/" target="_blank" rel="noopener">Wealth and air pollution emerge as top predictors of state autism rates (2026.07.13) 财富与空气污染成为各州自闭症患病率首要预测因素</a></div><div class="item-desc">社会经济地位和空气污染是自闭症最强预测因子，提示环境与遗传交互作用影响神经发育。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">3 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/how-steering-an-ais-personality-changes-the-way-it-interacts-with-others/" target="_blank" rel="noopener">How steering an AI’s personality changes the way it interacts with others (2026.07.13) AI个性如何影响其与他人的互动方式</a></div><div class="item-desc">大型语言模型“宜人性”主导合作行为，其他特质影响有限，为设计更协作的AI提供依据。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/mathematicians-still-dont-know-the-fastest-way-to-multiply-numbers/" target="_blank" rel="noopener">Mathematicians still don’t know the fastest way to multiply numbers (2026.07.13) 数学家至今不知乘法的最快算法</a></div><div class="item-desc">尽管算法众多，乘法复杂性上限仍未解，挑战计算理论，激励数学基础突破。</div></div></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/nine-recent-studies-that-reveal-the-hidden-psychology-of-american-politics/" target="_blank" rel="noopener">Nine recent studies that reveal the hidden psychology of American politics (2026.07.12) 九项近期研究揭示美国政治隐藏的心理机制</a></div><div class="item-desc">党派认同影响从微笑解读到日常选择，揭示政治极化深植于心理根基，远超投票行为。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">7 条</span></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/we-finally-know-the-name-of-a-maya-mathematician/" target="_blank" rel="noopener">We finally know the name of a Maya mathematician (2026.07.13) 我们终于知道了一位玛雅数学家的名字</a></div><div class="item-desc">署名“白胸狐狸”揭示古玛雅数学公式，为理解中美洲文明数学传承提供新线索。</div></div></div><div class="item"><span class="item-idx">13</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/why-have-their-been-so-many-record-breaking-heat-waves-this-summer/" target="_blank" rel="noopener">Why have their been so many record-breaking heat waves this summer? (2026.07.13) 为何今年夏天屡破纪录的热浪频发？</a></div><div class="item-desc">热浪叠加与气候变暖使极端高温更频繁，揭示未来酷暑将成常态的严峻趋势。</div></div></div><div class="item"><span class="item-idx">14</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/scientists-overwhelmingly-against-rule-change-that-would-give-political-appointees-say-over-science-grants/" target="_blank" rel="noopener">Scientists overwhelmingly against rule change that would give political appointees say over science grants (2026.07.13) 科学家压倒性反对让政治任命官员掌控科研经费</a></div><div class="item-desc">数十万科学家警告，改变拨款审批将严重损害美国科学，呼吁维护科研独立性与公信力。</div></div></div><div class="item"><span class="item-idx">15</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/scientists-spot-sugar-in-interstellar-space-for-the-first-time-ever/" target="_blank" rel="noopener">Scientists spot sugar in interstellar space for the first time ever (2026.07.13) 科学家首次在星际空间发现糖分子</a></div><div class="item-desc">在银河系云团中检测到树莓糖（赤藓糖），为宇宙生命起源及星际有机化学提供关键证据。</div></div></div><div class="item"><span class="item-idx">16</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/scientists-develop-a-groundbreaking-vaccine-that-outsmarts-illicit-fentanyl-analogs/" target="_blank" rel="noopener">Scientists develop a groundbreaking vaccine that outsmarts illicit fentanyl analogs (2026.07.13) 科学家开发出能抵御非法芬太尼类似物的突破性疫苗</a></div><div class="item-desc">疫苗训练免疫系统识别广谱分子特征，对抗芬太尼变异体，为阿片类药物滥用提供新防线。</div></div></div><div class="item"><span class="item-idx">17</span><div class="item-body"><div class="item-title"><a href="https://knowablemagazine.org/content/article/mind/2026/design-automated-systems-with-human-psychology-in-mind" target="_blank" rel="noopener">Who’s in charge? The fraught union of automation and human behavior (2026.07.13) 谁在掌控？自动化与人类行为的艰难结合</a></div><div class="item-desc">AI接管任务后人类从操作者变为监督者，带来控制权、信任与伦理的新挑战。</div></div></div><div class="item"><span class="item-idx">18</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/better-diets-are-linked-to-sharper-focus-in-teens-with-attention-disorders/" target="_blank" rel="noopener">Better diets are linked to sharper focus in teens with attention disorders (2026.07.13) 健康饮食与注意力障碍青少年更好的专注力相关</a></div><div class="item-desc">小样本研究显示改善饮食可提升ADHD青少年专注力，提供非药物辅助干预思路。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">📐 arXiv 前沿</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">A1</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.09876v1" target="_blank" rel="noopener">Prompting-MammAlps: Fine-Grained Text-to-Video Retrieval for Camera-Trap Data (2026.07.10) 提示式MammAlps：针对相机陷阱数据的细粒度文本到视频检索</a></div><div class="item-desc">提出了基于大型视频语言模型的文本到视频检索方法，专门用于从相机陷阱数据中自动检索感兴趣的事件。该方法解决了现有模型在时空理解不足和生态数据泛化差的问题，有助于高效分析大规模生态监测视频。</div></div></div><div class="item"><span class="item-idx">A2</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.09278v1" target="_blank" rel="noopener">Structural Brain Predictors of Visual Attention Gradient Modulated by Trait Anxiety (2026.07.10) 特质焦虑调节的视觉注意梯度的结构性脑预测因素</a></div><div class="item-desc">研究了大脑结构形态的个体差异如何预测空间注意的梯度分布，并发现特质焦虑对该过程有调节作用。这为理解焦虑如何改变视觉注意的灵活性提供了神经解剖学依据，有助于揭示注意偏向的生物学基础。</div></div></div><div class="item"><span class="item-idx">A3</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.09032v1" target="_blank" rel="noopener">Quantum Logic as the Logic of Contexts (2026.07.10) 量子逻辑作为语境逻辑</a></div><div class="item-desc">论证了量子逻辑应被视为有限可计算设定下语境逻辑的基础，而非对经典逻辑的偏离。通过展示自由正交模格在二生成元上的96个元素结构，挑战了经典逻辑优先的传统观点，为逻辑学研究提供了新视角。</div></div></div><div class="item"><span class="item-idx">A4</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.11859v1" target="_blank" rel="noopener">Can LLMs Perform Deep Technical Comprehension of Computer Architecture Papers? (2026.07.13) 大语言模型能否对计算机体系结构论文进行深层技术理解？</a></div><div class="item-desc">提出了Gauntlet开源流水线，通过五个独立专家角色审稿人和对抗合成阶段，评估LLM对论文的深层技术理解能力。这项工作超越了简单的摘要生成，推动了对AI批判性分析能力的量化评估。</div></div></div><div class="item"><span class="item-idx">A5</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.11692v1" target="_blank" rel="noopener">Uncovering Students&#x27; Mental Models of Generative Artificial Intelligence (2026.07.13) 揭示学生对生成式人工智能的心理模型</a></div><div class="item-desc">研究学生如何认知生成式AI的能力和局限，以及这些心理模型如何影响他们在学术工作中的使用方式。理解学生的心理模型对设计有效的AI教育工具和教学策略至关重要。</div></div></div><div class="item"><span class="item-idx">A6</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.11292v1" target="_blank" rel="noopener">The Paternalistic Filter: Epistemic Injustice and Differential Refusal in LLM-Mediated History Education for Marginalized Romanian Students (2026.07.13) 家长式过滤器：大语言模型中介的历史教育中对罗马尼亚边缘化学生的认知不公与差异拒绝</a></div><div class="item-desc">通过对四个LLM作为历史导师的系统API审计，评估了关于1989年罗马尼亚革命的1800个回应在不同种族和社会经济背景下的差异。揭示了LLM可能系统性歧视弱势群体，产生认知不公正，对教育公平提出警示。</div></div></div><div class="item"><span class="item-idx">A7</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.11276v1" target="_blank" rel="noopener">Automated Textbook Auditing with Multi-Agent LLM Systems (2026.07.13) 基于多智能体大语言模型的教材自动审计</a></div><div class="item-desc">提出了模块化多智能体流水线AI Textbook Auditor，用于同时对教材进行事实准确性、领域技术正确性和语言质量审计。解决了通用语法检查器无法处理教材多维度质量保证的问题，提升教材审核效率与深度。</div></div></div><div class="item"><span class="item-idx">A8</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.11228v1" target="_blank" rel="noopener">DeepBias: Adaptive In-depth Probing of Social Biases in LVLMs (2026.07.13) DeepBias：大型视觉语言模型中社会偏见的自适应深度探测</a></div><div class="item-desc">引入了DeepBias框架，通过自适应生成测试用例来动态评估LVLM中社会偏见的深度和极限。克服了静态数据集只能进行表面评估的局限，揭示模型脆弱性的真实程度，为偏见缓解提供更精准的基准。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><span class="item-idx">19</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/europe/russian-anti-war-politician-says-kremlin-is-bent-stopping-his-election-run-2026-07-14/" target="_blank" rel="noopener">Russian anti-war politician says Kremlin is bent on stopping his election run 俄反战政客称克里姆林宫执意阻其参选（Reuters）</a></div></div></div><div class="item"><span class="item-idx">20</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/russia-says-there-cant-be-security-guarantees-ukraine-without-its-involvement-2026-07-14/" target="_blank" rel="noopener">Russia says there can&#x27;t be security guarantees for Ukraine without its involvement 俄方称无俄参与无法为乌克兰提供安全保障（Reuters）</a></div></div></div><div class="item"><span class="item-idx">21</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/spanish-pm-sanchezs-brother-convicted-public-hiring-case-2026-07-14/" target="_blank" rel="noopener">Spanish PM Sanchez&#x27;s brother convicted in nepotism case 西班牙首相桑切斯之弟涉裙带关系案被判有罪（Reuters）</a></div></div></div><div class="item"><span class="item-idx">22</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/asia-pacific/indonesian-free-meals-operators-protest-moratorium-new-kitchens-2026-07-14/" target="_blank" rel="noopener">Indonesian free meals operators protest moratorium on new kitchens 印尼免费餐食经营者抗议新建厨房暂停令（Reuters）</a></div></div></div><div class="item"><span class="item-idx">23</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/lithuania-appoints-sinkevicius-prime-minister-with-pledge-defence-spending-us-2026-07-14/" target="_blank" rel="noopener">Lithuania appoints Sinkevicius prime minister with pledge of defence spending, US troop presence 立陶宛任命辛克维丘斯为总理，承诺增加国防开支并保留美军驻留（Reuters）</a></div></div></div><div class="item"><span class="item-idx">24</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/business/healthcare-pharmaceuticals/ebola-outbreak-is-least-double-formal-tally-who-says-2026-07-14/" target="_blank" rel="noopener">WHO says it has less than half funding needed to fight Ebola 世卫组织称抗击埃博拉资金不足所需一半（Reuters）</a></div></div></div><div class="item"><span class="item-idx">25</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/legal/government/can-prosecutors-compel-new-york-times-journalists-testify-leak-probe-2026-07-14/" target="_blank" rel="noopener">Explainer: Can prosecutors compel New York Times journalists to testify in leak probe? 解读：检察官能否强制《纽约时报》记者在泄密调查中作证？（Reuters）</a></div></div></div><div class="item"><span class="item-idx">26</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/legal/government/can-us-senator-lindsey-grahams-ukraine-initiatives-survive-without-him-2026-07-14/" target="_blank" rel="noopener">Can US Senator Lindsey Graham&#x27;s Ukraine initiatives survive without him? 美国参议员格雷厄姆缺席，其乌克兰提案能否延续？（Reuters）</a></div></div></div><div class="item"><span class="item-idx">27</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/asia-pacific/asean-envoy-meets-myanmar-opposition-groups-thailand-2026-07-14/" target="_blank" rel="noopener">ASEAN envoy meets Myanmar opposition groups in Thailand 东盟特使在泰国与缅甸反对派组织会面（Reuters）</a></div></div></div><div class="item"><span class="item-idx">28</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/middle-east/israeli-strikes-kill-two-people-gaza-including-10-year-old-medics-say-2026-07-14/" target="_blank" rel="noopener">Israeli fire kills nine in Gaza, including a 10-year-old, officials say 加沙遭以军袭击致九人死亡，含一名十岁儿童（Reuters）</a></div></div></div><div class="item"><span class="item-idx">29</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/europe/lebanon-israel-hold-us-brokered-talks-rome-implement-framework-deal-2026-07-14/" target="_blank" rel="noopener">Lebanon, Israel hold US-brokered talks in Rome to implement framework deal 黎巴嫩与以色列在美国斡旋下于罗马会谈落实框架协议（Reuters）</a></div></div></div><div class="item"><span class="item-idx">30</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/asia-pacific/how-flammable-decor-lax-rules-turned-bangkok-pub-into-death-trap-2026-07-14/" target="_blank" rel="noopener">How flammable decor and lax rules turned Bangkok pub into a death trap 易燃装饰与松懈法规如何使曼谷酒吧变死亡陷阱（Reuters）</a></div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>

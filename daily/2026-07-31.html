@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日信息简报 | 2026年7月31日 周五</title>
+<style>:root, [data-theme="auto"] {
+  --bg: #0d1117; --bg-card: #161b22; --bg-hover: #1c2129;
+  --text: #c9d1d9; --text-secondary: #8b949e; --text-tertiary: #6e7681;
+  --accent: #58a6ff; --accent-soft: rgba(88,166,255,0.1);
+  --accent-green: #3fb950; --accent-yellow: #d29922;
+  --border: #21262d; --divider: #21262d;
+  --tag-bg: rgba(88,166,255,0.1); --tag-text: #58a6ff;
+  --radius: 8px;
+  --font-serif: 'Charter','Noto Serif SC','Georgia','SimSun',serif;
+  --font-sans: 'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --font-mono: 'JetBrains Mono','SF Mono',monospace;
+}
+[data-theme="light"] {
+  --bg: #F5F4ED; --bg-card: #FAFAF5; --bg-hover: #E8E6DC;
+  --text: #2C2C2C; --text-secondary: #6b6a64; --text-tertiary: #8b8a84;
+  --accent: #1B365D; --accent-soft: #EEF2F7;
+  --accent-green: #1a7f37; --accent-yellow: #9a6700;
+  --border: #E8E6DC; --divider: #E8E6DC;
+  --tag-bg: #EEF2F7; --tag-text: #1B365D;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
+  color: var(--text); background: var(--bg);
+  transition: background 0.2s, color 0.2s;
+  padding-top: 48px;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* 顶部全局导航 */
+.topnav {
+  position: fixed; top: 0; left: 0; right: 0; height: 48px;
+  display: flex; align-items: center; justify-content: center; gap: 4px;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border); z-index: 200;
+}
+.topnav-tab {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 18px; border-radius: 20px;
+  font-size: 13px; font-weight: 500; color: var(--text-secondary);
+  border: 1px solid transparent; transition: all 0.15s;
+}
+.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
+.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+
+/* 主内容 */
+.main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
+.page-header h1 {
+  font-family: var(--font-serif); font-size: 24px; font-weight: 500;
+  color: var(--text); margin-bottom: 6px;
+}
+.subtitle { font-size: 13px; color: var(--text-secondary); margin-bottom: 20px; }
+.header-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.meta-chip {
+  font-size: 11px; padding: 3px 10px; border-radius: 20px;
+  background: var(--accent-soft); color: var(--accent);
+  font-family: var(--font-mono);
+}
+
+/* 今日要点 */
+.highlights {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px; margin-bottom: 28px;
+}
+.highlights-title {
+  font-size: 12px; color: var(--text-tertiary); text-transform: uppercase;
+  letter-spacing: 0.06em; margin-bottom: 10px;
+  display: flex; align-items: center; gap: 6px;
+}
+.highlights ul { list-style: none; }
+.highlights li {
+  padding: 6px 0; padding-left: 16px; position: relative;
+  font-size: 13.5px;
+}
+.highlights li::before {
+  content: '★'; position: absolute; left: 0; top: 6px;
+  color: var(--accent-yellow); font-size: 11px;
+}
+
+/* 板块 */
+.section { margin-bottom: 26px; }
+.section-head {
+  display: flex; align-items: center; gap: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid var(--divider);
+  margin-bottom: 12px;
+}
+.section-title { font-size: 15px; font-weight: 600; }
+.section-count { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item {
+  display: flex; gap: 10px; padding: 10px 12px;
+  border-radius: 6px; transition: background 0.12s;
+}
+.item:hover { background: var(--bg-hover); }
+.item-idx {
+  flex-shrink: 0; font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 2px 7px; border-radius: 4px; height: fit-content;
+  margin-top: 2px;
+}
+.item-body { min-width: 0; }
+.item-title { font-size: 13.5px; color: var(--text); }
+.item-title a { color: inherit; }
+.item-title a:hover { color: var(--accent); text-decoration: underline; }
+.item-date { font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+.item-desc { font-size: 12.5px; color: var(--text-secondary); margin-top: 3px; }
+.item-source { font-size: 10.5px; color: var(--text-tertiary); margin-top: 2px; }
+
+/* 往期列表 */
+.archive-list { display: flex; flex-direction: column; gap: 4px; }
+.archive-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 6px; border: 1px solid var(--border);
+  color: var(--text); transition: border-color 0.15s, background 0.15s;
+}
+.archive-item:hover { border-color: var(--accent); background: var(--accent-soft); text-decoration: none; }
+.archive-date { font-size: 14px; }
+.archive-count { margin-left: auto; font-size: 11px; color: var(--text-tertiary); font-family: var(--font-mono); }
+
+/* 移动端底部导航 */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: flex;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+
+/* footer */
+.footer {
+  margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--divider);
+  font-size: 11px; color: var(--text-tertiary); text-align: center; line-height: 1.8;
+}
+
+@media (min-width: 769px) {
+  .main { padding-top: 32px; }
+}
+</style>
+
+</head>
+<body>
+<nav class="topnav" aria-label="全局导航">
+  <a class="topnav-tab" href="index.html">📅 周报</a>
+  <a class="topnav-tab active" href="daily.html">📰 日报</a>
+</nav>
+<main class="main">
+  <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月31日 周五</span><span class="meta-chip">共 41 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>裸盖菇素辅助治疗使75%严重PTSD退伍军人症状完全缓解，为难治性精神疾病提供新希望</li><li>中年GDF15水平升高与后续20年痴呆风险增约两倍，或成低成本早期预警指标</li><li>LLM存在不可消除的对齐缺陷可被诱骗执行恶意指令，当前架构无法保证绝对安全</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/ai-vocalization-health-31161/" target="_blank" rel="noopener">Teaching AI to “Listen” for Disease (2026.07.30) 教会AI“听”病</a></div><div class="item-desc">国际专家小组建立首个基于共识的语音生物标志物框架和标准化分类法，推动疾病声学诊断。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/psilocybin-ptsd-remission-31159/" target="_blank" rel="noopener">Psilocybin Therapy Drives 75% PTSD Remission (2026.07.30) 裸盖菇素疗法使PTSD缓解率达75%</a></div><div class="item-desc">试验显示裸盖菇素辅助治疗对严重创伤后应激障碍退伍军人安全有效，75%症状完全缓解。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/learning-refining-neural-connections-31158/" target="_blank" rel="noopener">Learning Depends on Refining Existing Neural Connections (2026.07.30) 学习依赖于优化现有神经连接</a></div><div class="item-desc">研究发现神经网络学习主要通过调整已存在连接强度而非重构架构，揭示学习效率关键机制。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/ofc-curiosity-information-value-neuroscience-31156/" target="_blank" rel="noopener">The Neural Signal of Curiosity and Information Value (2026.07.30) 好奇心的神经信号与信息价值</a></div><div class="item-desc">小鼠实验发现脑内存在编码信息内在价值的神经特征，即使牺牲物理奖励也主动寻求未来知识。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/researchers-find-evidence-connecting-a-specific-blood-protein-to-brain-tissue-loss/" target="_blank" rel="noopener">Researchers find evidence connecting a specific blood protein to brain tissue loss (2026.07.30) 特定血液蛋白与脑组织损失相关</a></div><div class="item-desc">中年时期生长分化因子15水平升高与后续20年痴呆风险增加约两倍相关，此蛋白在衰老和炎症时释放。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/long-covid-symptoms-linked-to-measurable-damage-in-the-brains-dopamine-system/" target="_blank" rel="noopener">Long COVID symptoms linked to measurable damage in the brain’s dopamine system (2026.07.30) 长新冠症状与大脑多巴胺系统损伤相关</a></div><div class="item-desc">研究证实长新冠患者脑内多巴胺释放神经元显著减少，这种物理改变与淡漠、记忆障碍等症状直接相关。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/childhood-emotional-abuse-predicts-lower-romantic-relationship-satisfaction/" target="_blank" rel="noopener">Childhood emotional abuse predicts lower romantic relationship satisfaction (2026.07.30) 童年情感虐待预测较低浪漫关系满意度</a></div><div class="item-desc">纵向研究发现，童年心理虐待的成人因缺乏归属感而更难获得满意亲密关系，建议优先培养社会联结感。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/neuroscientists-just-upended-a-core-assumption-about-how-psychedelics-alter-brain-function/" target="_blank" rel="noopener">Neuroscientists just upended a core assumption about how psychedelics alter brain function (2026.07.30) 神经科学家颠覆迷幻药作用的核心假设</a></div><div class="item-desc">研究显示LSD、裸盖菇素等并非抑制默认模式网络，而是改变大脑皮层表面信息流动模式。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">2 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/chilean-mummies-reveal-a-lost-lineage-of-smallpox/" target="_blank" rel="noopener">Chilean mummies reveal a lost lineage of smallpox (2026.07.30) 智利木乃伊揭示已消失的天花病毒谱系</a></div><div class="item-desc">从智利木乃伊提取的古老DNA属于一个灭绝的天花病毒支系，随欧洲殖民被带到美洲。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/spacecraft-will-swarm-asteroid-apophis-during-fateful-2029-earth-flyby/" target="_blank" rel="noopener">Spacecraft will swarm asteroid Apophis during fateful 2029 Earth flyby (2026.07.30) 航天器将蜂拥前往2029年飞掠地球的小行星阿波菲斯</a></div><div class="item-desc">多国计划派遣探测器在2029年近距离观测这颗340米级小行星，研究其结构与轨道变化。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/focused-ultrasound-bbb-brain-cancer-31160/" target="_blank" rel="noopener">Focused Ultrasound Opens Blood-Brain Barrier to Treat Brain Cancer (2026.07.30) 聚焦超声打开血脑屏障治疗脑癌</a></div><div class="item-desc">研究表明聚焦超声联合微泡可高效靶向递药至胶质瘤，高分辨率MRI可精准追踪血脑屏障开放。</div></div></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/how-flowers-shaped-the-world-as-we-know-it/" target="_blank" rel="noopener">How flowers shaped the world as we know it (2026.07.30) 花朵如何塑造了我们所知的世界</a></div><div class="item-desc">新书论证开花植物从约1.4亿年前起源，通过改变生态系统与人类文化，最终塑造了现代世界面貌。</div></div></div><div class="item"><span class="item-idx">13</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/controlled-breathing-cravings-addiction-31157/" target="_blank" rel="noopener">Controlled Breathing Reduces Cravings in Addiction (2026.07.30) 控制呼吸可降低成瘾者的渴求</a></div><div class="item-desc">荟萃分析表明，控制呼吸干预能显著减少酒精、尼古丁等多种物质成瘾者的渴求感，效果具统计学意义。</div></div></div><div class="item"><span class="item-idx">14</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/everyone-alive-may-carry-dna-from-a-ghost-lineage-of-human-ancestors/" target="_blank" rel="noopener">Everyone alive may carry DNA from a ‘ghost lineage’ of human ancestors (2026.07.30) 所有人可能携带“幽灵祖先”DNA</a></div><div class="item-desc">新研究从现代基因组中读出古人类“幽灵谱系”，表明每个族群都携带有无化石记录的古人类血统。</div></div></div><div class="item"><span class="item-idx">15</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/3-charts-show-how-extreme-heat-is-costing-us-hours-of-lost-sleep/" target="_blank" rel="noopener">3 charts show how extreme heat is costing us hours of lost sleep (2026.07.30) 三张图表显示极端高温如何导致睡眠损失</a></div><div class="item-desc">研究发现夜间高温使人每年平均损失44小时睡眠，到本世纪末可能增至50-58小时，低收入国家影响更重。</div></div></div><div class="item"><span class="item-idx">16</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/07/30/1140942/montana-experimental-medical-hub-pushed-forward-right-to-try/" target="_blank" rel="noopener">Montana’s plan to become an experimental medical hub just pushed forward (2026.07.30) 蒙大拿州推进成为实验医疗中心计划</a></div><div class="item-desc">该州扩大“尝试权”法案，允许实验药物直接销售给消费者，首批药物即将接受审查。</div></div></div><div class="item"><span class="item-idx">17</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/new-space-station-study-reveals-a-hidden-side-effect-of-long-term-microgravity-on-the-human-brain/" target="_blank" rel="noopener">New space station study reveals a hidden side effect of long-term microgravity on the human brain (2026.07.30) 长期微重力对大脑的隐藏影响</a></div><div class="item-desc">中国空间站研究发现宇航员手臂运动时长增加且运动轨迹改变，提示微重力导致大脑运动控制适应性变化。</div></div></div><div class="item"><span class="item-idx">18</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/07/30/1140927/a-fundamental-flaw-leaves-llms-vulnerable-to-attack/" target="_blank" rel="noopener">A fundamental flaw leaves LLMs strikingly vulnerable to attack (2026.07.30) 根本缺陷使大语言模型极易受攻击</a></div><div class="item-desc">由于架构中不可消除的“对齐缺陷”，LLM无法完全安全，可被轻易诱骗执行恶意指令。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">📐 arXiv 前沿</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">A1</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.25131v1" target="_blank" rel="noopener">Beyond the Post Hoc User Study: Modeling Visual Decision-Making with Active Inference (2026.07.27) 超越事后用户研究：用主动推理建模视觉决策</a></div><div class="item-desc">提出了基于主动推理的计算框架来建模视觉决策过程，替代传统的事后用户研究范式。该框架能从因果和预测角度解释感知错误，为可视化设计提供先验指导而非事后评估，显著提升设计效率与科学性。</div></div></div><div class="item"><span class="item-idx">A2</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.23927v1" target="_blank" rel="noopener">Reality Monitoring in Large Language Models: Self-Knowledge That Transforms with Conversation Memory (2026.07.27) 大语言模型中的现实监控：随对话记忆转变的自我认知</a></div><div class="item-desc">通过两个实验和六个LLM，测试了模型区分自己输出与用户输入的能力（现实监控），发现来源归因依赖于对话记忆。揭示了LLM幻觉与人类现实监控失败之间的关联，为提升AI对话系统的可靠性提供了新视角。</div></div></div><div class="item"><span class="item-idx">A3</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.27179v1" target="_blank" rel="noopener">The Social Cost of an AI Teammate: How an Artificial Teammate Reshapes Human-Human Communication in Small-Team Decision-Making (2026.07.29) AI队友的社会成本：人工队友如何重塑小型团队决策中的人际沟通</a></div><div class="item-desc">通过组通信分析、问卷和词汇分析，研究了在道德困境决策任务中AI作为队友对团队成员间沟通动态的影响。首次量化了AI队友对人际沟通的潜在负面影响，为设计人机协作团队提供了关键社会心理考量。</div></div></div><div class="item"><span class="item-idx">A4</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.26899v1" target="_blank" rel="noopener">Human diversity fuels collective creativity that large language models cannot simulate or sustain (2026.07.29) 人类多样性驱动集体创造力，大语言模型无法模拟或维持</a></div><div class="item-desc">通过预注册的创意隐喻实验，比较了母语和非母语写作者在有无AI辅助下的创意产出，以及AI模拟多样性的效果。证实了人类多样性对创意不可替代的作用，警示AI辅助可能导致创意同质化，模拟多样性无法持续。</div></div></div><div class="item"><span class="item-idx">A5</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.26981v1" target="_blank" rel="noopener">OptimismBench: Forecasting Bias and the Alignment Effect in Language Model Judgment (2026.07.29) OptimismBench：语言模型判断中的预测偏差与对齐效应</a></div><div class="item-desc">提出了一个基准测试，检测LLM概率判断中的系统性方向性偏差（如乐观偏差），发现模型预测与人类判断存在对齐效应。揭示了传统校准指标忽略的偏差方向问题，对LLM作为决策辅助工具的风险评估具有重要意义。</div></div></div><div class="item"><span class="item-idx">A6</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.27022v1" target="_blank" rel="noopener">Evaluating Regional Bias in LLMs From Abstract Stereotype to Concrete Social Decision-Making (2026.07.29) 评估LLM中的区域偏见：从抽象刻板印象到具体社会决策</a></div><div class="item-desc">提出了S2D框架，系统评估LLM在区域刻板印象和基于区域的决策中的偏见，涵盖抽象到具体层面。整合了偏见研究的多个维度，揭示了区域偏见如何从认知层面渗透到实际决策，为公平AI提供评估工具。</div></div></div><div class="item"><span class="item-idx">A7</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.27100v1" target="_blank" rel="noopener">Can Large Language Models Represent Urban Publics? Behavioral Replication and Population Mismatch in an Affordable-Housing Experiment (2026.07.29) 大语言模型能否代表城市公众？可负担住房实验中的行为复制与人口错配</a></div><div class="item-desc">测试了LLM在可负担住房调查实验中能否复现居民态度，重点考察空间锚定和身份条件效应。发现LLM能预测平均结果但无法保留人口子群体间的结构差异，警示将其作为公众意见代理的局限性。</div></div></div><div class="item"><span class="item-idx">A8</span><div class="item-body"><div class="item-title"><a href="https://arxiv.org/abs/2607.26322v1" target="_blank" rel="noopener">Pragmatic Reasoning in Design (2026.07.28) 设计中的语用推理</a></div><div class="item-desc">将用户中心设计形式化为合作博弈，用户为主管、设计师为助手，提出设计选择传达因果结构的语用解释。为理解人们如何快速理解新工具提供了计算框架，连接了设计理论与语用推理，有望指导人机交互设计。</div></div></div></div>
+<div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><span class="item-idx">19</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/africa/eu-agrees-rescue-centre-eastern-libya-migrant-departures-rise-2026-07-30/" target="_blank" rel="noopener">EU agrees rescue centre in eastern Libya as migrant departures rise 欧盟同意在利比亚东部设立救援中心，移民离境人数增加（Reuters）</a></div></div></div><div class="item"><span class="item-idx">20</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/legal/government/first-case-secretive-us-court-meant-deport-alleged-terrorists-2026-07-30/" target="_blank" rel="noopener">Secretive US court meant to deport alleged terrorists hears first case 美国秘密法院审理首例驱逐疑似恐怖分子案（Reuters）</a></div></div></div><div class="item"><span class="item-idx">21</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/business/healthcare-pharmaceuticals/smallpox-dna-is-recovered-spanish-conquest-era-chilean-mummies-2026-07-30/" target="_blank" rel="noopener">Smallpox DNA is recovered from Spanish conquest-era Chilean mummies 西班牙征服时期智利木乃伊中提取出天花DNA（Reuters）</a></div></div></div><div class="item"><span class="item-idx">22</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/legal/government/father-georgia-school-shooter-sentenced-15-years-prison-2026-07-30/" target="_blank" rel="noopener">Father of Georgia school shooter sentenced to 15 years in prison 佐治亚州校园枪手父亲被判15年监禁（Reuters）</a></div></div></div><div class="item"><span class="item-idx">23</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/asia-pacific/blast-pakistan-coal-mine-complex-kills-eight-dozens-missing-official-says-2026-07-30/" target="_blank" rel="noopener">Blast at Pakistan coal mine complex kills at least 11, dozens missing, official says 巴基斯坦煤矿爆炸致至少11死数十人失踪（Reuters）</a></div></div></div><div class="item"><span class="item-idx">24</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/middle-east/us-issues-sanctions-targeting-support-networks-irans-mahan-air-2026-07-30/" target="_blank" rel="noopener">US issues sanctions targeting support networks for Iran&#x27;s Mahan Air 美国制裁伊朗马汉航空支持网络（Reuters）</a></div></div></div><div class="item"><span class="item-idx">25</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/americas/informal-poll-shows-costa-ricas-grynspan-ahead-race-be-next-un-chief-2026-07-30/" target="_blank" rel="noopener">Informal poll shows Costa Rica&#x27;s Grynspan ahead in race to be next UN chief 非正式民调显示哥斯达黎加人格林斯潘领跑下届联合国秘书长竞选（Reuters）</a></div></div></div><div class="item"><span class="item-idx">26</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/africa/ghanas-government-backs-five-year-presidential-term-lowers-minimum-age-35-2026-07-30/" target="_blank" rel="noopener">Ghana&#x27;s government backs five-year presidential term, lowers minimum age to 35 加纳政府支持五年总统任期，将最低年龄降至35岁（Reuters）</a></div></div></div><div class="item"><span class="item-idx">27</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/business/energy/drone-strike-egypt-sparks-security-concerns-about-suez-oil-exports-2026-07-30/" target="_blank" rel="noopener">Drone strike in Egypt sparks security concerns about Suez oil exports 埃及无人机袭击引发苏伊士石油出口安全担忧（Reuters）</a></div></div></div><div class="item"><span class="item-idx">28</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/africa/nigeria-destroys-2819-seized-illicit-arms-security-crackdown-2026-07-30/" target="_blank" rel="noopener">Nigeria destroys 2,819 seized illicit arms in security crackdown 尼日利亚销毁2819件缴获非法武器（Reuters）</a></div></div></div><div class="item"><span class="item-idx">29</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/china/chinas-military-coast-guard-patrol-contested-shoal-south-china-sea-2026-07-30/" target="_blank" rel="noopener">China&#x27;s military, coast guard, patrol contested shoal in South China Sea 中国军队和海警在南中国海争议浅滩巡逻（Reuters）</a></div></div></div><div class="item"><span class="item-idx">30</span><div class="item-body"><div class="item-title"><a href="https://www.reuters.com/world/asia-pacific/southwest-china-landslide-leaves-51-dead-10-missing-2026-07-30/" target="_blank" rel="noopener">Southwest China landslide leaves 51 dead, 10 missing 中国西南部山体滑坡致51死10失踪（Reuters）</a></div></div></div></div>
+  <footer class="footer">
+    数据：Folo RSS + arXiv · 翻译：DeepSeek/GLM · 每日更新<br>
+    <a href="daily.html">← 最新一期</a> · <a href="daily/index.html">📂 往期存档</a>
+  </footer>
+</main>
+<nav class="bottomnav" aria-label="页内导航">
+  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
+  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
+  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
+  <a class="bottomnav-item" href="daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+</nav>
+<script>
+(function() {
+  try {
+    var saved = localStorage.getItem('psych-weekly-theme');
+    var mode = (saved === 'dark' || saved === 'light' || saved === 'auto') ? saved : 'auto';
+    var actual = mode;
+    if (mode === 'auto') {
+      actual = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    }
+    document.documentElement.setAttribute('data-theme', actual);
+  } catch(e) {}
+})();
+
+document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
+  item.addEventListener('click', function() {
+    var action = this.dataset.action;
+    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
+    else if (action === 'highlights') {
+      var el = document.querySelector('.highlights');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else if (action === 'arxiv') {
+      var els = document.querySelectorAll('.section');
+      for (var i = 0; i < els.length; i++) {
+        if (els[i].textContent.indexOf('arXiv') !== -1) {
+          els[i].scrollIntoView({ behavior: 'smooth' }); break;
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>
