@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月19日 周五</span><span class="meta-chip">共 33 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>触发特定脑波模式让清醒小鼠获得睡眠般的记忆巩固，或为无睡眠休息提供新途径</li><li>全球荟萃分析显示27%脑炎幸存者出现临床抑郁，提示脑炎症是精神障碍重要风险因素</li><li>高分辨率成像显示人脑与大语言模型均用深层并行处理预测语言，认知与AI有共性</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">Researchers induce the memory-boosting benefits of sleep in parts of the awake brain 研究人员在清醒大脑中诱发类似睡眠的记忆增强效果 — 触发特定脑波模式让清醒小鼠获得睡眠般的记忆巩固，或为无睡眠休息提供新途径。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Brain Inflammation Linked to Chronic Depression and Anxiety 脑炎症与慢性抑郁和焦虑相关 — 全球荟萃分析显示27%脑炎幸存者出现临床抑郁，提示脑炎症是精神障碍重要风险因素。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Human Brains and AI Share Predictive Language Processing Principles 人脑与AI共享预测性语言处理原理 — 高分辨率神经成像显示人脑与大语言模型采用深层并行信息处理预测语言，揭示认知与AI的共性。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Restless Legs Syndrome Risk Gene Linked to Cerebellar Defects 不宁腿综合征风险基因与小脑缺陷相关 — MEIS1基因突变破坏斑马鱼节律运动，证明其对小脑发育关键，为RLS治疗提供新靶点。</div></div></div><div class="item"><div class="item-body"><div class="item-title">For Black women, hope about race relations predicts costlier political action 对种族关系的希望预测黑人女性付出更高代价的政治行动 — 情绪类型和触发主题决定黑人女性参与低/高成本政治行动，揭示种族关系中的情感驱动机制。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Dopamine dictates how long sexual drive remains suppressed after stress 多巴胺决定压力后性驱力受抑制的时长 — 果蝇实验表明多巴胺信号调控压力后求偶行为恢复时间，揭示压力抑制生殖动机的神经机制。</div></div></div><div class="item"><div class="item-body"><div class="item-title">High emotional intelligence might protect narcissists from workplace distress 高情商或可保护自恋者免受职场困扰 — 自恋者通过高情商获得更好心理健康，而精神病态则相反，为职场人格与幸福感关系提供新视角。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Scientists discover how cortisol helps lock in early neural connections 科学家发现皮质醇如何锁定早期神经连接 — 星形胶质细胞感知应激激素皮质醇，关闭大脑可塑性窗口，巩固发育中神经网络。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">2 条</span></div><div class="item"><div class="item-body"><div class="item-title">Japan’s 2011 earthquake was so powerful that it shifted the entire country’s location 日本2011年地震强大到移动了整个国家的位置 — 地震波从地核反弹导致日本位移，加深对大地震地球物理效应的理解。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ex-Google CEO Eric Schmidt’s Relativity Space selected for upcoming NASA Mars orbiter mission 前谷歌CEO施密特的相对论太空公司入选NASA火星轨道器任务 — 公私合作推进火星科学，相对论太空公司获选建造可重复使用火箭，降低深空探测成本。</div></div></div></div>

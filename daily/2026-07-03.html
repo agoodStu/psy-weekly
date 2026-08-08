@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月3日 周五</span><span class="meta-chip">共 33 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>壁画颜料中提取古人类遗传物质，为考古学提供“基因档案”揭示未记录的洞穴活动</li><li>AI在能源、制造等关键基础设施实现物理世界智能控制，价值远超消费级聊天机器人</li><li>裸盖菇素提升主观睡眠质量且改善程度与头痛发作减少成正比，为治疗提供新思路</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/nasa-needs-volunteers-to-spend-a-year-locked-in-a-mars-simulation/" target="_blank" rel="noopener">NASA needs volunteers to spend a year locked in a Mars simulation NASA招募志愿者封闭一年模拟火星任务</a></div><div class="item-desc">美国宇航局启动长期火星模拟任务，需志愿者在封闭环境中生活一年，为未来深空探索积累经验。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/psilocybin-improves-sleep-quality-in-patients-with-chronic-cluster-headaches/" target="_blank" rel="noopener">Psilocybin improves sleep quality in patients with chronic cluster headaches 裸盖菇素改善慢性丛集性头痛患者睡眠质量</a></div><div class="item-desc">研究发现裸盖菇素能提升主观睡眠质量，且改善程度与头痛发作减少成正比，为治疗提供新思路。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/major-new-study-links-childhood-income-inequality-to-a-magnified-genetic-risk-for-depression/" target="_blank" rel="noopener">Major new study links childhood income inequality to a magnified genetic risk for depression 童年收入不平等加剧抑郁遗传风险</a></div><div class="item-desc">成长于贫富差距大的社会，即便遗传易感性较低者抑郁症状也会增加，环境与基因交互作用显著。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/the-white-house-goes-all-in-on-aliens-with-new-uap-science-advisory-council/" target="_blank" rel="noopener">The White House goes all in on aliens with new UAP Science Advisory Council 白宫成立UAP科学顾问委员会全面调查外星现象</a></div><div class="item-desc">新顾问团旨在为政府最高层提供不明空中现象建议，并推动研究成果公开，加速外星生命探索。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/the-gender-attractiveness-gap-why-both-men-and-women-rate-female-faces-higher/" target="_blank" rel="noopener">Both men and women rate female faces as more attractive 男女一致认为女性面孔更具吸引力</a></div><div class="item-desc">跨文化大样本分析证实性别影响审美判断，女性面孔普遍被评为更迷人，挑战了传统审美观念。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/narcissism-and-psychopathy-linked-to-lower-physical-stress-responses-under-pressure/" target="_blank" rel="noopener">Narcissism and psychopathy linked to lower physical stress responses under pressure 自恋与心理变态者在压力下生理反应更低</a></div><div class="item-desc">高自恋和精神病态特质的人面对急性应激时身心反应减弱，暗示这些特质可能提供某种抗压保护。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/brain-lag-evolutionary-30977/" target="_blank" rel="noopener">Study Supports and Expands the Primate Brain Lag Hypothesis 研究支持并扩展灵长类大脑滞后假说</a></div><div class="item-desc">现代分子遗传定年证实，大脑尺寸演化始终滞后于体型增大，为人类脑容量快速增长的起源提供新解释。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/video-games-might-offer-a-small-boost-to-memory-and-mental-skills/" target="_blank" rel="noopener">Video games might offer a small boost to memory and mental skills 电子游戏或可小幅提升记忆与心智能力</a></div><div class="item-desc">综合多项研究发现，游戏能轻微改善信息处理和记忆细节，但效果有限，不宜过度夸大。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">2 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/07/02/1138433/teaching-ai-to-run-with-the-turbines/" target="_blank" rel="noopener">Teaching AI to run with the turbines 教会AI与涡轮机共舞</a></div><div class="item-desc">AI在能源、制造等关键基础设施领域实现物理世界的智能控制，远超聊天机器人等消费级应用价值。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/why-digital-government-records-are-so-hard-to-preserve/" target="_blank" rel="noopener">Why digital government records are so hard to preserve 数字政府记录为何难以长期保存</a></div><div class="item-desc">总统记录法案面临数字时代挑战，电子文件易遭篡改、格式过时，需法律与技术协同解决方案。</div></div></div></div>

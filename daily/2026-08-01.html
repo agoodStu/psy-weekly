@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年8月1日 周六</span><span class="meta-chip">共 41 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>NLP模型分析儿童语音提前六年预测心理疾病，准确率超临床专家，可用于早期筛查</li><li>氯胺酮在雌鼠中经应激激素激活小胶质细胞促神经可塑性，提供性别特异抗抑郁新路径</li><li>减少蛋白质摄入可改善代谢并延寿，挑战高蛋白潮流，但需兼顾肌肉健康</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/income-inequality-heightens-status-anxiety-and-self-objectification-across-genders/" target="_blank" rel="noopener">Income inequality heightens status anxiety and self-objectification across genders (2026.07.31) 收入不平等加剧地位焦虑与自我物化</a></div><div class="item-desc">收入不平等与地位焦虑让人更以外貌衡量自我价值，影响两性自我认知。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/men-who-crave-social-power-are-more-likely-to-endorse-strict-beauty-norms-for-women/" target="_blank" rel="noopener">Men who crave social power are more likely to endorse strict beauty norms for women (2026.07.31) 渴望社会权力的男性更认同严苛女性审美标准</a></div><div class="item-desc">崇尚传统男性气概并渴望社会权力的男性，更倾向要求女性在外貌上大量投入，反映审美背后的权力结构。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/mitochondrial-plaques-alzheimers-brains-31164/" target="_blank" rel="noopener">Mitochondrial Plaques in Alzheimer’s Brains Discovered (2026.07.31) 阿尔茨海默病脑内发现线粒体斑块</a></div><div class="item-desc">研究在阿尔茨海默病脑内发现线粒体斑块，见于动物模型和人类组织，为理解神经病理提供新方向。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/ai-speech-mental-health-nlp-31163/" target="_blank" rel="noopener">AI Models Analyze Children’s Speech to Predict Future Mental Health (2026.07.31) AI分析儿童语音预测未来心理健康</a></div><div class="item-desc">NLP模型分析9至13岁儿童语音，预测六年后的心理疾病比临床专家更准，有望用于早期筛查。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/ketamine-neuroplasticity-microglia-31162/" target="_blank" rel="noopener">Ketamine Reshapes Neural Networks and Neuroplasticity (2026.07.31) 氯胺酮重塑神经连接与可塑性</a></div><div class="item-desc">氯胺酮在雌性小鼠中通过应激激素激活小胶质细胞促进神经可塑性，揭示性别特异抗抑郁机制。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/brain-activity-patterns-may-shape-how-we-remember-childhood-trauma/" target="_blank" rel="noopener">Brain activity patterns may shape how we remember childhood trauma (2026.07.31) 大脑活动模式或塑造童年创伤记忆方式</a></div><div class="item-desc">大脑固有活动模式影响童年逆境的主观记忆，进而改变抑郁易感性，提示个性化干预可能。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/postpartum-psychosis-is-at-the-center-of-the-lindsay-clancy-trial-what-is-it/" target="_blank" rel="noopener">Postpartum psychosis is at the center of the Lindsay Clancy trial. What is it? (2026.07.31) 产后精神病是什么？林赛·克兰西案焦点</a></div><div class="item-desc">产后精神病是重性精神急症；该病成为母亲杀子案审判核心，凸显孕产期心理健康筛查的重要性。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/dummy-pills-reveal-the-hidden-power-of-human-expectation-in-addiction-recovery/" target="_blank" rel="noopener">Dummy pills reveal the hidden power of human expectation in addiction recovery (2026.07.31) 安慰剂揭示期望在成瘾康复中的隐藏力量</a></div><div class="item-desc">成瘾患者服用安慰剂即可减少渴求，酒精依赖者尤明显；可利用期望效应优化康复治疗。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">2 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/eating-less-protein-could-help-you-live-longer/" target="_blank" rel="noopener">Eating less protein could help you live longer (2026.07.31) 少吃蛋白质或助你更长寿</a></div><div class="item-desc">新研究建议减少蛋白质摄入可能延寿并省钱，与“蛋白质越多越好”潮流相反，但需兼顾肌肉健康。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/podcast/episode/the-untold-science-and-drama-of-lewis-and-clarks-expedition/" target="_blank" rel="noopener">The untold science and drama of Lewis and Clark’s expedition (2026.07.31) 刘易斯与克拉克远征背后的科学与戏剧</a></div><div class="item-desc">介绍刘易斯与克拉克远征的新书，揭示其科学发现、生态记录与殖民冲突，重新解读美国历史叙事。</div></div></div></div>

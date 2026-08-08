@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月9日 周二</span><span class="meta-chip">共 20 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">‘Odd’ Gulf of Mexico earthquake rattles Florida and Cuba - 古巴附近发生6.1级地震，可能是墨西哥湾历史上最大的地震之一。</div></div></div><div class="item"><div class="item-body"><div class="item-title">The Philippines earthquake is the largest this year, but it could’ve been bigger—here’s why - 菲律宾发生的7.8级地震是今年全球最大的地震，但可能更大。</div></div></div><div class="item"><div class="item-body"><div class="item-title">NASA’s astronauts will wear a Prada-designed onesie to keep cool on the moon - 美国宇航员将在月球表面穿着普拉达设计的服装以保持凉爽。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Increase in wildfire-driven ozone pollution linked to premature deaths across the U.S. - 火灾引起的臭氧污染增加导致美国每年有300多人过早死亡。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Why GLP-1 drugs might reduce cancer risk - 用于治疗糖尿病的GLP-1药物可能降低患多种癌症的风险。</div></div></div><div class="item"><div class="item-body"><div class="item-title">World Cup begins under health watch as new AI rules spark debate and ancient Rome’s road network expands - 世界杯在健康监控下开始，新的AI规则引发争议。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Can AI detect smuggled sea cucumbers? - 人工智能工具能够识别走私的海参、鲨鱼鳍和海参样本。</div></div></div><div class="item"><div class="item-body"><div class="item-title">How math can help you decide what to order for dinner - 数学可以帮助你决定晚餐点什么菜。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">Rotting $16 Million Mansion Exposes Indonesia’s Tangled Legal System</div></div></div><div class="item"><div class="item-body"><div class="item-title">Oil Steady as Israel and Iran Halt Hostilities That Risked Talks</div></div></div><div class="item"><div class="item-body"><div class="item-title">One Nation Tops Poll, OpenAI Primes Stock Market Debut</div></div></div><div class="item"><div class="item-body"><div class="item-title">OpenAI presenta en secreto su solicitud para salir a bolsa en EE.UU.</div></div></div><div class="item"><div class="item-body"><div class="item-title">Peru’s Diaspora Emerges as Tie-Breaker in Razor-Edge Presidential Race</div></div></div><div class="item"><div class="item-body"><div class="item-title">Asian Stocks Set to Rebound on Iran, AI Optimism: Markets Wrap</div></div></div><div class="item"><div class="item-body"><div class="item-title">Pentagon Names Biotech Firm WuXi AppTec to Chinese Military List</div></div></div><div class="item"><div class="item-body"><div class="item-title">NY Knicks Success a Win for Lenders Who Propped Up Broadcaster</div></div></div><div class="item"><div class="item-body"><div class="item-title">AI-Obsessed Amazon Pulls Off a History-Making Debt Deal in Canada</div></div></div><div class="item"><div class="item-body"><div class="item-title">OpenAI Filed Confidentially for IPO as Rivals Race to Market</div></div></div><div class="item"><div class="item-body"><div class="item-title">Iran and Israel Agree to Ease Strikes After Trump’s Plea</div></div></div><div class="item"><div class="item-body"><div class="item-title">Bank of America: hora de “tomar ganancias” en acciones de EE.UU.</div></div></div></div>

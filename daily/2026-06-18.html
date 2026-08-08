@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月18日 周四</span><span class="meta-chip">共 31 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>脑机接口将神经信号转为文字光标，实现重度瘫痪者居家自主交流操作</li><li>复方避孕药增加暴食症状首次得到大规模证实，揭示激素对进食行为的影响</li><li>高谷氨酸水平导致对错误过度敏感，解释焦虑抑郁共病风险增加的神经机制</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">High brain glutamate levels linked to severe reactions to mistakes 脑内高谷氨酸水平与对失误的强烈反应相关 — 高谷氨酸水平导致对错误过度敏感，解释焦虑抑郁共病风险增加机制</div></div></div><div class="item"><div class="item-body"><div class="item-title">Migrating Nerve Cells Experience Routine, Repairable DNA Damage 迁移中的神经细胞经历常规可修复的DNA损伤 — 新生神经元迁移时因挤压DNA双链断裂，揭示脑发育中固有损伤与修复机制</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trauma and Poverty Linked to Brain Changes in Schizophrenia 创伤与贫困关联精神分裂症患者脑部变化 — 童年创伤、贫困等社会因素直接导致精神分裂谱系障碍相关脑结构功能改变</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ingestible Vibrating Capsule Predicts Anorexia Relapse 可吞咽振动胶囊预测厌食症复发风险 — 胶囊振动监测感知能力变化，发现康复患者内感受受损可预警复发</div></div></div><div class="item"><div class="item-body"><div class="item-title">Our brains underestimate Elon Musk’s wealth 人脑难以理解马斯克的万亿财富规模 — 认知局限使大脑无法理解极端财富数值，揭示数字感知的神经机制</div></div></div><div class="item"><div class="item-body"><div class="item-title">Oral Contraceptives Linked to Binge Eating Risk 口服避孕药与暴食风险存在关联 — 大规模研究证实复方避孕药增加暴食症状，首次揭示激素对进食行为的影响</div></div></div><div class="item"><div class="item-body"><div class="item-title">Online therapy helps ease stress and anxiety after broken-heart syndrome 在线疗法有助于缓解心碎综合征后的压力焦虑 — 基于网络的认知行为疗法显著减轻心脏事件后患者的压力焦虑水平</div></div></div><div class="item"><div class="item-body"><div class="item-title">New study identifies distinct psychological profiles among youths with gender dysphoria 青少年性别焦虑者存在三种心理亚型 — 从低心理困扰到高创伤支持不足三类群体，揭示个性化干预必要性</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">The first Atlantic tropical storm of 2026 is here—and it used to be a Pacific cyclone 2026年首个大西洋热带风暴来自太平洋气旋 — 热带风暴亚瑟由太平洋残余形成，将给美国东南部带来强降雨和山洪风险</div></div></div><div class="item"><div class="item-body"><div class="item-title">Seven Perfect Shuffles Randomize a Deck of Cards. But How Many Sloppy Ones? 完美洗牌七次可随机化牌组，粗糙洗牌需几次？ — 数学证明粗糙洗牌所需次数远多于完美洗牌，揭示随机性生成效率差异</div></div></div><div class="item"><div class="item-body"><div class="item-title">Math predicts humans could go extinct in about 17,000 years 数学模型预测人类约1.7万年后可能灭绝 — 基于大灭绝周期模型，人类面临气候、疫情等复合风险，警示长期存续挑战</div></div></div><div class="item"><div class="item-body"><div class="item-title">Macular Degeneration Linked to Increased Risk of Cancer 黄斑变性患者患癌风险升高 — 大规模队列研究揭示新生血管性黄斑变性特定癌症风险增加，具临床筛查意义</div></div></div><div class="item"><div class="item-body"><div class="item-title">NASA data reveals weird x-ray changes in the exploded ruins of dead stars NASA数据揭示死亡星体残骸诡异X射线变化 — 超新星遗迹亮度14年持续波动，暗示残骸物理过程或存在未知机制</div></div></div><div class="item"><div class="item-body"><div class="item-title">Unprecedented brain implant allows paralyzed man to completely control his computer and “speak” independently 史无前例脑植入让瘫痪者独立控制电脑“说话” — 脑机接口将神经信号转为文字光标，实现重度瘫痪者居家自主交流操作</div></div></div><div class="item"><div class="item-body"><div class="item-title">Here’s how big the Ebola outbreak in the Democratic Republic of the Congo might be 刚果（金）埃博拉疫情规模预测 — 基于检测率和死亡率模型估算布迪布焦病毒疫情已列为第三大爆发，需加强防控</div></div></div><div class="item"><div class="item-body"><div class="item-title">Want to get a data center online quickly? Give it some flex. 数据中心快速上线秘诀：灵活调度电力负荷 — 通过协调非必要设备（如电热水壶）错峰用电，缓解电网压力并加速部署</div></div></div></div>

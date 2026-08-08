@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月15日 周一</span><span class="meta-chip">共 17 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">5 条</span></div><div class="item"><div class="item-body"><div class="item-title">Ancient ground squirrels feasted on carcasses like ‘zombies of the Pleistocene’ - 古代地松鼠像“冰川时代的僵尸”一样以尸体为食，揭示了其多样的饮食习性。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Inside the race to develop a new Ebola vaccine - 在开发新型埃博拉疫苗的竞赛中，Moderna公司正在加速推进候选疫苗的临床试验。</div></div></div><div class="item"><div class="item-body"><div class="item-title">U.S. industries push to revive tungsten production amid shortage - 在短缺之际，美国工业推动恢复钨的生产，以应对伊朗冲突带来的影响。</div></div></div><div class="item"><div class="item-body"><div class="item-title">World-first: therapy to make cells young again given to a person - 首例将使细胞重返年轻的基因治疗疗法已有人接受治疗，用于治疗青光眼。</div></div></div><div class="item"><div class="item-body"><div class="item-title">World Cup camera coverage poses a moving math puzzle - 世界杯摄像机覆盖提出一个动态的数学问题，关于如何准确覆盖足球场。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">oOh!Media Gets Improved Proposals From Bidders Including PEP</div></div></div><div class="item"><div class="item-body"><div class="item-title">Japanese Stocks Set to Rise After US-Iran Peace Deal Reached</div></div></div><div class="item"><div class="item-body"><div class="item-title">UK, France, Germany Ready to Lift Relevant Iran Sanctions</div></div></div><div class="item"><div class="item-body"><div class="item-title">US and Iran Agree to Deal Halting War That Shook the Middle East</div></div></div><div class="item"><div class="item-body"><div class="item-title">LNG Tanker Heads Toward Hormuz as Deal Raises Hopes of Reopening</div></div></div><div class="item"><div class="item-body"><div class="item-title">US-Iran Peace Deal Moves Global Markets</div></div></div><div class="item"><div class="item-body"><div class="item-title">Uruguay forced to delay trip to US for World Cup opener - reports</div></div></div><div class="item"><div class="item-body"><div class="item-title">Oil Slumps as US-Iran Deal May Allow Strait of Hormuz to Reopen</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trump Says Hormuz Strait to Open Friday Upon Deal Signing</div></div></div><div class="item"><div class="item-body"><div class="item-title">EUA e Irã chegam a um acordo de paz para reabrir Ormuz</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trump Says Hormuz Strait to Open Friday Upon Deal Signing</div></div></div><div class="item"><div class="item-body"><div class="item-title">Stock Market Moves On From SpaceX To Focus On Iran Deal, Fed</div></div></div></div>

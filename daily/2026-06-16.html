@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月16日 周二</span><span class="meta-chip">共 19 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">7 条</span></div><div class="item"><div class="item-body"><div class="item-title">Glaciers are secretly teeming with life — 冰川中隐藏着丰富的生命，研究发现冰川上生活着150多种不同物种。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Russia seeks mathematician’s extradition — 俄罗斯寻求引渡著名数学家，因其批评国家行为被指控煽动恐怖主义。</div></div></div><div class="item"><div class="item-body"><div class="item-title">NASA’s Chandra Observatory spots possible supernova remnant in the middle of our galaxy — NASA的Chandra望远镜在银河系中心发现可能的新星遗迹。</div></div></div><div class="item"><div class="item-body"><div class="item-title">How an aspiring actress from Brooklyn stumbled into an astrophysics career at NASA — 布鲁克林一名有抱负的女演员意外进入NASA天体物理学领域。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Can printed ‘skin’ help to heal burns without scars? — 打印的“皮肤”能否帮助无疤痕地治愈烧伤？</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ancient ground squirrels feasted on carcasses like ‘zombies of the Pleistocene’ — 古代地松鼠像“更新世僵尸”一样以尸体为食。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Inside the race to develop a new Ebola vaccine — 新型埃博拉疫苗研发竞赛内部情况。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">Oil Holds Losses After Iran Deal Spurs Stock Rally: Markets Wrap</div></div></div><div class="item"><div class="item-body"><div class="item-title">Cohere Says It’s Seeing ‘Huge Inbound’ After US Blocks Anthropic Models</div></div></div><div class="item"><div class="item-body"><div class="item-title">Oil Steadies Near Lowest Since March on Outlook for Hormuz Deal</div></div></div><div class="item"><div class="item-body"><div class="item-title">China Built the Last Steel Boom. India’s Will Be Different</div></div></div><div class="item"><div class="item-body"><div class="item-title">Bolivia Tells Investors FX Unification, IMF Deal Coming Soon</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trump Iran War Deal Raises 2015 Obama Accord Comparisons</div></div></div><div class="item"><div class="item-body"><div class="item-title">Where the US, Israel and Iran Stand on a Deal to End Months of War</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trump Says Hormuz Strait to Reopen by Friday</div></div></div><div class="item"><div class="item-body"><div class="item-title">UK to Announce Fresh Russia Sanctions, Ukraine Energy Support</div></div></div><div class="item"><div class="item-body"><div class="item-title">Russian drone hits zoo in Ukraine&#x27;s Kharkiv, kills animals</div></div></div><div class="item"><div class="item-body"><div class="item-title">Danone US Sues Chobani Over High-Protein Yogurt Labeling Claims</div></div></div><div class="item"><div class="item-body"><div class="item-title">Goldman-Backed Go to Debut After Biggest Japan IPO This Year</div></div></div></div>

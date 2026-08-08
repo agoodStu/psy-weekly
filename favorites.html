@@ -32,31 +32,28 @@ html, body { margin: 0; padding: 0; }
 body {
   background: var(--bg); color: var(--text);
   font-family: var(--font-sans);
-  padding-top: 48px;
   -webkit-font-smoothing: antialiased;
 }
-/* 顶部全局导航（三 tab：周报/日报/收藏） */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px; z-index: 100;
-  display: flex; align-items: center; gap: 4px;
-  padding: 0 14px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--divider);
+/* 移动端底部导航（3 tab：日报/周报/收藏） */
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: none;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
 }
-.topnav-tab {
-  display: inline-flex; align-items: center; height: 32px;
-  padding: 0 14px; border-radius: 16px;
-  color: var(--text-secondary); text-decoration: none;
-  font-size: 13.5px; font-weight: 500;
-  border: 1px solid transparent;
-  transition: color .15s, background .15s;
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
 }
-.topnav-tab:hover { color: var(--text); background: var(--bg-hover); text-decoration: none; }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+.bottomnav-item.active { color: var(--accent); }
+.bottomnav-item.active .bn-icon { color: var(--accent); }
 @media (max-width: 768px) {
-  .topnav { padding: 0 8px; }
-  .topnav-tab { padding: 0 10px; font-size: 12.5px; }
+  .bottomnav { display: flex; }
 }
 .fav-page { max-width: 760px; margin: 0 auto; padding: 24px 16px 84px; }
 .fav-page h1 { font-size: 22px; margin: 0 0 4px; font-family: var(--font-serif); }
@@ -91,11 +88,6 @@ body {
 </style>
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="index.html">📅 周报</a>
-  <a class="topnav-tab" href="daily.html">📰 日报</a>
-  <a class="topnav-tab active" href="favorites.html">⭐ 收藏</a>
-</nav>
 <main class="fav-page">
   <h1>⭐ 我的收藏</h1>
   <div class="fav-sub">
@@ -104,6 +96,11 @@ body {
   </div>
   <div id="fav-list"></div>
 </main>
+<nav class="bottomnav" aria-label="页内导航">
+  <a class="bottomnav-item" href="daily.html"><span class="bn-icon">📰</span><span>日报</span></a>
+  <a class="bottomnav-item" href="index.html"><span class="bn-icon">📅</span><span>周报</span></a>
+  <a class="bottomnav-item active" href="favorites.html"><span class="bn-icon">⭐</span><span>收藏</span></a>
+</nav>
 <script src="favorites.js"></script>
 </body>
 </html>

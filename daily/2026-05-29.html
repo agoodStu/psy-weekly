@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年5月29日 周五</span><span class="meta-chip">共 20 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">7 条</span></div><div class="item"><div class="item-body"><div class="item-title">White House proposes new rules giving political appointees final approval on research grants — 白宫提议新规，政治任命官员将最终决定研究资助</div></div></div><div class="item"><div class="item-body"><div class="item-title">A new study says homing pigeon livers act like compasses. Other experts aren’t so sure — 新研究表明家鸽肝脏如同指南针。其他专家对此持怀疑态度</div></div></div><div class="item"><div class="item-body"><div class="item-title">Back-to-back chemical accidents raise alarm over EPA push to reduce oversight — 连续发生的化学事故引发对环保署监管减弱的担忧</div></div></div><div class="item"><div class="item-body"><div class="item-title">San Antonio Spurs star ‘Wemby’ is rocking the NBA playoffs. Science can help explain why — 圣安东尼奥马刺队球星“Wemby”在NBA季后赛中大放异彩。科学可以解释原因</div></div></div><div class="item"><div class="item-body"><div class="item-title">Kamala Sohonie: The biochemist who wanted to feed a nation — Kamala Sohonie：这位想养活一个国家的生物化学家</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trump plan to give start-ups plutonium harvested from Cold War–era nuclear weapons is risky, experts say — 特朗普计划向初创企业提供冷战时期核武器中提炼的钚，专家称此举风险巨大</div></div></div><div class="item"><div class="item-body"><div class="item-title">The ‘age of gravitational astronomy’ is here — 引力天文学时代已经到来</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🧠 心理学</span><span class="section-count">1 条</span></div><div class="item"><div class="item-body"><div class="item-title">目前文章列表中没有心理学相关的文章。</div></div></div></div>

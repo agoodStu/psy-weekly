@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月10日 周五</span><span class="meta-chip">共 41 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>酒精改变决策脑回路但效果随阿尔茨海默特征而异，提示需个体化风险评估</li><li>五种睡眠亚型关联脑电波与健康，超越传统二分法，有助精准干预</li><li>单个人类皮层神经元计算复杂度远超预期，AI分析证实其微型芯片能力</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title">A diverse toy environment is linked to better infant communication skills (2026.07.09) 多样玩具环境促进婴儿沟通能力</div><div class="item-desc">家庭中玩具种类越多，婴儿早期语言和互动能力发展越好，揭示环境刺激的重要性。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title">Chronic alcohol use alters Alzheimer’s brain circuits differently based on underlying pathology (2026.07.09) 慢性饮酒对阿尔茨海默病脑回路影响因病理而异</div><div class="item-desc">酒精改变决策相关脑回路，但效果取决于阿尔茨海默病的具体特征，提示个体化风险。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title">Men who consume pornography report lower sexual satisfaction than female viewers (2026.07.09) 男性色情消费者性满意度低于女性</div><div class="item-desc">综合研究显示，男性观看色情内容与性功能下降及满意度降低相关，而女性则未表现出同样关联。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title">American ginseng extract improves memory and clearing of cellular waste in aging rats (2026.07.09) 西洋参提取物改善老龄大鼠记忆并清除细胞废物</div><div class="item-desc">西洋参根提取物保护突触连接，提升大脑细胞废物清理系统，延缓衰老相关认知衰退。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title">Early bird, night owl or something else? Five patterns may define how we sleep (2026.07.09) 早鸟、夜猫子还是其他？五种睡眠模式揭示个体差异</div><div class="item-desc">新研究识别出五种不同睡眠亚型，关联脑电波模式、行为与健康，超越传统二分法。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title">New psychology study challenges a major assumption about why we bond with our friends (2026.07.09) 新研究挑战“性格相似决定友谊满意度”假设</div><div class="item-desc">朋友间性格略有相似，但相似度并不预测友谊幸福感，其他因素更关键。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title">Severe early deprivation leaves lasting mark on life skills 16 years later (2026.07.09) 早期严重剥夺对生活技能影响持续16年</div><div class="item-desc">布加勒斯特早期干预项目显示，接受寄养护理的儿童16年后适应功能更好，抚养质量是中介。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title">How fictional violence shapes the actions of copycat offenders (2026.07.08) 虚构暴力如何影响模仿犯行为</div><div class="item-desc">现实罪犯常模仿影视游戏中的具体暴力手法，研究探讨了媒体暴力对犯罪行为的塑造机制。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">2 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title">Scientists reveal a simple feedback tweak that could improve human-machine interface control (2026.07.09) 实时反馈微调可显著提升人机界面控制</div><div class="item-desc">研究发现任务中即时成功率反馈能增强机器控制能力，尤其当视觉受限时效果更佳。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title">The Branching Dendrite Secret Behind Human Cognitive Superiority (2026.07.08) 树突分支秘密揭示人类认知优势</div><div class="item-desc">单个人类皮层神经元计算复杂度远超预期，AI分析证实其作为“微型芯片”的独特能力。</div></div></div></div>

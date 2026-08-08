@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月8日 周一</span><span class="meta-chip">共 16 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">4 条</span></div><div class="item"><div class="item-body"><div class="item-title">How math can help you decide what to order for dinner — 数学策略可助餐厅点餐选择</div></div></div><div class="item"><div class="item-body"><div class="item-title">NASA’s X-59 plane goes supersonic for the first time — NASA实验飞机首超音速飞行</div></div></div><div class="item"><div class="item-body"><div class="item-title">How prediction markets could forecast the future of science — 预测市场预测科学未来</div></div></div><div class="item"><div class="item-body"><div class="item-title">Aquanauts experience awe-inspiring ‘underview effect’ — 水下居住体验“下视效应”</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">Naver to Use Nvidia’s AI Models in Bid to Cement Lead in Korea</div></div></div><div class="item"><div class="item-body"><div class="item-title">Gold Holds Decline as Iran Attacks Threatens Mideast Ceasefire</div></div></div><div class="item"><div class="item-body"><div class="item-title">Legal &amp; General Says Energy Transition is ‘Alive and Well’</div></div></div><div class="item"><div class="item-body"><div class="item-title">UK Jobs Slump Deepens as Starmer Woes Add to Headwinds, REC Says</div></div></div><div class="item"><div class="item-body"><div class="item-title">Market Rout Puts Pressure on Indonesia to Deliver Concrete Steps</div></div></div><div class="item"><div class="item-body"><div class="item-title">Japan’s Stocks Set to Sink on Tech Selloff, Middle East Worries</div></div></div><div class="item"><div class="item-body"><div class="item-title">Peru on Edge as Exit Polls Show No Clear Presidential Winner</div></div></div><div class="item"><div class="item-body"><div class="item-title">Knicks Watch Party Canceled Near MSG Over Security for Trump</div></div></div><div class="item"><div class="item-body"><div class="item-title">US Stock Futures Drop After Tech Selloff, Oil Up: Markets Wrap</div></div></div><div class="item"><div class="item-body"><div class="item-title">Oil Jumps as Iran’s Attacks on Israel Put Ceasefire at Risk</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ukraine&#x27;s Zelenskiy says Russian magnate Abramovich came to Kyiv with offer of help</div></div></div><div class="item"><div class="item-body"><div class="item-title">Armenia&#x27;s ruling party leads parliamentary vote with 54% in early results</div></div></div></div>

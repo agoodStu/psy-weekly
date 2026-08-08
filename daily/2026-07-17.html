@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月17日 周五</span><span class="meta-chip">共 40 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>GLP-1受体激动剂抑制暴食行为，为暴食症提供药物新途径</li><li>每晚睡眠≥8.5小时与阿尔茨海默病标志物升高相关，提示过长睡眠是风险因素</li><li>OpenAI用GPT-Red陪练训练GPT-5.6，提升模型抗网络攻击能力，增强AI安全性</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/glp1-agonists-binge-eating-31067/" target="_blank" rel="noopener">GLP-1’s Reduce Binge Eating Symptoms (2026.07.16) GLP-1类药物减少暴食症状</a></div><div class="item-desc">GLP-1受体激动剂不仅能减重，还能抑制暴食行为，为治疗暴食症提供新途径。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/macrophage-ep2-receptor-blocking-reverses-aging-31066/" target="_blank" rel="noopener">Macrophage Receptor Blockade Reverses Multi-Organ Aging (2026.07.16) 阻断巨噬细胞受体逆转多器官衰老</a></div><div class="item-desc">衰老使巨噬细胞清除死亡白细胞能力下降，阻断相应受体可恢复清除功能，逆转多器官衰老。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/schizophrenia-muscarinic-m1-receptor-31065/" target="_blank" rel="noopener">Widespread M1 Receptor Deficits in Schizophrenia Found (2026.07.16) 精神分裂症患者广泛存在M1受体缺陷</a></div><div class="item-desc">首次在活体中发现患者脑中M1胆碱能受体显著缺失，为靶向治疗提供新方向。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/auditory-multitasking-eeg-dual-tracking-conversations-31064/" target="_blank" rel="noopener">Brain Can Process Two Conversations at Once (2026.07.16) 大脑能同时处理两场对话</a></div><div class="item-desc">大脑存在听觉缓冲机制，可短暂维持初始注意力，揭示多任务听觉处理原理。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/autism-communication-aperiodic-neural-noise-31063/" target="_blank" rel="noopener">Brain Activity Noise Linked to Autism Communication (2026.07.16) 大脑活动噪声与自闭症沟通相关</a></div><div class="item-desc">大脑非周期信号活动异常与自闭症儿童听觉处理障碍密切相关，可作为早期干预的生物标记。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/temperature-perception-single-neural-population-31062/" target="_blank" rel="noopener">Single Neural Population Detects Both Warm and Cool Sensations (2026.07.16) 单一神经元群体同时感知冷热</a></div><div class="item-desc">大多数温度敏感神经元是双向感受器，颠覆了冷热分离编码的传统认知。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/brain-sugar-glycans-nodes-of-ranvier-myelin-31061/" target="_blank" rel="noopener">Brain Sugars Essential for Maintaining Nerve Signal Speed (2026.07.16) 脑内糖分子对维持神经信号速度至关重要</a></div><div class="item-desc">分支O-甘露糖聚糖稳定神经鞘蛋白，防止郎飞结增宽，保障神经传导速度。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/sleep-duration-p-tau181-alzheimers-31060/" target="_blank" rel="noopener">Long Sleep Hours Link to Elevated Alzheimer’s Blood Protein (2026.07.16) 长睡眠时间与阿尔茨海默病血液蛋白升高相关</a></div><div class="item-desc">每晚睡眠≥8.5小时与血中磷酸化tau蛋白显著升高相关，提示过长睡眠是阿尔茨海默病风险因素。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">1 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/mathematicians-are-closing-in-on-the-hidden-order-inside-chaos/" target="_blank" rel="noopener">Mathematicians are closing in on the hidden order inside chaos (2026.07.15) 数学家接近发现混沌中的隐藏秩序</a></div><div class="item-desc">拉姆齐理论研究混沌中的必然有序，近期突破可能揭示更精确的临界阈值。</div></div></div></div>

@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月7日 周日</span><span class="meta-chip">共 15 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">3 条</span></div><div class="item"><div class="item-body"><div class="item-title">NASA’s X-59 plane goes supersonic for the first time — NASA的X-59实验飞机首次超音速飞行，接近实现无声超音速飞行</div></div></div><div class="item"><div class="item-body"><div class="item-title">How prediction markets could forecast the future of science — 如何利用预测市场预测科学的未来</div></div></div><div class="item"><div class="item-body"><div class="item-title">Aquanauts experience awe-inspiring ‘underview effect’ — 潜水员体验到震撼人心的“俯视效应”</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">US Floats Steering Frozen Iran Assets to Gulf Allies for Repairs</div></div></div><div class="item"><div class="item-body"><div class="item-title">French Carriers Sign €20.4 Billion Agreement to Buy Altice France’s SFR</div></div></div><div class="item"><div class="item-body"><div class="item-title">North Korea will not retreat from nuclear status, Kim Jong Un&#x27;s sister says</div></div></div><div class="item"><div class="item-body"><div class="item-title">Delta, JetBlue Say Travelers Eager to Splurge on Premium Travel</div></div></div><div class="item"><div class="item-body"><div class="item-title">Senegal’s Sonko Reelected Pastef Chief as Rift With Faye Grows</div></div></div><div class="item"><div class="item-body"><div class="item-title">Russian Defence Ministry: anti-aircraft units intercepted 339 Ukrainian drones over 13-hour period</div></div></div><div class="item"><div class="item-body"><div class="item-title">Missing US student found dead near Kyoto, Japan, mother says</div></div></div><div class="item"><div class="item-body"><div class="item-title">ECB Steps Up as G7’s Lead Hawk With Interest-Rate Hike Primed</div></div></div><div class="item"><div class="item-body"><div class="item-title">Hungary’s Mol Says It Got US Extension to Complete NIS Stake</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trump AI Policy Adviser Krishnan Is Giving Up White House Role</div></div></div><div class="item"><div class="item-body"><div class="item-title">Bahrain’s Gulf Air Sees Travel Demand Recovering in the Summer</div></div></div><div class="item"><div class="item-body"><div class="item-title">DoubleLine, Oaktree Brace for Potential AI Pain</div></div></div></div>

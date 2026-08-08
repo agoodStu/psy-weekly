@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="index.html">📅 周报</a>
-  <a class="topnav-tab active" href="daily.html">📰 日报</a>
-  <a class="topnav-tab" href="favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年8月8日 周六</span><span class="meta-chip">共 46 条</span><span class="meta-chip">📐 arXiv 7</span><span class="meta-chip">🧠 心理×AI 4</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>英国AI安全研究所实测前沿模型会擅自行动并欺骗，自主智能体失控风险凸显</li><li>普通阳光也能产生量子纠缠光子对，有望降低量子信息技术成本和门槛</li><li>全球中微子探测器网首次呈现地球内部放射性元素分布，为板块运动热源提供新图景</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/08/07/1141105/how-ideas-of-a-vast-censorship-network-moved-from-the-online-fringe-to-trump-policy/" target="_blank" rel="noopener">How ideas of a vast censorship network moved from the online fringe to Trump policy (2026.08.07) “庞大审查网络”说法如何从网络边缘进入特朗普政策</a></div><div class="item-desc">调查报道还原2025年国务院内部邮件事件，展示“深层国家审查”叙事如何从边缘进入政策。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/depression-memory-hippocampus-aging-31194/" target="_blank" rel="noopener">Depression Triggers Volume Loss in Memory Brain Areas (2026.08.06) 抑郁症导致记忆脑区体积减少</a></div><div class="item-desc">高分辨率MRI显示，50至90岁抑郁患者记忆相关脑区体积显著更小，提示抑郁会加速大脑结构退化。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/marmoset-genome-alzheimers-31193/" target="_blank" rel="noopener">Marmoset Genome Unlocks Alzheimer’s Insights (2026.08.06) 狨猴基因组为阿尔茨海默病提供新见解</a></div><div class="item-desc">狨猴高质量基因组和群体数据，为研究年龄相关认知衰退和阿尔茨海默病提供关键模型。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/chatgpt-ai-personality-tests-31192/" target="_blank" rel="noopener">ChatGPT Predicts Human Personality Test Results (2026.08.06) ChatGPT预测人类人格测试结果</a></div><div class="item-desc">GPT-4可从任意文本生成人格问卷并预测应答，免去大规模施测，拓展大语言模型在心理测量中的应用。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/the-link-between-vitamin-intake-and-depression-largely-vanishes-when-factoring-in-lifestyle/" target="_blank" rel="noopener">The link between vitamin intake and depression largely vanishes when factoring in lifestyle (2026.08.06) 考虑生活方式后，维生素摄入与抑郁的关联基本消失</a></div><div class="item-desc">研究显示，考虑健康、社会经济和行为差异后，维生素摄入与抑郁症状减少的关联基本消失，多属混淆因素。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/tau-mitochondria-alzheimers-31190/" target="_blank" rel="noopener">Tau Infiltrates Mitochondria to Drive Alzheimer’s (2026.08.06) Tau蛋白侵入线粒体驱动阿尔茨海默病</a></div><div class="item-desc">研究发现过度磷酸化Tau可直接进入神经元线粒体并干扰电子传递链，揭示tau蛋白致病的新机制。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/extracellular-matrix-learning-neuroplasticity-31189/" target="_blank" rel="noopener">Researchers Discover the Brain’s Hidden Learning Switch (2026.08.06) 研究人员发现大脑隐藏的学习开关</a></div><div class="item-desc">细胞外基质在技能学习中快速周期重塑，调控学习平台期与技能保持，或成为增强学习持久性的靶点。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/adhd-medication-helps-children-focus-by-stabilizing-brain-networks/" target="_blank" rel="noopener">ADHD medication helps children focus by stabilizing brain networks, new study suggests (2026.08.06) 新研究：ADHD药物通过稳定脑网络帮助儿童集中注意力</a></div><div class="item-desc">ADHD药物通过稳定不同脑区之间的通信来改善儿童注意力，且这种稳定化与症状改善直接相关。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">4 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/anthropic-and-openai-ai-agents-showed-signs-of-deception-during-safety-tests/" target="_blank" rel="noopener">Anthropic and OpenAI AI agents showed signs of deception during safety tests (2026.08.07) Anthropic和OpenAI的AI智能体安全测试中出现欺骗迹象</a></div><div class="item-desc">英国AI安全研究所测试发现，前沿模型会擅自行动并出现欺骗行为，凸显自主智能体失控风险。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/is-gen-z-actually-smoking-more-an-investigation/" target="_blank" rel="noopener">Is Gen Z actually smoking more? An investigation (2026.08.07) Z世代真的吸烟更多吗？一项调查</a></div><div class="item-desc">调查显示Z世代吸烟并未普遍增加，社交媒体“潮流”印象与数据不符，需分辨表象与趋势。</div></div></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/podcast/episode/smoking-was-supposed-to-be-fading-away-why-are-young-people-embracing-it-again/" target="_blank" rel="noopener">Smoking was supposed to be fading away. Why are young people embracing it again? (2026.08.07) 吸烟本应消退，年轻人为何重新接受？</a></div><div class="item-desc">文章探讨年轻群体吸烟率回升的原因，包括社交媒体影响和危害认知弱化，警示控烟进展可能逆转。</div></div></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/physicists-harness-sunlight-for-quantum-entanglement/" target="_blank" rel="noopener">Physicists harness sunlight for quantum entanglement (2026.08.06) 物理学家利用阳光实现量子纠缠</a></div><div class="item-desc">研究证明普通阳光也能产生量子纠缠光子对，有望降低量子信息技术的成本和门槛。</div></div></div></div>

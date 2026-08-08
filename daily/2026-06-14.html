@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月14日 周日</span><span class="meta-chip">共 25 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">13 条</span></div><div class="item"><div class="item-body"><div class="item-title">**U.S. Industries Push to Revive Tungsten Production Amid Shortage** — 中国限制钨出口导致美国钨短缺，美国企业正寻求恢复国内钨生产。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**World-first: therapy to make cells young again given to a person** — 一项基因疗法实验首次在人类身上进行，旨在逆转衰老细胞。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**World Cup camera coverage poses a moving math puzzle** — 世界杯的摄像头覆盖引发了数学难题，研究如何准确覆盖比赛场地。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**NASA’s experimental quiet supersonic plane passes another critical milestone** — NASA的实验性静音超音速飞机取得重大进展，首次达到目标速度和高度。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**Former U.S. health official explains why the Trump administration ‘ignored’ a key alcohol study** — 前美国卫生官员解释了为什么特朗普政府忽视了关键酒精研究。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**Earth’s permafrost could soon release hidden ‘deep carbon,’ supercharging warming** — 地球的永久冻土层可能很快会释放隐藏的“深层碳”，加剧变暖。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**The 24 alien books Scientific American recommends** — 科学美国人推荐的24本外星书籍，探索外星生命的可能性和遭遇。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**SpaceX’s historic IPO ignites the new space race** — SpaceX的首次公开募股引发了新的太空竞赛，为公司未来计划提供资金。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**Steven Spielberg’s Disclosure Day gets one major thing wrong about the search for aliens** — Steven Spielberg的电影《披露日》在对外星生命搜索的描述上存在一个重大错误。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**SpaceX IPO valuation depends on Starship and orbital AI data centers** — SpaceX的IPO估值取决于Starship和轨道人工智能数据中心。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**Crowdsourcing could discover new meteor showers and more** — 众包可能发现新的流星雨和其他更多事物，如天文观测。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**Can black holes send information back in time?** — 黑洞是否可以将信息发送回过去，科学家研究时空结构。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**Disclosure Day and interspecies communication—alien language isn’t just weird noises** — 揭露日和跨物种交流——外星语言不仅仅是奇怪的声音，科学家探讨外星生命的交流方式。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">Iran face New Zealand in politically charged Los Angeles opener</div></div></div><div class="item"><div class="item-body"><div class="item-title">North Korea says &#x27;denuclearisation&#x27; is a matter terminated irreversibly</div></div></div><div class="item"><div class="item-body"><div class="item-title">Mexico investigates murder of mayor of town in Oaxaca state</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trump to Name Ex-CFTC Enforcer McDonald as Wall Street’s Top Cop</div></div></div><div class="item"><div class="item-body"><div class="item-title">Fed and BOE Stay Guarded After 100 Days of Iran War</div></div></div><div class="item"><div class="item-body"><div class="item-title">CLO ETFs Boom on Higher Rates, Private Debt Woes</div></div></div><div class="item"><div class="item-body"><div class="item-title">Venezuela, Argentina’s Impsa Sign Deal to Work on Power Grid</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trump Says He’ll Sign Deal With Iran to Reopen Hormuz Sunday</div></div></div><div class="item"><div class="item-body"><div class="item-title">UK&#x27;s Starmer, Trump discuss efforts to end Iran conflict</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trump says Iran deal to be signed on Sunday</div></div></div><div class="item"><div class="item-body"><div class="item-title">Brazilian Bank Apologizes for Liquidation Alert Sent by Mistake</div></div></div><div class="item"><div class="item-body"><div class="item-title">De la Espriella Tops Cepeda in New Colombian Polls Before Runoff</div></div></div></div>

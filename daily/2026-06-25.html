@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月25日 周四</span><span class="meta-chip">共 31 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>科学家在核反应堆旁捕获幽灵粒子，开启粒子物理新纪元</li><li>创纪录热浪迫使法国核电站关闭，凸显气候对能源的威胁</li><li>靶向脑刺激临床试验显著改善难治性抑郁，提供新疗法</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">A social bonding hormone boosts cooperation among men interacting with women 社交激素促进男性与女性合作 — 实验发现催产素使异性恋男性更愿与女性合作，揭示激素对社交行为的调节作用</div></div></div><div class="item"><div class="item-body"><div class="item-title">New research sheds light on why women tend to generate more creative ideas during the ovulatory phase 排卵期女性创造力更强的原因 — 研究表明排卵期激素上升提升思维原创性，解释女性创造力周期性波动的机制</div></div></div><div class="item"><div class="item-body"><div class="item-title">Personalized fMRI Scans Supercharge TMS Depression Treatment 个性化脑磁图引导TMS治疗抑郁症 — 临床试验证明基于个体脑成像的靶向刺激，显著改善难治性抑郁疗效</div></div></div><div class="item"><div class="item-body"><div class="item-title">Republicans are more likely to see a smile as a play for power, study suggests 共和党人更易将微笑视为权力游戏 — 研究揭示政治身份影响表情解读，保守派更倾向将微笑理解为竞争信号</div></div></div><div class="item"><div class="item-body"><div class="item-title">Gossiping and manipulation linked to higher fertility in new psychology study 八卦和操控行为与高生育率相关 — 心理学研究发现间接攻击行为者恋爱概率更高、子女更多，揭示进化适应策略</div></div></div><div class="item"><div class="item-body"><div class="item-title">Extreme heat is muddling animals’ brains—and even triggering aggression 极端高温扰乱动物大脑引发攻击性 — 高温使鸟类认知能力下降、行为异常，气候变化正威胁动物生存与生态系统</div></div></div><div class="item"><div class="item-body"><div class="item-title">Pop music lyrics have become more rebellious and less empathetic over the past six decades 流行歌词六十年间更叛逆更冷漠 — 歌词分析显示负面道德主题激增，积极情感减少，反映社会价值观转变趋势</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ultra-processed foods linked to lower memory and concentration in young adults 超加工食品损害年轻人记忆力与专注力 — 研究发现高摄入超加工食品与青年认知得分低相关，提示饮食质量影响大脑健康</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">How Physicists Track and Trap the Elusive Neutrino 物理学家如何追踪捕捉中微子 — 科学家通过大型探测器在核反应堆旁捕获幽灵粒子，开启粒子物理新纪元</div></div></div><div class="item"><div class="item-body"><div class="item-title">Slapping an “AI-generated” label on political messages doesn’t stop people from believing them “AI生成”标签难阻政治消息说服力 — 实验显示标注AI来源不影响公众对政策信息的信任，挑战AI内容治理有效性</div></div></div><div class="item"><div class="item-body"><div class="item-title">Europe’s extreme heat is shutting down power plants 欧洲极端高温导致电厂停运 — 创纪录热浪迫使法国核电站关闭，凸显气候危机对能源基础设施的威胁</div></div></div><div class="item"><div class="item-body"><div class="item-title">Top quantum computer expert claims Microsoft’s ‘topological qubit’ doesn’t hold up 量子专家质疑微软拓扑量子比特 — 专家指出微软宣称的技术未通过验证，量子计算竞赛中理论可靠性存疑</div></div></div><div class="item"><div class="item-body"><div class="item-title">Stripe, Anthropic, and OpenAI are backing an effort to stop respiratory infections 科技巨头联合抗击呼吸道感染 — Stripe、Anthropic等成立非营利组织，专注攻克普通感冒和流感疫苗难题</div></div></div><div class="item"><div class="item-body"><div class="item-title">The emergence of the web data infrastructure layer for AI AI时代崛起的数据基础设施层 — 企业需海量数据驱动AI，但网络信息碎片化阻碍模型训练，催生新型数据管道</div></div></div><div class="item"><div class="item-body"><div class="item-title">All challenges big and small 从战场废墟到人生挑战的感悟 — 作者回忆海湾战争后科威特经历，探讨逆境中成长与面对挑战的韧性</div></div></div><div class="item"><div class="item-body"><div class="item-title">This flying solar-powered platform could deliver better internet from the air 太阳能飞行平台空中提供更好网络 — Sceye飞艇驻留平流层充当高空基站，有望为偏远地区带来高速互联网</div></div></div></div>

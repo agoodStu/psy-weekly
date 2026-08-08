@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年8月6日 周四</span><span class="meta-chip">共 47 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 4</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>48至68岁保持血压正常等健康因素，无痴呆生存期延长近13年，凸显中年期干预价值</li><li>常规测序漏掉的肿瘤特异异构体可强结合MHC，成为脑癌疫苗新靶点，有望填补治疗空白</li><li>离体人脑组织施以DBS样电刺激，破解细胞特异性分子机制，为神经调控优化提供精准靶点</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/nonordinary-experiences-personal-growth-31188/" target="_blank" rel="noopener">Nonordinary Experiences Lead to Long-Term Personal Growth (2026.08.05) 超常体验可带来长期个人成长</a></div><div class="item-desc">新量表研究显示，出体、超感知等体验被积极整合后，可促进长期个人成长。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/vascular-health-aging-dementia-31186/" target="_blank" rel="noopener">Midlife Vascular Health Adds Nearly 13 Dementia-Free Years (2026.08.05) 中年血管健康延寿近13年无痴呆</a></div><div class="item-desc">48至68岁保持血压正常、不吸烟、不患糖尿病，无痴呆生存期可延长近13年。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/neural-stem-cells-branch-cerebral-cortex-31184/" target="_blank" rel="noopener">Neural Stem Cells Branch Earlier Than Expected (2026.08.05) 神经干细胞分化早于预期</a></div><div class="item-desc">小鼠皮层研究显示，神经干细胞在神经发生早期便产生多种投射神经元谱系，改写发育时序认知。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/ai-visual-processing-video-neurotech-31184/" target="_blank" rel="noopener">Brain-Inspired AI Cuts Video Processing Time (2026.08.05) 类脑AI大幅缩短视频处理时间</a></div><div class="item-desc">新框架受大脑选择性注意启发，过滤冗余视觉帧、只处理关键信息，显著提升视频处理效率。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/thc-trauma-nightmares-ptsd-31182/" target="_blank" rel="noopener">THC Significantly Reduces Trauma Nightmares in PTSD (2026.08.05) THC显著减少PTSD创伤噩梦</a></div><div class="item-desc">临床试验显示，植物源THC药物屈大麻酚显著降低PTSD患者的创伤相关噩梦负担。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/dbs-genetics-astrocytes-brain-31180/" target="_blank" rel="noopener">Brain Stimulation Triggers Cell-Specific Genetics in Living Brains (2026.08.05) 脑刺激引发细胞特异性基因变化</a></div><div class="item-desc">研究者对离体人脑组织施以DBS样电刺激，首次揭示深部脑刺激的细胞特异性分子机制。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/how-partisans-change-their-news-habits-when-the-headlines-look-bad/" target="_blank" rel="noopener">Democrats and Republicans show different reactions to unfavorable news (2026.08.05) 两党选民对不利新闻反应不同</a></div><div class="item-desc">人们会根据头条对己党是否有利动态调整新闻阅读量与类型，党派身份塑造信息消费。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/miniature-brain-models-reveal-varied-electrical-activity-in-different-types-of-a/" target="_blank" rel="noopener">Miniature brain models reveal varied electrical activity in different types of autism (2026.08.05) 迷你脑模型揭示自闭症电活动差异</a></div><div class="item-desc">用自闭症患者细胞培养的3D脑模型显示，不同自闭症亚型神经网络电活动模式明显不同。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">4 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/trump-cdc-pick-erica-schwartz-confirmed-to-lead-nations-top-public-health-agency/" target="_blank" rel="noopener">Trump CDC pick Erica Schwartz confirmed to lead nation’s top public health agency (2026.08.05) 特朗普提名CDC局长施瓦茨获确认</a></div><div class="item-desc">参议院确认埃丽卡·施瓦茨出任CDC局长，结束该机构近一年无正式掌门人的局面。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/elon-musk-reveals-spacex-plans-to-build-satellite-factories-on-the-moon/" target="_blank" rel="noopener">Elon Musk reveals SpaceX plans to build satellite factories on the moon (2026.08.05) 马斯克披露SpaceX月球建厂计划</a></div><div class="item-desc">SpaceX计划在月球建造卫星工厂，据称可降低发射成本；该公司近期发射业务亏损5.42亿美元。</div></div></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/neanderthal-genes-may-give-modern-humans-muscles-a-boost/" target="_blank" rel="noopener">Neanderthal genes may give modern humans’ muscles a boost (2026.08.05) 尼安德特基因或增强现代人肌肉</a></div><div class="item-desc">多数人携带少量尼安德特DNA，新研究提示这些基因可能赋予现代人肌肉功能优势。</div></div></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/podcast/episode/youtube-star-simone-giertz-has-some-life-and-science-lessons-to-share-with-you/" target="_blank" rel="noopener">YouTube star Simone Giertz has some life and science lessons to share with you (2026.08.05) YouTube明星Giertz分享科学与人生课</a></div><div class="item-desc">从搞笑机器人到实用发明，Simone Giertz以亲身经历讲述失败、好奇心与科学传播。</div></div></div></div>

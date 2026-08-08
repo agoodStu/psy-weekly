@@ -25,21 +25,6 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--accent-soft); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: var(--accent); }
 
 body {
   font-family: 'Inter', -apple-system, sans-serif;
@@ -48,7 +33,7 @@ body {
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 60px 20px 40px;
+  padding: 28px 20px 40px;
 }
 
 .container {
@@ -149,14 +134,29 @@ h1 {
   color: var(--text-secondary);
   text-align: center;
 }
+.bottomnav {
+  position: fixed; bottom: 0; left: 0; right: 0; height: 56px;
+  display: none;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border); z-index: 200;
+}
+.bottomnav-item {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2px;
+  font-size: 10px; color: var(--text-secondary);
+  cursor: pointer; border: none; background: none; font-family: inherit; padding: 4px 0;
+}
+.bottomnav-item .bn-icon { font-size: 17px; line-height: 1; }
+.bottomnav-item:hover { color: var(--text); text-decoration: none; }
+.bottomnav-item.active { color: var(--accent); }
+.bottomnav-item.active .bn-icon { color: var(--accent); }
+@media (max-width: 768px) {
+  .bottomnav { display: flex; }
+}
 </style>
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab active" href="index.html">📅 周报</a>
-  <a class="topnav-tab" href="daily.html">📰 日报</a>
-  <a class="topnav-tab" href="favorites.html">⭐ 收藏</a>
-</nav>
 <div class="container">
   <h1>心理学期刊周报</h1>
   <p class="subtitle">Psychology Weekly · 往期存档</p>
@@ -208,5 +208,10 @@ document.querySelectorAll('.theme-btn').forEach(function(btn) {
 </script>
 <script src="favorites.js"></script>
 <script src="archive-enhance.js"></script>
+<nav class="bottomnav" aria-label="页内导航">
+  <a class="bottomnav-item" href="daily.html"><span class="bn-icon">📰</span><span>日报</span></a>
+  <a class="bottomnav-item active" href="index.html"><span class="bn-icon">📅</span><span>周报</span></a>
+  <a class="bottomnav-item" href="favorites.html"><span class="bn-icon">⭐</span><span>收藏</span></a>
+</nav>
 </body>
 </html>

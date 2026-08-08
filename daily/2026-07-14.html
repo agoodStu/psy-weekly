@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月14日 周二</span><span class="meta-chip">共 41 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>银河系云团检测到树莓糖，为宇宙生命起源及星际有机化学提供关键证据</li><li>疫苗训练免疫系统识别芬太尼变异体，为阿片类药物滥用提供新防线</li><li>联邦开源AI整合文献与暗数据提供免费工具，旨在逆转阿尔茨海默高失败率</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/testosterone-puberty-girls-emotional-distress-31042/" target="_blank" rel="noopener">Testosterone Drives Early Pubertal Distress in Girls (2026.07.13) 睾酮驱动女孩青春期早期情绪困扰</a></div><div class="item-desc">睾酮在10-12岁女孩情绪脆弱中起主导作用，挑战传统激素角色认知，提示早期干预方向。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/open-source-ai-tools-alzheimers-31041/" target="_blank" rel="noopener">Open-Source AI Tools for Alzheimer’s (2026.07.13) 开源AI工具助力阿尔茨海默病研究</a></div><div class="item-desc">联邦开源AI整合文献与暗数据提供免费工具集，旨在逆转阿尔茨海默临床试验高失败率。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/" target="_blank" rel="noopener">What Anthropic’s latest AI discovery does—and doesn’t—show (2026.07.13) Anthropic最新AI发现的真相与局限</a></div><div class="item-desc">公司发布怪诞研究揭示AI内部机制，但实际意义有限，需谨慎评估其可解释性价值。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/objective-measurements-shed-light-on-the-geometry-of-facial-attractiveness/" target="_blank" rel="noopener">Objective measurements shed light on the geometry of facial attractiveness (2026.07.13) 客观测量揭示面部吸引力的几何特征</a></div><div class="item-desc">三维面形客观几何模式决定吸引力，男女特征不同，挑战审美主观论，可用于社会认知研究。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://neurosciencenews.com/infant-auditory-spatial-tracking-noise-31040/" target="_blank" rel="noopener">Infants Use Spatial Cues to Hear Voices in Noisy Environments (2026.07.13) 婴儿利用空间线索在嘈杂环境中分辨声音</a></div><div class="item-desc">即使大脑皮层未成熟，婴儿也能借助空间分隔隔离语音，揭示早期听觉分离能力。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/the-evolutionary-reasons-behind-who-we-choose-as-friends/" target="_blank" rel="noopener">The evolutionary reasons behind who we choose as friends (2026.07.13) 选择朋友背后的进化原因</a></div><div class="item-desc">同性友谊选择基于祖先环境中的合作特质，拓展友谊进化论解释，关联现代社交行为。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.quantamagazine.org/why-am-i-left-handed-20260713/" target="_blank" rel="noopener">Why Am I Left-Handed? (2026.07.13) 我为什么是左撇子？</a></div><div class="item-desc">左撇子由大脑偏侧化与遗传共同决定，研究揭示其与认知功能及疾病风险的关联。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/wealth-and-air-pollution-emerge-as-top-predictors-of-state-autism-rates/" target="_blank" rel="noopener">Wealth and air pollution emerge as top predictors of state autism rates (2026.07.13) 财富与空气污染成为各州自闭症患病率首要预测因素</a></div><div class="item-desc">社会经济地位和空气污染是自闭症最强预测因子，提示环境与遗传交互作用影响神经发育。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">3 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/how-steering-an-ais-personality-changes-the-way-it-interacts-with-others/" target="_blank" rel="noopener">How steering an AI’s personality changes the way it interacts with others (2026.07.13) AI个性如何影响其与他人的互动方式</a></div><div class="item-desc">大型语言模型“宜人性”主导合作行为，其他特质影响有限，为设计更协作的AI提供依据。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/mathematicians-still-dont-know-the-fastest-way-to-multiply-numbers/" target="_blank" rel="noopener">Mathematicians still don’t know the fastest way to multiply numbers (2026.07.13) 数学家至今不知乘法的最快算法</a></div><div class="item-desc">尽管算法众多，乘法复杂性上限仍未解，挑战计算理论，激励数学基础突破。</div></div></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/nine-recent-studies-that-reveal-the-hidden-psychology-of-american-politics/" target="_blank" rel="noopener">Nine recent studies that reveal the hidden psychology of American politics (2026.07.12) 九项近期研究揭示美国政治隐藏的心理机制</a></div><div class="item-desc">党派认同影响从微笑解读到日常选择，揭示政治极化深植于心理根基，远超投票行为。</div></div></div></div>

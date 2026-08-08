@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月29日 周一</span><span class="meta-chip">共 27 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>夜间脑波模式与年龄性别及认知能力相关，睡眠结构可反映智力水平，有望用于认知评估</li><li>多巴胺驱动母性大脑终身分子改变提升学习记忆，揭示生育对认知的长期影响</li><li>人类专家相信AI辅助时更易接受不公正严厉评分，揭示监督中认知偏差隐患</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/how-age-and-biological-sex-shape-our-sleeping-brain-waves/" target="_blank" rel="noopener">Can nighttime brain bursts predict performance on intelligence tests? 夜间脑波爆发能否预测智力测试表现</a></div><div class="item-desc">研究发现夜间脑波模式与年龄、性别及认知能力相关，睡眠结构变化可反映智力水平。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/negative-life-events-trigger-different-depressive-symptoms-in-teenage-girls-and-boys/" target="_blank" rel="noopener">Negative life events trigger different depressive symptoms in teenage girls and boys 负面生活事件引发青少年男女不同抑郁症状</a></div><div class="item-desc">纵向研究发现负面事件增多导致抑郁加重，女孩尤甚，且负面自我评价是关键中介。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/brain-scans-reveal-how-uneven-intelligence-scores-relate-to-attention-deficits-i/" target="_blank" rel="noopener">Brain scans reveal how uneven intelligence scores relate to attention deficits in children 脑扫描揭示智力分数不均衡与儿童注意力缺陷的关系</a></div><div class="item-desc">ADHD儿童言语与非言语智力差距大时自控力更差，大脑前额叶血流减少是原因。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/one-highly-desirable-trait-can-dominate-how-you-choose-a-romantic-partner/" target="_blank" rel="noopener">One highly desirable trait can dominate how you choose a romantic partner 一种理想特质主导你如何选择伴侣</a></div><div class="item-desc">研究发现择偶依赖通用决策系统，单一特质可主导选择，计算模型能准确预测偏好。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/the-science-of-mommy-brain-how-dopamine-locks-in-lifelong-cognitive-benefits-for-mothers/" target="_blank" rel="noopener">The science of “mommy brain”: How dopamine locks in lifelong cognitive benefits for mothers “妈妈脑”的科学：多巴胺如何锁定母亲终身认知益处</a></div><div class="item-desc">多巴胺驱动母性大脑终身分子改变，提升学习记忆，揭示生育对认知的长期影响。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/how-autistic-traits-shape-the-brain-s-response-to-social-rewards/" target="_blank" rel="noopener">Study links autistic traits to how the brain processes social versus nonsocial rewards 研究将自闭特质与大脑处理社会与非社会奖励的差异联系起来</a></div><div class="item-desc">自闭特质越高，大脑处理社会奖励时特定区域连接性越低，解释了对社会刺激的偏好差异。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/people-with-insecure-relationship-habits-tend-to-have-more-children-study-finds/" target="_blank" rel="noopener">People with insecure relationship habits tend to have more children, study finds 研究显示有不安全依恋习惯的人倾向于生育更多子女</a></div><div class="item-desc">不安全依恋风格与子女数量正相关，文化规范在其中起重要调节作用。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/an-international-brain-imaging-analysis-reveals-how-psychedelics-rewire-neural-c/" target="_blank" rel="noopener">An international brain imaging analysis reveals how psychedelics rewire neural circuits 国际脑成像分析揭示致幻剂如何重连神经回路</a></div><div class="item-desc">多项研究联合发现迷幻药物增加脑网络间功能连接，表明其可塑性作用机制。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">4 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/teachers-say-they-distrust-ai-but-still-accept-its-harsh-grading-mistakes-study-finds/" target="_blank" rel="noopener">Teachers say they distrust AI but still accept its harsh grading mistakes, study finds 研究显示教师声称不信任AI但仍接受其严厉评分错误</a></div><div class="item-desc">人类专家在相信AI辅助时更易接受不公正的严厉评分，表明监督存在认知偏差。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/how-to-tell-a-comet-from-an-asteroid-and-a-meteor-from-a-meteorite/" target="_blank" rel="noopener">How to tell a comet from an asteroid and a meteor from a meteorite 如何区分彗星与小行星、流星与陨石</a></div><div class="item-desc">本文科普了夜空中流星、彗星、小行星和陨石的区别，帮助理解天体分类。</div></div></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/how-to-protect-earth-from-a-deadly-asteroid-impact/" target="_blank" rel="noopener">How to protect Earth from a deadly asteroid impact 如何保护地球免受致命小行星撞击</a></div><div class="item-desc">本文探讨小行星撞击威胁及防御方法，介绍监测、偏转等技术应对潜在灾难。</div></div></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/whats-best-for-baking-butter-or-margarine-a-food-scientist-explains/" target="_blank" rel="noopener">What&#x27;s best for baking—butter or margarine? A food scientist explains 烘焙用黄油还是人造黄油？食品科学家解读</a></div><div class="item-desc">文章从科学角度比较黄油与人造黄油的成分、风味和烘焙效果，帮助做出最佳选择。</div></div></div></div>

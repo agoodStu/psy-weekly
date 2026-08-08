@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年5月12日 周二</span><span class="meta-chip">共 20 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">Sucker fish are hiding in manta rays’ ‘butthole,’ new study reveals - 新研究表明，吸盘鱼会进入蝠鲼的肛门部位，这一行为可能有助于它们隐藏或捕食。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Strange crystals found inside wreckage from the first nuclear bomb test - 在第一次核试验的残骸中发现了奇特的晶体，这是熔化沙子和蒸发传感器电线结合形成的物质。</div></div></div><div class="item"><div class="item-body"><div class="item-title">See the National Park Service’s newest canine rangers - 国家公园服务展示了最新的犬类管理员，这些雪橇犬在阿拉斯加国家公园中起着关键作用。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Tanking is ruining NBA basketball. Can math save it? - NBA的战术问题导致球队故意输球，新想法试图解决这个问题。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Inside NASA’s ‘very ambitious’ moon base plan - 美国宇航局公布了雄心勃勃的月球基地计划，预计2036年建立基地。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Protein-boosted foods are everywhere now, but do we actually need more protein? - 蛋白质强化食品无处不在，但我们实际上需要更多的蛋白质吗？</div></div></div><div class="item"><div class="item-body"><div class="item-title">This sulfurous hell world might change the way we classify exoplanets - 一个充满硫磺的奇异世界可能改变我们对系外行星的分类。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Hantavirus cruise ship outbreak, risk of microplastics-caused climate warming and Alaska landslide tsunami - 船上汉坦病毒爆发、微塑料导致的气候变化风险以及阿拉斯加滑坡海啸。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">Japan Faces UK Rival In Race to Build Warships for New Zealand</div></div></div><div class="item"><div class="item-body"><div class="item-title">Japan’s Households Cut Spending Even as Wages Kept Growing</div></div></div><div class="item"><div class="item-body"><div class="item-title">New Zealand Law Change Will Block Action Against Polluters</div></div></div><div class="item"><div class="item-body"><div class="item-title">Petrobras Misses Profit Estimates Despite War-Driven Oil Rally</div></div></div><div class="item"><div class="item-body"><div class="item-title">Malaysia’s Anti-Graft Chief Ends Term With Probes Unresolved</div></div></div><div class="item"><div class="item-body"><div class="item-title">Warsh’s Fed Nomination Clears First in Series of Senate Votes</div></div></div><div class="item"><div class="item-body"><div class="item-title">Jes Staley Asked to Sit for US House Interview Over Epstein Ties</div></div></div><div class="item"><div class="item-body"><div class="item-title">Asian Stocks to Rise, Oil Gains on Iran Deadlock: Markets Wrap</div></div></div><div class="item"><div class="item-body"><div class="item-title">California Mayor Admits to Being a China Agent After Probe</div></div></div><div class="item"><div class="item-body"><div class="item-title">US Releases Another Wave of Emergency Oil as Gas Prices Bite</div></div></div><div class="item"><div class="item-body"><div class="item-title">Nvidia’s CEO to Miss China Trip After Year of Travels With Trump</div></div></div><div class="item"><div class="item-body"><div class="item-title">México detiene a líder del Cártel del Noreste y decomisa siete tigres</div></div></div></div>

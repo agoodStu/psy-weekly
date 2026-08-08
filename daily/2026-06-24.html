@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月24日 周三</span><span class="meta-chip">共 28 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">Heart Rates Align in Real-World Social Interactions 真实社交中心率同步 — 共享空间和注意力时人与人心率频率对齐，成为社交投入的生理指纹。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Opening a door to mental-health help online 打开在线心理健康之门 — 基于MIT技术的Koko平台提供匿名在线心理支持，帮助青少年掌握健康应对策略。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Chronic nicotine use rewires the brain to increase motivation for food 慢性尼古丁使用重塑大脑增加食物动机 — 尼古丁长期暴露改变脑回路，显著增强为获得食物付出的努力，而非仅增加药物渴望。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Human Memory Limits Make AI Better at Grammar 人类记忆限制使AI语法更好 — 引入类人遗忘机制的Transformer模型优先学习抽象语法结构，提升语言理解准确性。</div></div></div><div class="item"><div class="item-body"><div class="item-title">World-First Embryonic Stem Cell Trial for Huntington’s Opens 全球首个亨廷顿病胚胎干细胞试验启动 — 胚胎干细胞移植旨在修复受损神经元，为致命遗传病开辟潜在治疗路径。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Comfort Food Shuts Down Chronic Stress 舒适食物抑制慢性压力 — 高热量美味食物通过激活特定神经环路缓解长期压力，揭示“安慰剂效应”的生物学基础。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Sleep Deprivation Increases Synaptic Density Markers in the Brain 睡眠剥夺增加大脑突触密度标记 — 睡眠不足导致突触连接增强，支持“突触稳态假说”，解释睡眠对脑功能恢复的必要性。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Positive romantic relationships ease existential dread by boosting meaning in life 积极恋爱关系通过提升生命意义缓解存在恐惧 — 健康浪漫关系增强生命意义感，有效降低死亡焦虑，促进心理健康。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">GABA Immune Pathway Drives Female Brain Cancer Growth GABA免疫通路驱动女性脑癌生长 — 研究发现GABA免疫通路是胶质母细胞瘤性别差异的关键机制，为开发靶向治疗提供新方向。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ultrasound imaging turns a robot hand into a skillful mimic 超声成像让机械手成为灵巧模仿者 — 超声技术捕捉手部肌肉实时运动，使机器人精准模仿人手动作，提升精细操作能力。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Engineered “mini livers” could be injected as an alternative to transplantation 工程化“微型肝脏”可注射替代移植 — 可注射水凝胶微球携带肝细胞，替代肝功能数月，为肝衰竭患者提供无移植新疗法。</div></div></div><div class="item"><div class="item-body"><div class="item-title">A breath test could diagnose pneumonia in minutes 呼吸测试几分钟内诊断肺炎 — 便携芯片传感器PlasmoSniff检测呼气中的疾病标志物，实现肺炎快速无创诊断。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Reinventing the zipper 重新发明拉链 — 受40年前专利启发，三面拉链可瞬间变形组装，用于帐篷、骨折固定等快速成型场景。</div></div></div><div class="item"><div class="item-body"><div class="item-title">A man of many words 词汇大师 — 拼字比赛词源专家Brian Sietsema为选手提供单词发音和词源解答，保障比赛权威性。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Heads in the game 赛场上的头脑 — 分析世界杯决赛中裁判快速决策的心理过程，揭示高压下认知判断的关键机制。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Stand Up for Research, Innovation, and Education 支持研究、创新与教育 — MIT校友呼吁维护美国科技领导力、基于成绩的招生和可负担教育，捍卫学术使命。</div></div></div></div>

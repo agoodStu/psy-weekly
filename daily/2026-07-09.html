@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月9日 周四</span><span class="meta-chip">共 42 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>激光诱导石墨烯传感器可无创检测泪液多巴胺，为帕金森病超早期诊断提供新路径</li><li>游戏时长与认知损害无关，成瘾行为才是真正风险，需区分正常与病态游戏</li><li>单个人类皮层神经元计算复杂度远超动物，揭示大脑信息处理能力的进化根源</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title">How fictional violence shapes the actions of copycat offenders (2026.07.08) 虚构暴力如何塑造模仿犯的行为</div><div class="item-desc">研究发现罪犯会模仿影视中的具体暴力手法，揭示媒体暴力的潜在社会危害。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title">Alcohol Alters Brain Flexibility Based on Hidden Dementia Markings (2026.07.08) 酒精基于隐藏痴呆标记改变大脑灵活性</div><div class="item-desc">酒精显著削弱皮质纹状体通路通讯，揭示其对决策和认知灵活性的损害机制。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title">Ketogenic Diet Eases Schizophrenia and Bipolar Symptoms (2026.07.08) 生酮饮食缓解精神分裂症和双相障碍症状</div><div class="item-desc">营养性酮症纠正大脑葡萄糖代谢缺陷，快速改善精神症状和认知障碍。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title">Why do relationships fail when women earn more? Study challenges traditional explanations (2026.07.08) 女性收入更高时关系为何破裂？新研究挑战传统解释</div><div class="item-desc">女性收入高仍易导致关系破裂，但非因性别角色威胁，需重新审视经济与婚姻动态。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title">Tears Can Be Used to Detect Dopamine Levels (2026.07.08) 眼泪可检测多巴胺水平</div><div class="item-desc">激光诱导石墨烯传感器实现泪液多巴胺精准检测，为帕金森病超早期无创诊断提供新路径。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title">Air Pollution Drives Parkinson’s Risk (2026.07.08) 空气污染增加帕金森病风险</div><div class="item-desc">长期暴露于细颗粒物直接提高帕金森病相对风险，强调空气治理对神经健康的重要性。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title">Heavy video gaming is not linked to cognitive harm in teens, but gaming addiction is (2026.07.08) 重度游戏不伤青少年认知，但游戏成瘾有害</div><div class="item-desc">游戏时长与认知损害无关，成瘾行为才是真正风险因素，需区分正常与病态游戏。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title">Exposure to local hate crimes linked to mail-in voting preference (2026.07.08) 本地仇恨犯罪曝光与邮寄投票偏好相关</div><div class="item-desc">非裔美国人聚居区仇恨犯罪率越高，越倾向邮寄投票，反映对选举安全的焦虑。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">4 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title">The Branching Dendrite Secret Behind Human Cognitive Superiority (2026.07.08) 树突分支秘密：人类认知优势的细胞基础</div><div class="item-desc">单个人类皮层神经元计算复杂度远超动物，揭示大脑信息处理能力的进化根源。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title">Einstein’s greatest theory triumphs again in landmark frame-dragging measurement (2026.07.08) 爱因斯坦理论再获胜利：最精准的参考系拖拽测量</div><div class="item-desc">地球绕太阳公转时拖拽时空，精确验证广义相对论效应，为引力研究提供新证据。</div></div></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title">Detecting hidden nuclear weapons in space may be possible using cosmic rays (2026.07.08) 宇宙射线可能检测太空隐藏核武器</div><div class="item-desc">利用宇宙射线穿透特性可探测轨道核装置，为《外层空间条约》提供技术执行手段。</div></div></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title">International timekeepers to vote on changing the leap second to a leap hour (2026.07.08) 国际时间机构将投票把闰秒改为闰时</div><div class="item-desc">为协调世界时与地球自转，拟改用更长时间调整，减少对现代计时系统的干扰。</div></div></div></div>

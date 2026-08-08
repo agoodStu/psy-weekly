@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月12日 周五</span><span class="meta-chip">共 27 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">15 条</span></div><div class="item"><div class="item-body"><div class="item-title">**Obstetricians oppose CDC to recommend more shots for moms** — 美国妇产科医生协会反对CDC推荐更多疫苗，建议孕妇接种四剂疫苗，包括COVID和流感疫苗。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**The U.S. stockpiles oil in huge underground salt caverns. Here’s why** — 美国利用巨大的地下盐洞储存石油，这种储存方式因其密封液体的能力而特别适合。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**Meet LEV-2, a baseball-sized and absurdly cute moon robot** — 介绍LEV-2月球探测器，一个小巧且可爱的月球机器人，有助于月球探索。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**See the hidden fungal network so big it could stretch to Proxima Centauri and back** — 研究人员创建了地球上最大且最不明显的生物网络之一——丛枝菌根真菌的全球高分辨率地图。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**Children’s zip codes change their brains, new study finds** — 研究发现，儿童的居住地和社会经济地位对大脑发育有显著影响。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**Humans and AI race to ‘blow up’ math’s toughest equations** — 人类和人工智能竞相解决数学中最困难的方程式，探索数学领域的突破。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**Tilly Edinger: The paleoneurologist saved by her science** — 讲述了古神经学家蒂莉·埃丁格如何通过自己的科学研究逃离纳粹德国。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**China’s Tianwen-2 spacecraft arrives at one of Earth’s mysterious ‘quasi-moons’** — 中国的天问-2探测器到达地球的一个神秘的“准月亮”Kamoʻoalewa。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**El Niño is here and could tip Earth to a new record hot year** — 热带海洋流现象厄尔尼诺到来，可能导致地球出现新的高温记录。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**What AI-herding scientists can learn from watching ‘sheepdog YouTube’** — 通过观看“牧羊犬YouTube”视频，科学家了解到如何控制混乱的群体。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**The 2026 World Cup will bring the heat. Here&#x27;s how to keep cool** — 2026年世界杯将带来高温，本文提供了保持凉爽的方法。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**The U.S. is getting hit with severe stormy weather—here’s what’s stewing in the atmosphere** — 美国正遭受严重的风暴天气，国家海洋和大气管理局提供了天气情况的详细信息。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**Report of gene-edited human embryos sparks worries about the technology’s future uses** — 基因编辑人类胚胎的报告引发了科学家对技术未来应用的担忧。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**AI scores a ‘C–’ on its hardest math test yet** — 人工智能在最新的数学测试中仅得C-，这表明大型语言模型在数学研究中的辅助作用虽然有用，但仍有缺陷。</div></div></div><div class="item"><div class="item-body"><div class="item-title">**How to build kids’ ‘cognitive endurance’ in an age of distraction** — 在一个分心的时代，如何提高孩子的“认知耐力”。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">Twelve Hours at the Mall? In Southeast Asia, That’s Easy</div></div></div><div class="item"><div class="item-body"><div class="item-title">Gold Holds Gain as Trump Signals Imminent Peace Deal With Iran</div></div></div><div class="item"><div class="item-body"><div class="item-title">MediaTek’s Rally Signals Shift From Laggard to AI Contender</div></div></div><div class="item"><div class="item-body"><div class="item-title">ChatGPT Pushed Back on LA Fire Suspect’s Vision of Burning City</div></div></div><div class="item"><div class="item-body"><div class="item-title">Peru Holds Key Interest Rate at 4.25% Amid Knife-Edge Vote Count</div></div></div><div class="item"><div class="item-body"><div class="item-title">Japanese Stocks Set to Rise on Optimism Over Middle East War</div></div></div><div class="item"><div class="item-body"><div class="item-title">UK Offers Meningitis Shot to 1 Million Students After Outbreak</div></div></div><div class="item"><div class="item-body"><div class="item-title">Taiwan’s Dumpling Alliance Fades Under China’s Economic Squeeze</div></div></div><div class="item"><div class="item-body"><div class="item-title">Locked Out of IPO, Asia Investors Find New Ways to Bet on SpaceX</div></div></div><div class="item"><div class="item-body"><div class="item-title">Scaffolding Company’s Data-Center Pivot Cuts Into Margins</div></div></div><div class="item"><div class="item-body"><div class="item-title">Oil Drops to Two-Month Low as Trump Says Deal With Iran Is Close</div></div></div><div class="item"><div class="item-body"><div class="item-title">Billionaires Are Fleeing California Taxes. Voters Are Also Fed Up</div></div></div></div>

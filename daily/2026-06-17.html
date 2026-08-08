@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月17日 周三</span><span class="meta-chip">共 34 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>AI视网膜筛查可提前数十年预测阿尔茨海默病，提供低成本无创筛查新方法</li><li>发现第二个缺乏暗物质的星系，挑战传统星系形成理论，推动暗物质研究</li><li>裸盖菇碱结合正念冥想首次临床试验，可能持久重塑大脑，开辟抑郁治疗新途径</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">Republicans and Democrats process the implied meanings of Trump and Harris differently, study shows 研究显示共和党和民主党对特朗普和哈里斯隐含含义的理解不同 — 听众根据说话者政治身份解读隐含含义，揭示政治极化对语言理解的影响。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Neuroscientists discover how the brain physically organizes your autobiographical memories 神经科学家发现大脑如何组织自传体记忆 — 大脑按时间邻近性组织自传体记忆，时间越近神经表征越相似，揭示记忆存储机制。</div></div></div><div class="item"><div class="item-body"><div class="item-title">What psychologists noticed about couples who are happiest when moving in together 心理学家发现同居最幸福的情侣特征 — 情侣同居时对转变的共识程度越高，关系满意度越高，为同居决策提供参考。</div></div></div><div class="item"><div class="item-body"><div class="item-title">A three-minute smartphone game can detect a subtle cognitive mechanism behind depression 三分钟手机游戏可检测抑郁症背后的认知机制 — 三分钟手机游戏检测抑郁症患者对愉悦的期望偏差，为早期筛查提供新工具。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Chickadees Sneak Around for Brains, Not Just Brawn 山雀为智商而非体力出轨 — 雌性山雀偏好空间智能强的雄性，揭示认知能力在配偶选择中的关键作用。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Researchers identify key psychological traits linking childhood abuse to future domestic violence victimization 研究揭示童年虐待与未来家暴受害的关键心理特征 — 童年虐待通过改变心理特质增加成年后伴侣暴力受害风险，为干预提供靶点。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Senescent Cells Are Essential for Building the Brain’s Barriers 衰老细胞对构建大脑屏障至关重要 — 衰老细胞在发育期精准构建脑屏障，颠覆其仅促衰老的认知，揭示双刃剑作用。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Pairing Psilocybin With Stillness Could Permanently Rewire the Brain 裸盖菇碱结合静默可永久重塑大脑 — 首次临床试验探索裸盖菇碱结合正念冥想，可能持久重塑大脑，为抑郁治疗开辟新途径。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">3 条</span></div><div class="item"><div class="item-body"><div class="item-title">Retinal Photos and AI Predict Early Alzheimer’s Risk 视网膜照片与AI可提前预测阿尔茨海默病风险 — AI分析视网膜照片可提前数十年预测阿尔茨海默病风险，提供低成本无创筛查新方法。</div></div></div><div class="item"><div class="item-body"><div class="item-title">AI Voice Scams Weaponize Vocal Timbre to Trick Our Trust AI语音诈骗利用音色特征欺骗信任 — AI语音克隆利用声音指纹相似性骗取信任，揭示人类对相似音色缺乏防御心理。</div></div></div><div class="item"><div class="item-body"><div class="item-title">U.S. limits on Anthropic Fable AI could hurt cybersecurity 美国对Anthropic Fable AI的限制可能削弱网络安全 — 美国限制高级AI模型可能削弱网络安全防御能力，引发安全与监管权衡讨论。</div></div></div></div>

@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月4日 周四</span><span class="meta-chip">共 18 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">6 条</span></div><div class="item"><div class="item-body"><div class="item-title">Scientists just built a powerful AI computer worm that learns as it spreads — 科学家们打造了一种能够学习的AI计算机蠕虫，它可以在传播过程中学习，提醒人们对由人工智能引发的网络安全风险提高警惕。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Landmark pancreatic cancer treatment paves way for targeting other tricky tumors — 标志性的胰腺癌治疗方法为治疗其他难以治疗的肿瘤开辟了道路，一种新的实验性药物显著提高了胰腺癌患者的生存期。</div></div></div><div class="item"><div class="item-body"><div class="item-title">NASA’s Mars mission MAVEN is lost forever — 美国宇航局火星任务MAVEN永久失联，这是第一个成功研究火星大气层的任务，并成为支持NASA火星车表面的通信网络的关键节点。</div></div></div><div class="item"><div class="item-body"><div class="item-title">The reason why elevators feel slow—and the surprising math behind everyday life — 为什么电梯感觉缓慢，以及日常生活背后的惊人数学。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Edison may not have been the first to record the human voice, new evidence suggests — 新的证据表明，爱迪生可能并非第一个记录人类声音的人。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Ötzi the murdered Iceman’s microbiome is still active — 被谋杀的冰人Ötzi的微生物组仍然活跃，即使在极低温度下保存了5300年后，他的体内仍有微生物活动。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">South Korea ruling party sweeps most seats in local elections but faces losing Seoul</div></div></div><div class="item"><div class="item-body"><div class="item-title">Israel and Lebanon agree to implement ceasefire</div></div></div><div class="item"><div class="item-body"><div class="item-title">China bans four New Zealand lawmakers after Taiwan visit, media reports</div></div></div><div class="item"><div class="item-body"><div class="item-title">All EU members greenlight first step in accession talks, Ukraine PM says</div></div></div><div class="item"><div class="item-body"><div class="item-title">Rubio says China cannot erase memories of Tiananmen Square crackdown</div></div></div><div class="item"><div class="item-body"><div class="item-title">US House votes for measure that would end Iran war, in blow to Trump</div></div></div><div class="item"><div class="item-body"><div class="item-title">North Korea&#x27;s Kim calls for &#x27;exponential&#x27; nuclear expansion after inspecting new plant, KCNA says</div></div></div><div class="item"><div class="item-body"><div class="item-title">Protests and last-minute construction work disrupt Mexico City ahead of World Cup</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trump signs order to make it easier to fire 8,000 federal workers</div></div></div><div class="item"><div class="item-body"><div class="item-title">Five Eyes security alliance warns of Chinese espionage threat</div></div></div><div class="item"><div class="item-body"><div class="item-title">US Stops Sharing Crucial Election Threat Data With State Officials</div></div></div><div class="item"><div class="item-body"><div class="item-title">US Trade Judge Warns DOJ Appeal Could Upend Trump Tariff Refunds</div></div></div></div>

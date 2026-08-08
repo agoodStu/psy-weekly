@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年5月16日 周六</span><span class="meta-chip">共 19 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">7 条</span></div><div class="item"><div class="item-body"><div class="item-title">How to arm yourself against hantavirus misinformation — 汉坦病毒相关虚假信息正在快速传播，科学家们正在努力对抗这种阴谋论。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Can plants have consciousness? The film Silent Friend reimagines the science — 电影《沉默的朋友》探讨了植物意识的科学和历史灵感。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Asking AI to explain your medical results? What doctors want you to know — 越来越多的人询问AI解释他们的医疗结果，该技术既显示出其潜力也存在风险。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Microbe ‘cities’ may solve a key ocean mystery — 微生物“城市”可能解开海洋碳循环的关键之谜。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Are astronomers ignoring some of the cosmos? — 天文学家是否忽视了一些宇宙部分？</div></div></div><div class="item"><div class="item-body"><div class="item-title">To celebrate Endangered Species Day, meet the scaly-foot snail, the most metal animal in the world — 为庆祝濒危物种日，认识世界上最“金属”的动物——鳞足蜗牛。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Why Black women are at greater risk for fibroids and endometrial cancer — 为什么黑人女性面临子宫肌瘤和子宫内膜癌的风险更高。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">Snap, YouTube Settle School Social Media Suit Ahead of Trial</div></div></div><div class="item"><div class="item-body"><div class="item-title">Trump’s IRS Suit May End With a $1.7 Billion Compensation Fund</div></div></div><div class="item"><div class="item-body"><div class="item-title">Arm Holdings to Face US Antitrust Probe Over Chip Tech</div></div></div><div class="item"><div class="item-body"><div class="item-title">Supreme Court Rejects Virginia Democrats on Reviving Voting Map</div></div></div><div class="item"><div class="item-body"><div class="item-title">Enbridge Warms Up to New Canada Oil Pipeline After Carbon Compromise</div></div></div><div class="item"><div class="item-body"><div class="item-title">Global Bond Markets Plummet Over War Shock</div></div></div><div class="item"><div class="item-body"><div class="item-title">Berkshire Sold $8 Billion of Chevron Shares as Prices Soared</div></div></div><div class="item"><div class="item-body"><div class="item-title">UAE says all of its actions came under defensive measures to protect sovereignty, vital infrastructure</div></div></div><div class="item"><div class="item-body"><div class="item-title">Forbright Files for IPO Pitching Middle Market, Digital Banking</div></div></div><div class="item"><div class="item-body"><div class="item-title">Erock, a Power Systems Maker for Data Centers, Files for US IPO</div></div></div><div class="item"><div class="item-body"><div class="item-title">Mexico former state finance minister hands himself over to US authorities, media report</div></div></div><div class="item"><div class="item-body"><div class="item-title">US Sanctions the Final Straw as Sherritt Packs Up its Cuba Operations</div></div></div></div>

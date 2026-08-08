@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年8月7日 周五</span><span class="meta-chip">共 48 条</span><span class="meta-chip">📐 arXiv 8</span><span class="meta-chip">🧠 心理×AI 5</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>mRNA流感疫苗获批，有效性比标准疫苗高27%，流感预防进入新阶段</li><li>普通阳光也能产生纠缠光子对，量子计算光源成本大降，不再依赖特殊设备</li><li>肿瘤测序漏掉的异构体可强结合MHC，为脑癌疫苗提供新靶标</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/the-link-between-vitamin-intake-and-depression-largely-vanishes-when-factoring-in-lifestyle/" target="_blank" rel="noopener">The link between vitamin intake and depression largely vanishes when factoring in lifestyle (2026.08.06) 维生素摄入与抑郁关联在考虑生活方式后基本消失</a></div><div class="item-desc">研究发现调整健康、社会经济和行为因素后，维生素摄入与抑郁症状的关联大多消失，提示生活方式是混杂因素。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/adhd-medication-helps-children-focus-by-stabilizing-brain-networks/" target="_blank" rel="noopener">ADHD medication helps children focus by stabilizing brain networks, new study suggests (2026.08.06) 新研究表明ADHD药物通过稳定脑网络助儿童专注</a></div><div class="item-desc">小规模研究显示ADHD药物通过稳定不同脑区间的通信改善专注力，且与行为改善直接相关。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/single-people-who-pursue-novel-activities-report-better-psychological-health-study-finds/" target="_blank" rel="noopener">Single people who pursue novel activities report better psychological health, study finds (2026.08.06) 研究发现追求新奇活动的单身人士心理更健康</a></div><div class="item-desc">将单身视为成长机会并尝试新活动的人，生活满意度更高、对单身状态更少恐惧，心理健康更佳。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://www.quantamagazine.org/how-does-touch-lead-to-pain-or-pleasure-20260806/" target="_blank" rel="noopener">How Does Touch Lead To Pain Or Pleasure? (2026.08.06) 触觉如何导致疼痛或愉悦</a></div><div class="item-desc">神经科学仍无法解释身体疼痛与心理疼痛的差异，也不清楚为何亲人触摸安抚而陌生人接触排斥，探索感知机制。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/how-social-anxiety-and-depression-change-the-way-we-process-feedback/" target="_blank" rel="noopener">Social anxiety and depression appear to change the way we process feedback (2026.08.06) 社交焦虑和抑郁改变我们处理反馈的方式</a></div><div class="item-desc">社交焦虑者易内化负面能力反馈，抑郁症患者难接受正面反馈，揭示不同心理障碍的认知处理偏差。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/gratitude-makes-people-more-helpful-but-it-doesnt-overcome-the-bystander-effect/" target="_blank" rel="noopener">Gratitude makes people more helpful, but it doesn’t overcome the bystander effect (2026.08.06) 感恩让人更乐于助人但无法克服旁观者效应</a></div><div class="item-desc">感恩提升助人意愿，但无法消除旁观者效应；群体中人们仍因责任分散而减少干预。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/psychological-distress-isolates-men-more-than-women-according-to-a-14-year-study/" target="_blank" rel="noopener">Psychological distress isolates men more than women, according to a 14-year study (2026.08.06) 14年研究：心理困扰对男性的孤立影响大于女性</a></div><div class="item-desc">纵向数据显示心理困扰会随后减少社会支持感知，该效应在男性中更明显，提示需针对性支持。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/brief-dmt-trips-linked-to-lasting-improvements-in-quality-of-life-for-depressed-patients/" target="_blank" rel="noopener">Brief DMT trips linked to lasting improvements in quality of life for depressed patients (2026.08.06) 短暂DMT体验与抑郁患者生活质量持续改善相关</a></div><div class="item-desc">吸入DMT配合心理支持可缓解焦虑、提升生活满意度，且效果持续，提示短效致幻剂或可治疗抑郁。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">4 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/physicists-harness-sunlight-for-quantum-entanglement/" target="_blank" rel="noopener">Physicists harness sunlight for quantum entanglement (2026.08.06) 物理学家利用阳光实现量子纠缠</a></div><div class="item-desc">研究人员证明普通阳光也能产生纠缠光子对，为量子计算提供更易获取的光源，降低对特殊光源的依赖。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/urban-landscapes-can-boost-storms-or-break-them-up/" target="_blank" rel="noopener">Urban landscapes can boost storms—or break them up (2026.08.06) 城市景观可增强或消散风暴</a></div><div class="item-desc">对德州四城市四万场暴雨的分析显示，城市景观对不同类型风暴影响不同，有助于解释城市降雨变化。</div></div></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/trump-cdc-pick-erica-schwartz-confirmed-to-lead-nations-top-public-health-agency/" target="_blank" rel="noopener">Trump CDC pick Erica Schwartz confirmed to lead nation’s top public health agency (2026.08.05) 特朗普提名的埃里卡·施瓦茨获确认执掌CDC</a></div><div class="item-desc">参议院确认施瓦茨担任CDC主任，结束该机构近一年无正式领导人的局面，防疫政策走向受关注。</div></div></div><div class="item"><span class="item-idx">12</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/elon-musk-reveals-spacex-plans-to-build-satellite-factories-on-the-moon/" target="_blank" rel="noopener">Elon Musk reveals SpaceX plans to build satellite factories on the moon (2026.08.05) 马斯克透露SpaceX计划在月球建卫星工厂</a></div><div class="item-desc">SpaceX公布季度亏损后，马斯克向投资者宣布将在月球建立卫星工厂，以降低发射成本并支持深空探索。</div></div></div></div>

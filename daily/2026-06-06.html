@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月6日 周六</span><span class="meta-chip">共 18 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">6 条</span></div><div class="item"><div class="item-body"><div class="item-title">Anthropic warns AI may soon begin recursive self-improvement - Anthropic警告人工智能可能很快开始自我改进。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Astronauts take shelter on the International Space Station because of air leaks - 国际空间站宇航员因空气泄漏而紧急疏散。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Report: FDA just launched a study on the abortion pill - 报告称FDA启动了对堕胎药的研究。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Planets aplenty may lurk around supermassive black holes - 超级黑洞周围可能隐藏着众多行星。</div></div></div><div class="item"><div class="item-body"><div class="item-title">How breast cancer screening can predict heart disease risk - 乳腺筛查如何预测心脏病风险。</div></div></div><div class="item"><div class="item-body"><div class="item-title">PCOS is now PMOS: What went behind renaming the common condition - PCOS更名为PMOS：这一更名背后的故事。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🌍 时事</span><span class="section-count">12 条</span></div><div class="item"><div class="item-body"><div class="item-title">Cruce Is Fun, Cheap Tapas Bar That Fills Spanish Craving in Hong Kong</div></div></div><div class="item"><div class="item-body"><div class="item-title">Raízen fecha acordo com credores em RE de R$ 65 bi: Fontes</div></div></div><div class="item"><div class="item-body"><div class="item-title">Raizen Inks $13 Billion Out-of-Court Debt Deal With Creditors</div></div></div><div class="item"><div class="item-body"><div class="item-title">Why India’s Gen-Z ‘Cockroach’ Movement Is a Worry for Modi</div></div></div><div class="item"><div class="item-body"><div class="item-title">Colombian Inflation Accelerates to Fastest Pace Since 2024</div></div></div><div class="item"><div class="item-body"><div class="item-title">England’s World Cup Opener Could Top Power Spike in 1966 Final</div></div></div><div class="item"><div class="item-body"><div class="item-title">Anwar’s Battle Against Allies Shapes Up as Key Malaysian States Call Polls</div></div></div><div class="item"><div class="item-body"><div class="item-title">US Army Warns Lawmakers Draft Legislation Risks Data Center Push</div></div></div><div class="item"><div class="item-body"><div class="item-title">North Korean leader Kim Jong Un visits naval vessel, Rodong Sinmun says</div></div></div><div class="item"><div class="item-body"><div class="item-title">Electrum-Backed Mexican Silver Miner Sinda Files for US IPO</div></div></div><div class="item"><div class="item-body"><div class="item-title">NBA Finals First Game Draws Nearly 17 Million Viewers to ABC</div></div></div><div class="item"><div class="item-body"><div class="item-title">FIFA Will Let Fans Bring Bottled Water to World Cup Matches, With Some Caveats</div></div></div></div>

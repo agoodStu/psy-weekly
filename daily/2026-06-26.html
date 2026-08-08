@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年6月26日 周五</span><span class="meta-chip">共 31 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>量子传感器可检测混凝土钢材微弱磁场异常，为桥梁无损检测提供新方法提升安全评估能力</li><li>新研究提出宇宙并非处处相同，挑战均匀性假设，可能颠覆标准模型</li><li>法国周三平均气温突破30摄氏度创历史新高，极端热浪警示气候变化加剧</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">Brain stimulation technique alters human perception of physical control 脑刺激技术改变人对身体控制的感知 — 研究发现特定脑区电刺激可增强或削弱人对自身动作控制力的感知，揭示大脑与自主感的关系。</div></div></div><div class="item"><div class="item-body"><div class="item-title">People who enjoy outshining romantic rivals share distinct psychological traits across cultures 爱在情场上胜过对手的人具有跨文化心理特征 — 研究表明，享受在约会中超越同性竞争者的人，无论文化背景，均表现出共同的心理特质。</div></div></div><div class="item"><div class="item-body"><div class="item-title">High-fat diets and pesticide exposure alter memory differently based on genes and sex 高脂饮食与农药暴露对记忆的影响因基因和性别而异 — 研究发现高脂饮食和早期农药接触会改变记忆功能，且影响程度取决于遗传风险和性别。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Differences in birthweight between twins predict later intelligence test scores 双胞胎出生体重差异可预测后期智力测试成绩 — 研究发现，即使基因和环境相同，出生体重较高的双胞胎在儿童和青年期认知表现更好。</div></div></div><div class="item"><div class="item-body"><div class="item-title">People who embrace national and global identities report higher life satisfaction 同时认同国家和全球身份的人生活满意度更高 — 世界价值观调查分析显示，国家认同和世界公民认同均正向预测生活满意度，但民族自豪感效果受全球认同强度调节。</div></div></div><div class="item"><div class="item-body"><div class="item-title">The diploma divide is real, but college doesn’t make students as liberal as people think 学历分化确实存在，但大学并未让学生变得如人们想象中那么自由派 — 研究证实近十年大学学历与自由派身份关联增强，但多数学生在校期间政治立场变化有限。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Cameras in the statehouse do not increase political polarization, study finds 研究发现州议会安装摄像头不会加剧政治极化 — 直播立法会议并未改变议员的投票行为或导致更极端的立场，表明公开透明不会破坏政策制定过程。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Scientists identify an ancient brainstem network that acts as an attentional selection engine 科学家发现古老脑干网络充当注意力选择引擎 — 进化上古老的脑干抑制性神经元是过滤干扰、聚焦空间信息的关键，揭示注意力的神经基础。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">🔬 科普</span><span class="section-count">8 条</span></div><div class="item"><div class="item-body"><div class="item-title">France just hit its hottest day ever recorded 法国遭遇有记录以来最热的一天 — 法国周三平均气温突破30摄氏度创历史新高，极端热浪警示气候变化加剧。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Repositioning retail for the AI era 零售业在AI时代的重新定位 — 人工智能正悄然重塑零售业，核心变革不在前台体验，而在搜索排序、库存管理等后台决策的智能化。</div></div></div><div class="item"><div class="item-body"><div class="item-title">What Is the Positive Grassmannian and Why Does It Show Up Everywhere? 什么是正格拉斯曼流形？为何它无处不在？ — 正格拉斯曼流形是代数组合学中的几何结构，意外连接交通流、浅水波和量子散射等多种数学模型。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Fundamental principles of the universe called into question by two physicists 两位物理学家质疑宇宙基本法则 — 新研究提出宇宙并非处处相同，挑战了宇宙学数十年的均匀性假设，可能颠覆标准模型。</div></div></div><div class="item"><div class="item-body"><div class="item-title">How quantum sensing could reveal hidden faults in thousands of U.S. bridges 量子传感如何揭示美国数千座桥梁的隐蔽裂缝 — 量子传感器可检测混凝土中钢材的微弱磁场异常，为桥梁无损检测提供新方法，提升安全评估能力。</div></div></div><div class="item"><div class="item-body"><div class="item-title">Weight loss drugs don&#x27;t work for everyone—here’s why 减肥药并非对所有人都有效——原因在此 — 奥泽匹克等药物减重效果显著，但因个体代谢差异、肠道菌群等因素，约三分之一使用者反应不佳。</div></div></div><div class="item"><div class="item-body"><div class="item-title">IBM has unveiled chip technology that could help extend Moore’s Law another decade IBM发布芯片技术，有望将摩尔定律再延长十年 — IBM新原型芯片在指甲盖大小面积上集成约1000亿个晶体管，密度较2021年技术翻倍，推动更高效计算。</div></div></div><div class="item"><div class="item-body"><div class="item-title">What Europe’s heat wave means for the power grid 欧洲热浪对电网意味着什么 — 创纪录高温导致制冷用电激增，电网面临超负荷风险，需加速储能和需求侧响应等适应性措施。</div></div></div></div>

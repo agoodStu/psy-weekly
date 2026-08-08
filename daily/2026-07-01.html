@@ -30,27 +30,10 @@ body {
   font-family: var(--font-sans); font-size: 14px; line-height: 1.6;
   color: var(--text); background: var(--bg);
   transition: background 0.2s, color 0.2s;
-  padding-top: 48px;
 }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* 顶部全局导航 */
-.topnav {
-  position: fixed; top: 0; left: 0; right: 0; height: 48px;
-  display: flex; align-items: center; justify-content: center; gap: 4px;
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border); z-index: 200;
-}
-.topnav-tab {
-  display: inline-flex; align-items: center; gap: 6px;
-  padding: 6px 18px; border-radius: 20px;
-  font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  border: 1px solid transparent; transition: all 0.15s;
-}
-.topnav-tab:hover { color: var(--text); text-decoration: none; background: var(--bg-hover); }
-.topnav-tab.active { color: var(--accent); background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 35%, transparent); }
 
 /* 主内容 */
 .main { max-width: 760px; margin: 0 auto; padding: 24px 16px 96px; }
@@ -224,11 +207,6 @@ a:hover { text-decoration: underline; }
 
 </head>
 <body>
-<nav class="topnav" aria-label="全局导航">
-  <a class="topnav-tab" href="../index.html">📅 周报</a>
-  <a class="topnav-tab active" href="../daily.html">📰 日报</a>
-  <a class="topnav-tab" href="../favorites.html">⭐ 收藏</a>
-</nav>
 <main class="main">
   <header class="page-header"><h1>每日信息简报</h1><p class="subtitle">Folo RSS · arXiv 前沿 · 心理×AI 论文跟踪</p><div class="header-meta"><span class="meta-chip">📰 2026年7月1日 周三</span><span class="meta-chip">共 34 条</span><span class="meta-chip">📐 arXiv 0</span><span class="meta-chip">🧠 心理×AI 0</span></div></header><div class="highlights"><div class="highlights-title">⭐ 今日要点</div><ul><li>AI从心电图中发现隐藏信号可提前识别高风险人群，有望精准预防心源性猝死</li><li>中国超算LineShine以每秒近2百亿亿次运算超越美国，凸显算力竞争新格局</li><li>邱园将740万份标本数字化免费开放，极大促进全球植物与真菌研究资源可及性</li></ul></div><div class="section"><div class="section-head"><span class="section-title">🧠 心理与认知</span><span class="section-count">8 条</span></div><div class="item"><span class="item-idx">1</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/the-association-between-autistic-traits-and-camouflaging-is-stronger-in-the-general-population/" target="_blank" rel="noopener">The association between autistic traits and camouflaging is stronger in the general population 普通人群中自闭特质与伪装行为关联更显著</a></div><div class="item-desc">元分析显示，普通人群中自闭特质越强伪装越多，但自闭症患者中此关联较弱，提示诊断差异。</div></div></div><div class="item"><span class="item-idx">2</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/brain-synchronization-bridges-the-gap-between-fearing-a-threat-and-reacting-to-i/" target="_blank" rel="noopener">Researchers discover a neural bridge between fear and physical reactions 恐惧记忆与身体反应间的神经桥梁被揭示</a></div><div class="item-desc">研究发现海马体两侧在恐惧学习中协同，连接恐惧记忆与生理反应，揭示恐惧产生机制。</div></div></div><div class="item"><span class="item-idx">3</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/scientists-reverse-autism-like-symptoms-in-mice-by-repairing-shortened-nerve-cell-structures/" target="_blank" rel="noopener">Scientists reverse autism-like symptoms in mice by repairing shortened nerve cell structures 修复缩短的神经细胞结构可逆转小鼠自闭样行为</a></div><div class="item-desc">通过激活特定神经通路恢复小鼠脑内关键结构，逆转类自闭症状，提示可逆性神经机制。</div></div></div><div class="item"><span class="item-idx">4</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/common-flu-drugs-show-promise-in-preventing-cognitive-decline/" target="_blank" rel="noopener">Common flu drugs show promise in preventing cognitive decline 流感药物或能保护糖分子，预防认知衰退</a></div><div class="item-desc">研究发现糖分子流失导致慢性感染患者认知下降，常用流感药物可恢复其水平，提供新干预思路。</div></div></div><div class="item"><span class="item-idx">5</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/how-aggressive-political-rhetoric-threatens-core-values-and-reduces-democratic-t/" target="_blank" rel="noopener">Experiments reveal the psychological cost of insulting political rhetoric 侮辱性政治言论让人感到核心价值受攻击</a></div><div class="item-desc">实验表明攻击性政治言辞使听众感觉自身价值观被侵犯，加剧社会分裂，不论其政治立场。</div></div></div><div class="item"><span class="item-idx">6</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/chaotic-pigeons-are-helping-redefine-what-we-know-about-learning/" target="_blank" rel="noopener">Chaotic pigeons are helping redefine what we know about learning 鸽子在混沌中学习，挑战传统心理学奖励定律</a></div><div class="item-desc">新研究发现鸽子学习方式处于混沌边缘，质疑奖励与惩罚对学习的传统解释，推动学习理论革新。</div></div></div><div class="item"><span class="item-idx">7</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/scientists-accidentally-discover-an-inherent-human-tendency-for-counterclockwise-movement/" target="_blank" rel="noopener">Scientists accidentally discover an inherent human tendency for counterclockwise movement 人类行走自然偏向逆时针，揭示群体自组织规律</a></div><div class="item-desc">研究发现人类自由行走时倾向逆时针，这种个人偏好可影响大规模人群自发组织模式。</div></div></div><div class="item"><span class="item-idx">8</span><div class="item-body"><div class="item-title"><a href="https://www.psypost.org/how-a-loss-of-pleasure-changes-the-way-young-people-work-for-rewards/" target="_blank" rel="noopener">Anhedonia makes young people less likely to work for high rewards 快感缺失削弱年轻人对高回报的付出意愿</a></div><div class="item-desc">实验表明快感缺失者难以调整努力获取更大奖励，源于对奖励与成本的认知缺陷。</div></div></div></div>
 <div class="section"><div class="section-head"><span class="section-title">💻 科技</span><span class="section-count">3 条</span></div><div class="item"><span class="item-idx">9</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/how-to-spot-an-ai-generated-face-according-to-science/" target="_blank" rel="noopener">How to spot an AI-generated face, according to science 训练视觉线索可将AI人脸识别准确率提升近一倍</a></div><div class="item-desc">研究表明，训练人们关注特定视觉细节，可将识别AI生成面孔的准确率提高近一倍。</div></div></div><div class="item"><span class="item-idx">10</span><div class="item-body"><div class="item-title"><a href="https://www.technologyreview.com/2026/06/29/1139849/ai-agents-are-not-your-coworkers/" target="_blank" rel="noopener">AI agents are not your “coworkers” 将AI智能体视为“同事”会导致更多错误</a></div><div class="item-desc">研究发现将AI代理当同事而非工具，人们错误率增加18%，表明应正确对待人机协作角色。</div></div></div><div class="item"><span class="item-idx">11</span><div class="item-body"><div class="item-title"><a href="https://www.scientificamerican.com/article/gene-editing-startups-are-using-crispr-to-treat-diseases/" target="_blank" rel="noopener">Gene-editing startups are using CRISPR to treat diseases CRISPR基因编辑初创公司推进疾病治疗</a></div><div class="item-desc">多家基因编辑初创公司如Epicrispr致力于CRISPR疗法，探索从遗传病到癌症的临床应用。</div></div></div></div>
