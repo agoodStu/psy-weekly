@@ -1,8 +1,9 @@
 /* prevnext.js — 单期页面「前一期/后一期」导航（纯前端）
  *
- * 适用页面：日报单期 daily/YYYY-MM-DD.html、周报单期 psych_weekly_*.html
- * 逻辑：fetch 存档列表页（daily → index.html，weekly → archive.html），
- *       解析 .archive-item 顺序（存档列表是倒序：最新在上），
+ * 适用页面：日报最新一期 daily.html（根目录）、日报单期 daily/YYYY-MM-DD.html、
+ *           周报单期 psych_weekly_*.html
+ * 逻辑：fetch 存档列表页（daily.html → daily/index.html，daily 单期 → index.html，
+ *       weekly → archive.html），解析 .archive-item 顺序（存档列表是倒序：最新在上），
  *       找到当前页位置后取相邻项，在 page-header 后插入导航条。
  * 边界：最新一期「后一期」置灰，最早一期「前一期」置灰。
  * 用法：页面 </body> 前加 <script src="prevnext.js"></script>
@@ -15,12 +16,16 @@
   var basename = path.split('/').pop() || '';
 
   // 判定页面类型
-  var isDaily = /\/daily\/\d{4}-\d{2}-\d{2}\.html/.test(path);
+  var isDailyIssue = /\/daily\/\d{4}-\d{2}-\d{2}\.html/.test(path);
+  var isDailyRoot = /daily\.html$/.test(path); // 根目录最新一期入口页
   var isWeekly = /psych_weekly_/.test(basename);
-  if (!isDaily && !isWeekly) return;
+  if (!isDailyIssue && !isDailyRoot && !isWeekly) return;
 
-  var ARCHIVE_URL = isDaily ? 'index.html' : 'archive.html';
-  var TITLE_SELECTOR = isDaily ? '.archive-date' : '.archive-week';
+  // dailyRoot（daily.html 在根目录）的存档列表在 daily/index.html，链接需加 daily/ 前缀；
+  // daily 单期与周报单期的存档列表与当前页同目录，裸文件名相对解析天然正确。
+  var ARCHIVE_URL = isDailyRoot ? 'daily/index.html' : (isDailyIssue ? 'index.html' : 'archive.html');
+  var TITLE_SELECTOR = (isDailyIssue || isDailyRoot) ? '.archive-date' : '.archive-week';
+  var LINK_PREFIX = isDailyRoot ? 'daily/' : '';
 
   /* ── 样式注入 ── */
   var styleEl = document.createElement('style');
@@ -119,6 +124,7 @@
       var doc = new DOMParser().parseFromString(html, 'text/html');
       var items = Array.prototype.slice.call(doc.querySelectorAll('.archive-item')).map(function (el) {
         var href = el.getAttribute('href') || '';
+        if (LINK_PREFIX) href = LINK_PREFIX + href; // daily.html 在根目录 → 存档链接加 daily/
         var labelEl = el.querySelector(TITLE_SELECTOR);
         var label = labelEl ? (labelEl.textContent || '').replace(/\s+/g, ' ').trim() : href;
         return { href: href, label: label };
@@ -126,13 +132,18 @@
       if (!items.length) return;
 
       var curIdx = -1;
-      items.forEach(function (it, i) {
-        if (it.href === basename) curIdx = i;
-      });
-      if (curIdx === -1) return; // 当前页不在存档列表（理论上不会）
-
-      // 当前期标签
-      var curLabel = items[curIdx].label;
+      var curLabel;
+      if (isDailyRoot) {
+        // daily.html 永远是最新一期 → 存档列表第一项（倒序），后一期自然置灰
+        curIdx = 0;
+        curLabel = '最新一期 ' + items[0].label;
+      } else {
+        items.forEach(function (it, i) {
+          if (it.href === basename) curIdx = i;
+        });
+        if (curIdx === -1) return; // 当前页不在存档列表（理论上不会）
+        curLabel = items[curIdx].label;
+      }
 
       var nav = buildNav(items, curIdx, curLabel);
       inject(nav);
