@@ -151,6 +151,75 @@ a:hover { text-decoration: underline; }
 @media (min-width: 769px) {
   .main { padding-top: 32px; }
 }
+.bottomnav-item.active { color: var(--accent); }
+.bottomnav-item.active .bn-icon { color: var(--accent); }
+
+/* 板块 bottom sheet */
+.sheet-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 300;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.sheet-overlay.open { opacity: 1; pointer-events: auto; }
+.sheet {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  max-height: 70vh;
+  overflow-y: auto;
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  border-radius: 16px 16px 0 0;
+  padding: 14px 16px 24px;
+  z-index: 301;
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+  box-shadow: 0 -8px 30px rgba(0,0,0,0.25);
+}
+.sheet.open { transform: translateY(0); }
+.sheet-handle {
+  width: 36px; height: 4px;
+  border-radius: 2px;
+  background: var(--text-tertiary);
+  opacity: 0.5;
+  margin: 0 auto 10px;
+}
+.sheet-title {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  padding: 0 4px;
+}
+.sheet-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+.sheet-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition: all 0.12s;
+}
+.sheet-field:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  text-decoration: none;
+}
 </style>
 
 </head>
@@ -172,11 +241,25 @@ a:hover { text-decoration: underline; }
   </footer>
 </main>
 <nav class="bottomnav" aria-label="页内导航">
-  <button class="bottomnav-item" data-action="top"><span class="bn-icon">📋</span><span>顶部</span></button>
-  <button class="bottomnav-item" data-action="highlights"><span class="bn-icon">⭐</span><span>要点</span></button>
-  <button class="bottomnav-item" data-action="arxiv"><span class="bn-icon">📐</span><span>arXiv</span></button>
-  <a class="bottomnav-item" href="../daily/index.html"><span class="bn-icon">📂</span><span>往期</span></a>
+  <a class="bottomnav-item active" href="../daily.html"><span class="bn-icon">📰</span><span>日报</span></a>
+  <a class="bottomnav-item" href="../index.html"><span class="bn-icon">📅</span><span>周报</span></a>
+  <button class="bottomnav-item" data-action="sections"><span class="bn-icon">🗂</span><span>板块</span></button>
+  <a class="bottomnav-item" href="../favorites.html"><span class="bn-icon">⭐</span><span>收藏</span></a>
 </nav>
+<div class="sheet-overlay" id="sheet-overlay"></div>
+<div class="sheet" id="section-sheet" role="dialog" aria-label="选择板块">
+  <div class="sheet-handle"></div>
+  <div class="sheet-title">选择板块</div>
+  <div class="sheet-grid">
+    <button class="sheet-field" data-target="0"><span>📰 今日要点</span></button>
+    <button class="sheet-field" data-target="1"><span>🧠 心理与认知</span></button>
+    <button class="sheet-field" data-target="2"><span>🔬 科普</span></button>
+    <button class="sheet-field" data-target="3"><span>📐 arXiv 前沿</span></button>
+    <button class="sheet-field" data-target="4"><span>🧠 心理 × AI</span></button>
+    <button class="sheet-field" data-target="5"><span>🌍 时事</span></button>
+    <a class="sheet-field" href="../daily/index.html"><span>📂 往期存档</span></a>
+  </div>
+</div>
 <script>
 (function() {
   try {
@@ -190,22 +273,36 @@ a:hover { text-decoration: underline; }
   } catch(e) {}
 })();
 
-document.querySelectorAll('.bottomnav-item[data-action]').forEach(function(item) {
-  item.addEventListener('click', function() {
-    var action = this.dataset.action;
-    if (action === 'top') window.scrollTo({ top: 0, behavior: 'smooth' });
-    else if (action === 'highlights') {
-      var el = document.querySelector('.highlights');
+// ── 板块 bottom sheet ──
+var sheetOverlay = document.getElementById('sheet-overlay');
+var sectionSheet = document.getElementById('section-sheet');
+function openSheet() {
+  sheetOverlay.classList.add('open');
+  sectionSheet.classList.add('open');
+}
+function closeSheet() {
+  sheetOverlay.classList.remove('open');
+  sectionSheet.classList.remove('open');
+}
+document.querySelectorAll('.bottomnav-item[data-action="sections"]').forEach(function(item) {
+  item.addEventListener('click', function() { openSheet(); });
+});
+if (sheetOverlay) {
+  sheetOverlay.addEventListener('click', closeSheet);
+}
+if (sectionSheet) {
+  sectionSheet.querySelectorAll('.sheet-field[data-target]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      closeSheet();
+      var idx = parseInt(this.dataset.target, 10);
+      var el = idx === 0 ? document.querySelector('.highlights')
+                         : document.querySelectorAll('.section')[idx - 1];
       if (el) el.scrollIntoView({ behavior: 'smooth' });
-    } else if (action === 'arxiv') {
-      var els = document.querySelectorAll('.section');
-      for (var i = 0; i < els.length; i++) {
-        if (els[i].textContent.indexOf('arXiv') !== -1) {
-          els[i].scrollIntoView({ behavior: 'smooth' }); break;
-        }
-      }
-    }
+    });
   });
+}
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeSheet();
 });
 </script>
 <script src="../favorites.js"></script>

@@ -10258,18 +10258,10 @@ a:hover { text-decoration: underline; }
 <button class="scroll-top" id="scroll-top" title="回到顶部" aria-label="回到顶部">↑</button>
 
 <nav class="bottomnav" id="bottomnav" aria-label="页内导航">
-  <button class="bottomnav-item" data-action="top">
-    <span class="bn-icon">📋</span><span>时间线</span>
-  </button>
-  <button class="bottomnav-item" data-action="featured">
-    <span class="bn-icon">⭐</span><span>精选</span>
-  </button>
-  <button class="bottomnav-item" data-action="fields">
-    <span class="bn-icon">🗂</span><span>领域</span>
-  </button>
-  <a class="bottomnav-item" href="archive.html">
-    <span class="bn-icon">📂</span><span>存档</span>
-  </a>
+  <a class="bottomnav-item" href="daily.html"><span class="bn-icon">📰</span><span>日报</span></a>
+  <a class="bottomnav-item active" href="index.html"><span class="bn-icon">📅</span><span>周报</span></a>
+  <button class="bottomnav-item" data-action="fields"><span class="bn-icon">🗂</span><span>领域</span></button>
+  <a class="bottomnav-item" href="favorites.html"><span class="bn-icon">⭐</span><span>收藏</span></a>
 </nav>
 
 <div class="sheet-overlay" id="sheet-overlay"></div>
@@ -10491,12 +10483,7 @@ if (bottomNav) {
   bottomNav.querySelectorAll('[data-action]').forEach(function(item) {
     item.addEventListener('click', function() {
       var action = this.dataset.action;
-      if (action === 'top') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } else if (action === 'featured') {
-        var el = document.getElementById('field-featured');
-        if (el) el.scrollIntoView({ behavior: 'smooth' });
-      } else if (action === 'fields') {
+      if (action === 'fields') {
         openSheet();
       }
     });
