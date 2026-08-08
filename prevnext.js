@@ -19,7 +19,10 @@
   var isDailyIssue = /\/daily\/\d{4}-\d{2}-\d{2}\.html/.test(path);
   var isDailyRoot = /daily\.html$/.test(path); // 根目录最新一期入口页
   var isWeekly = /psych_weekly_/.test(basename);
-  if (!isDailyIssue && !isDailyRoot && !isWeekly) return;
+  // 周报根入口：/psy-weekly/ 或 /psy-weekly/index.html（排除 daily/ 存档列表页）
+  var isDailyDir = /\/daily\/$/.test(path);
+  var isWeeklyRoot = !isDailyDir && !/\/daily\//.test(path) && (/\/$/.test(path) || basename === 'index.html');
+  if (!isDailyIssue && !isDailyRoot && !isWeekly && !isWeeklyRoot) return;
 
   // dailyRoot（daily.html 在根目录）的存档列表在 daily/index.html，链接需加 daily/ 前缀；
   // daily 单期与周报单期的存档列表与当前页同目录，裸文件名相对解析天然正确。
@@ -133,8 +136,8 @@
 
       var curIdx = -1;
       var curLabel;
-      if (isDailyRoot) {
-        // daily.html 永远是最新一期 → 存档列表第一项（倒序），后一期自然置灰
+      if (isDailyRoot || isWeeklyRoot) {
+        // 根入口页永远是最新一期 → 存档列表第一项（倒序），后一期自然置灰
         curIdx = 0;
         curLabel = '最新一期 ' + items[0].label;
       } else {
