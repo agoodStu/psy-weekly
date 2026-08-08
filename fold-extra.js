@@ -100,9 +100,9 @@
   });
 
   /* ── 与筛选/搜索联动 ──
-   * 注意：领域 chips 是模板 JS 动态创建的，applyFilter 不会 toggle 它们的
-   * .active（只 toggle 静态的"全部"chip），所以不能依赖 .filter-chip.active
-   * 判断当前筛选领域——由本脚本自己记录点击来源。 */
+   * 早期版本的领域 chips 是模板 JS 动态创建的且 applyFilter 不会 toggle 它们的
+   * .active（bug，2026-08-08 已修：filterChips 改数组 + 创建时 push）。
+   * 这里仍用 lastField 自记来源，不依赖模板内部状态——防御性写法，两者都稳。 */
   var lastField = 'all';
 
   function syncFoldState() {

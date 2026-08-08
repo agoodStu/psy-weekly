@@ -10326,7 +10326,7 @@ document.querySelectorAll('.theme-btn').forEach(function(btn) {
 
 // ── Field filter ───────────────────────
 var cards = document.querySelectorAll('.card');
-var filterChips = document.querySelectorAll('.filter-chip');
+var filterChips = Array.prototype.slice.call(document.querySelectorAll('.filter-chip'));
 var fieldSections = document.querySelectorAll('.timeline-field');
 var sidebarLinks = document.querySelectorAll('.side-link[data-field]');
 
@@ -10423,6 +10423,7 @@ cards.forEach(function(card) {
     e.preventDefault();
     applyFilter(f);
   });
+  filterChips.push(chip); // 加入数组，applyFilter 才能切换它的 .active 高亮
   document.getElementById('filter-bar').appendChild(chip);
 });
 
